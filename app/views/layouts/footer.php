@@ -2,30 +2,18 @@
 
 <!-- ============================================ -->
 <!-- FOOTER -->
-<footer class="site-footer" role="contentinfo" aria-label="Pied de page du site">
-  <div class="container footer-container">
-    <div class="footer-grid">
-      <div class="footer-column footer-brand-column">
-        <p class="brand-footer">Maison d’Estimation <span>Bordeaux</span></p>
-        <p class="muted footer-description">L’expertise immobilière d’exception au cœur de Bordeaux. Une estimation précise, confidentielle et élégante de votre patrimoine.</p>
-      </div>
-
-      <div class="footer-column">
-        <h4>Pages</h4>
-        <ul class="footer-links" aria-label="Liens de navigation">
-<!-- ============================================ -->
 <footer class="site-footer">
   <div class="container">
     <!-- FOOTER GRID (4 COLONNES) -->
     <div class="footer-grid">
-      
+
       <!-- COLONNE 1: LOGO + DESCRIPTION -->
       <div>
         <p class="brand-footer">
-          Estimation <span>Bordeaux</span>
+          Estimation <span>Nandy</span>
         </p>
         <p class="muted" style="margin: 0.8rem 0 0; font-size: 0.95rem; line-height: 1.6;">
-          Plateforme d'estimation immobilière fiable et rapide à Bordeaux. 
+          Plateforme d'estimation immobilière fiable et rapide à Nandy et ses environs.
           Découvrez la vraie valeur de votre bien en 60 secondes. Accompagnement expert gratuit.
         </p>
       </div>
@@ -55,8 +43,8 @@
             <i class="fas fa-envelope"></i> Email
           </p>
           <p style="margin: 0; color: var(--text); font-weight: 500;">
-            <a href="mailto:contact@estimation-immobilier-bordeaux.fr" style="color: var(--primary); text-decoration: none;">
-              contact@estimation-immobilier-bordeaux.fr
+            <a href="mailto:contact@estimation-immobilier-nandy.fr" style="color: var(--primary); text-decoration: none;">
+              contact@estimation-immobilier-nandy.fr
             </a>
           </p>
         </div>
@@ -66,8 +54,8 @@
             <i class="fas fa-phone"></i> Téléphone
           </p>
           <p style="margin: 0; color: var(--text); font-weight: 500;">
-            <a href="tel:+33556000000" style="color: var(--primary); text-decoration: none;">
-              +33 5 56 00 00 00
+            <a href="tel:+33164000000" style="color: var(--primary); text-decoration: none;">
+              +33 1 64 00 00 00
             </a>
           </p>
           <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted);">
@@ -80,8 +68,8 @@
             <i class="fas fa-map-marker-alt"></i> Adresse
           </p>
           <p style="margin: 0; color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.6;">
-            12 Quai des Chartrons<br>
-            33000 Bordeaux<br>
+            15 Rue de l'Église<br>
+            77176 Nandy<br>
             France
           </p>
         </div>
@@ -122,7 +110,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="muted">&copy; 2026 Maison d’Estimation Bordeaux. Tous droits réservés.</p>
+      <p class="muted">&copy; 2026 Maison d'Estimation Nandy. Tous droits réservés.</p>
     </div>
   </div>
 </footer>

@@ -1,4 +1,4 @@
-<?php $page_title = 'Estimation Immobilière Bordeaux | Évaluez Votre Bien en 1 Minute'; ?>
+<?php $page_title = 'Estimation Immobilière Nandy | Évaluez Votre Bien en 1 Minute'; ?>
 
 <!-- ============================================ -->
 <!-- HERO ULTRA-PREMIUM -->
@@ -13,25 +13,25 @@
       </p>
 
       <!-- HEADLINE H1 -->
-      <h1>Découvrez la vraie valeur de votre bien immobilier à Bordeaux</h1>
+      <h1>Découvrez la vraie valeur de votre bien immobilier à Nandy et ses environs</h1>
 
       <!-- SUBHEADLINE -->
       <p class="lead">
-        En 60 secondes, obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. Aucun engagement, 100% gratuit.
+        En 60 secondes, obtenez une fourchette de prix précise basée sur les données réelles du marché immobilier de Nandy et du Sud Seine-et-Marne. Aucun engagement, 100% gratuit.
       </p>
 
       <!-- TRUST INDICATORS -->
       <ul class="trust-list">
         <li>
-          <i class="fas fa-users"></i> 
+          <i class="fas fa-users"></i>
           <strong>2 847 estimations</strong> réalisées depuis 2023
         </li>
         <li>
-          <i class="fas fa-star"></i> 
+          <i class="fas fa-star"></i>
           <strong>4.8/5</strong> note moyenne des utilisateurs
         </li>
         <li>
-          <i class="fas fa-shield-alt"></i> 
+          <i class="fas fa-shield-alt"></i>
           <strong>Données sécurisées</strong> • RGPD conforme
         </li>
       </ul>
@@ -45,7 +45,7 @@
           "L'estimation était très proche de l'offre reçue. Recommandé pour avoir un avis fiable avant de vendre !"
         </p>
         <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Marie D. • Bordeaux Chartrons
+          — Marie D. • Nandy Centre
         </p>
       </div>
 
@@ -74,11 +74,11 @@
         <div class="form-row">
           <label for="city">
             <span><i class="fas fa-map-marker-alt"></i> Ville</span>
-            <input 
-              type="text" 
-              id="city" 
-              name="city" 
-              placeholder="Bordeaux, Talence, Floirac..." 
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Nandy, Savigny-le-Temple, Melun..."
               required
               autocomplete="off"
             >
@@ -86,11 +86,11 @@
 
           <label for="postal_code">
             <span><i class="fas fa-envelope"></i> Code postal</span>
-            <input 
-              type="text" 
-              id="postal_code" 
-              name="postal_code" 
-              placeholder="33000" 
+            <input
+              type="text"
+              id="postal_code"
+              name="postal_code"
+              placeholder="77176"
               maxlength="5"
               required
             >
@@ -113,14 +113,14 @@
 
           <label for="surface">
             <span><i class="fas fa-ruler-combined"></i> Surface (m²)</span>
-            <input 
-              type="number" 
-              id="surface" 
-              name="surface" 
-              min="10" 
-              max="500" 
+            <input
+              type="number"
+              id="surface"
+              name="surface"
+              min="10"
+              max="500"
               step="0.1"
-              placeholder="85" 
+              placeholder="85"
               required
             >
           </label>
@@ -130,26 +130,26 @@
         <div class="form-row">
           <label for="rooms">
             <span><i class="fas fa-door-open"></i> Nombre de pièces</span>
-            <input 
-              type="number" 
-              id="rooms" 
-              name="rooms" 
-              min="1" 
+            <input
+              type="number"
+              id="rooms"
+              name="rooms"
+              min="1"
               max="10"
-              placeholder="3" 
+              placeholder="3"
               required
             >
           </label>
 
           <label for="year_built">
             <span><i class="fas fa-calendar"></i> Année construction</span>
-            <input 
-              type="number" 
-              id="year_built" 
-              name="year_built" 
-              min="1850" 
+            <input
+              type="number"
+              id="year_built"
+              name="year_built"
+              min="1850"
               max="2024"
-              placeholder="2005" 
+              placeholder="2005"
               required
             >
           </label>
@@ -186,26 +186,26 @@
         <div class="form-row">
           <label for="bedrooms">
             <span><i class="fas fa-bed"></i> Chambres</span>
-            <input 
-              type="number" 
-              id="bedrooms" 
-              name="bedrooms" 
-              min="0" 
+            <input
+              type="number"
+              id="bedrooms"
+              name="bedrooms"
+              min="0"
               max="10"
-              placeholder="2" 
+              placeholder="2"
               required
             >
           </label>
 
           <label for="bathrooms">
             <span><i class="fas fa-bath"></i> Salles de bain</span>
-            <input 
-              type="number" 
-              id="bathrooms" 
-              name="bathrooms" 
-              min="0" 
+            <input
+              type="number"
+              id="bathrooms"
+              name="bathrooms"
+              min="0"
               max="5"
-              placeholder="1" 
+              placeholder="1"
               required
             >
           </label>
@@ -218,8 +218,8 @@
 
         <!-- REASSURANCE -->
         <p class="form-footer" style="text-align: center; margin: 1rem 0 0; font-size: 0.8rem;">
-          <i class="fas fa-check-circle"></i> 100% gratuit • 
-          <i class="fas fa-zap"></i> Résultat en 1 min • 
+          <i class="fas fa-check-circle"></i> 100% gratuit •
+          <i class="fas fa-zap"></i> Résultat en 1 min •
           <i class="fas fa-lock"></i> Sécurisé & confidentiel
         </p>
       </form>
@@ -292,7 +292,7 @@
           <i class="fas fa-database"></i>
         </div>
         <h3>Données actualisées</h3>
-        <p>Base de données de 5000+ transactions récentes en Gironde. Marché temps réel, pas de données obsolètes.</p>
+        <p>Base de données de 5000+ transactions récentes en Seine-et-Marne. Marché temps réel, pas de données obsolètes.</p>
       </article>
 
       <!-- AVANTAGE 2 -->
@@ -301,7 +301,7 @@
           <i class="fas fa-robot"></i>
         </div>
         <h3>Algorithme intelligent</h3>
-        <p>Machine learning entraîné sur les tendances bordelaises. Précision ±5% en conditions normales.</p>
+        <p>Machine learning entraîné sur les tendances du marché local. Précision ±5% en conditions normales.</p>
       </article>
 
       <!-- AVANTAGE 3 -->
@@ -362,31 +362,31 @@
           <p class="eyebrow">
             <i class="fas fa-check-circle"></i> Estimation pour
           </p>
-          <h2>T3 • Bordeaux Chartrons</h2>
+          <h2>T3 • Nandy Centre</h2>
           <p>85 m² • Année 2005 • État bon</p>
         </div>
 
         <div class="kpi-grid">
           <div class="kpi-box kpi-low">
             <p class="kpi-label"><i class="fas fa-arrow-down"></i> Prix minimum</p>
-            <p class="kpi-value">290 K€</p>
+            <p class="kpi-value">215 K€</p>
           </div>
 
           <div class="kpi-box kpi-mid">
             <p class="kpi-label"><i class="fas fa-target"></i> Estimation centrale</p>
-            <p class="kpi-value">315 K€</p>
+            <p class="kpi-value">240 K€</p>
           </div>
 
           <div class="kpi-box kpi-high">
             <p class="kpi-label"><i class="fas fa-arrow-up"></i> Prix maximum</p>
-            <p class="kpi-value">340 K€</p>
+            <p class="kpi-value">265 K€</p>
           </div>
         </div>
 
         <div class="result-detail">
           <p class="detail-label"><i class="fas fa-coins"></i> Prix au m²</p>
-          <p class="detail-value">€3 700</p>
-          <p class="detail-info">Moyenne pour votre quartier : €3 500 - €4 100</p>
+          <p class="detail-value">€2 820</p>
+          <p class="detail-info">Moyenne pour votre secteur : €2 600 - €3 100</p>
         </div>
       </div>
 
@@ -397,11 +397,11 @@
             <i class="fas fa-chart-line"></i> Tendance du marché
           </h3>
           <p style="margin: 0; color: var(--text); font-weight: 600;">
-            <i class="fas fa-arrow-up" style="color: #22c55e;"></i> 
-            <span style="color: #22c55e;">Marché haussier</span>
+            <i class="fas fa-arrow-up" style="color: #22c55e;"></i>
+            <span style="color: #22c55e;">Marché stable</span>
           </p>
           <p style="margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem;">
-            Prix en hausse de +3.2% sur les 12 derniers mois dans ce secteur.
+            Prix en légère hausse de +1.8% sur les 12 derniers mois dans ce secteur.
           </p>
         </div>
 
@@ -411,7 +411,7 @@
           </h3>
           <ul style="margin: 0; padding-left: 1.5rem; list-style: none;">
             <li style="margin-bottom: 0.5rem; color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation prime (Chartrons)
+              <span style="color: var(--primary); font-weight: 700;">✓</span> Proximité gare RER D
             </li>
             <li style="margin-bottom: 0.5rem; color: var(--text);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Bien entretenu (+5%)
@@ -491,14 +491,14 @@
         Estimez votre bien en 60 secondes
       </h2>
       <p class="lead" style="max-width: 600px; margin: 0 auto 2rem;">
-        Obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. 100% gratuit, sans engagement, confidentiel.
+        Obtenez une fourchette de prix précise basée sur les données réelles du marché de Nandy et ses environs. 100% gratuit, sans engagement, confidentiel.
       </p>
       <a href="#form-estimation" class="btn btn-primary" style="display: inline-flex; font-size: 1.1rem; padding: 1.2rem 2rem;">
         <i class="fas fa-calculator"></i> Lancer mon estimation gratuite
       </a>
       <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted);">
-        <i class="fas fa-clock"></i> Résultat en 1 minute • 
-        <i class="fas fa-lock"></i> Données sécurisées • 
+        <i class="fas fa-clock"></i> Résultat en 1 minute •
+        <i class="fas fa-lock"></i> Données sécurisées •
         <i class="fas fa-check-circle"></i> Sans engagement
       </p>
     </div>

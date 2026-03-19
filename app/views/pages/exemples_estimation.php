@@ -1,4 +1,4 @@
-<?php $page_title = 'Exemple Estimation - Cas Réels Bordeaux | Nos Résultats'; ?>
+<?php $page_title = 'Exemple Estimation - Cas Réels Nandy | Nos Résultats'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -11,7 +11,7 @@
       </p>
       <h1>Exemples d'estimations complètes</h1>
       <p class="lead">
-        Découvrez comment nos estimations fonctionnent sur des biens réels de Bordeaux. 
+        Découvrez comment nos estimations fonctionnent sur des biens réels de Nandy et ses environs.
         Fourchettes de prix, analyses détaillées, facteurs d'ajustement.
       </p>
     </div>
@@ -19,32 +19,32 @@
 </section>
 
 <!-- ============================================ -->
-<!-- CAS 1: APPARTEMENT CHARTRONS -->
+<!-- CAS 1: APPARTEMENT CENTRE-VILLE NANDY -->
 <!-- ============================================ -->
 <section class="section">
   <div class="container">
     <article class="card">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-        
+
         <!-- GAUCHE: BIEN DÉCRIT -->
         <div>
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-home"></i> Cas #1
           </p>
-          <h2 style="margin: 0 0 1.5rem;">Appartement Chartrons, Bordeaux</h2>
-          
+          <h2 style="margin: 0 0 1.5rem;">Appartement Centre-ville, Nandy</h2>
+
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
             <h3 style="margin: 0 0 1rem; font-size: 1rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Caractéristiques</h3>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Quai des Chartrons</p>
+                <p style="margin: 0; font-weight: 600;">Rue de l'Église</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
-                <p style="margin: 0; font-weight: 600;">33000</p>
+                <p style="margin: 0; font-weight: 600;">77176</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Type</p>
@@ -104,24 +104,24 @@
           <!-- FOURCHETTE PRIX -->
           <div style="background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.03)); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; text-align: center;">
             <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 700;">Fourchette de prix</p>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Min</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">280 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">200 000 €</p>
               </div>
               <div style="background: white; border: 2px solid var(--accent); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; justify-content: center;">
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Médian (recommandé)</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">320 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">230 000 €</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Max</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">360 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">260 000 €</p>
               </div>
             </div>
 
             <p style="margin: 0; font-size: 0.9rem; color: var(--text);">
-              <strong>Écart:</strong> <span style="color: var(--primary);">80 000 €</span> (25% de flexibilité)
+              <strong>Écart:</strong> <span style="color: var(--primary);">60 000 €</span> (26% de flexibilité)
             </p>
           </div>
 
@@ -129,7 +129,7 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Prix/m²</p>
-              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">3 765 €</p>
+              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">2 700 €</p>
             </div>
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Comparatif marché</p>
@@ -140,7 +140,7 @@
           <!-- ANALYSE -->
           <div style="background: rgba(var(--success-rgb), 0.05); border-left: 4px solid #22c55e; border-radius: 8px; padding: 1rem;">
             <p style="margin: 0 0 0.5rem; font-weight: 600; color: #22c55e;">✓ Analyse très positive</p>
-            <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Quartier Chartrons très demandé. Prix au m² 12% au-dessus de la moyenne bordelaise. Potentiel de vente excellent. Surface et type adaptés au marché.</p>
+            <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Centre de Nandy très demandé, proximité RER D. Prix au m² 12% au-dessus de la moyenne locale. Potentiel de vente excellent. Surface et type adaptés au marché.</p>
           </div>
         </div>
 
@@ -150,32 +150,32 @@
 </section>
 
 <!-- ============================================ -->
-<!-- CAS 2: MAISON TALENCE -->
+<!-- CAS 2: MAISON SAVIGNY-LE-TEMPLE -->
 <!-- ============================================ -->
 <section class="section section-alt">
   <div class="container">
     <article class="card">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-        
+
         <!-- GAUCHE: BIEN DÉCRIT -->
         <div>
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-house"></i> Cas #2
           </p>
-          <h2 style="margin: 0 0 1.5rem;">Maison Talence, Banlieue Bordeaux</h2>
-          
+          <h2 style="margin: 0 0 1.5rem;">Maison Savigny-le-Temple</h2>
+
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
             <h3 style="margin: 0 0 1rem; font-size: 1rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Caractéristiques</h3>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Talence</p>
+                <p style="margin: 0; font-weight: 600;">Savigny-le-Temple</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
-                <p style="margin: 0; font-weight: 600;">33400</p>
+                <p style="margin: 0; font-weight: 600;">77176</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Type</p>
@@ -211,7 +211,7 @@
                   <li>Terrain spacieux</li>
                   <li>Garage double</li>
                   <li>Calme résidentiel</li>
-                  <li>Proximité université</li>
+                  <li>Proximité écoles et commerces</li>
                 </ul>
               </div>
               <div>
@@ -220,7 +220,7 @@
                   <li>Travaux importants</li>
                   <li>Toiture à rénover</li>
                   <li>Électricité vieille</li>
-                  <li>Éloigné du centre</li>
+                  <li>Éloigné du RER</li>
                 </ul>
               </div>
             </div>
@@ -236,24 +236,24 @@
           <!-- FOURCHETTE PRIX -->
           <div style="background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.03)); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; text-align: center;">
             <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 700;">Fourchette de prix</p>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Min</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">380 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">280 000 €</p>
               </div>
               <div style="background: white; border: 2px solid var(--accent); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; justify-content: center;">
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Médian (recommandé)</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">450 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">330 000 €</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Max</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">520 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">380 000 €</p>
               </div>
             </div>
 
             <p style="margin: 0; font-size: 0.9rem; color: var(--text);">
-              <strong>Écart:</strong> <span style="color: var(--primary);">140 000 €</span> (31% de flexibilité)
+              <strong>Écart:</strong> <span style="color: var(--primary);">100 000 €</span> (30% de flexibilité)
             </p>
           </div>
 
@@ -261,7 +261,7 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Prix/m²</p>
-              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">3 000 €</p>
+              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">2 200 €</p>
             </div>
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Comparatif marché</p>
@@ -282,32 +282,32 @@
 </section>
 
 <!-- ============================================ -->
-<!-- CAS 3: T2 BACALAN -->
+<!-- CAS 3: T2 CESSON -->
 <!-- ============================================ -->
 <section class="section">
   <div class="container">
     <article class="card">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-        
+
         <!-- GAUCHE: BIEN DÉCRIT -->
         <div>
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-apartment"></i> Cas #3
           </p>
-          <h2 style="margin: 0 0 1.5rem;">T2 Rénové Bacalan, Bordeaux</h2>
-          
+          <h2 style="margin: 0 0 1.5rem;">T2 Rénové Cesson</h2>
+
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
             <h3 style="margin: 0 0 1rem; font-size: 1rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Caractéristiques</h3>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Bacalan</p>
+                <p style="margin: 0; font-weight: 600;">Cesson</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
-                <p style="margin: 0; font-weight: 600;">33300</p>
+                <p style="margin: 0; font-weight: 600;">77240</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Type</p>
@@ -341,8 +341,8 @@
                 <p style="margin: 0 0 0.5rem; font-size: 0.85rem; text-transform: uppercase; color: #22c55e; font-weight: 700;">✓ Points positifs</p>
                 <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.9rem;">
                   <li>Moderne & rénové</li>
-                  <li>Balcon vue sur fleuve</li>
-                  <li>Quartier branché</li>
+                  <li>Balcon vue sur forêt</li>
+                  <li>Commune calme et résidentielle</li>
                   <li>Piscine en immeuble</li>
                 </ul>
               </div>
@@ -368,24 +368,24 @@
           <!-- FOURCHETTE PRIX -->
           <div style="background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.03)); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; text-align: center;">
             <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 700;">Fourchette de prix</p>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Min</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">165 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #e24b4a;">130 000 €</p>
               </div>
               <div style="background: white; border: 2px solid var(--accent); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; justify-content: center;">
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Médian (recommandé)</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">190 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.5rem; color: var(--primary);">150 000 €</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.8rem;">Max</p>
-                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">215 000 €</p>
+                <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: #22c55e;">170 000 €</p>
               </div>
             </div>
 
             <p style="margin: 0; font-size: 0.9rem; color: var(--text);">
-              <strong>Écart:</strong> <span style="color: var(--primary);">50 000 €</span> (26% de flexibilité)
+              <strong>Écart:</strong> <span style="color: var(--primary);">40 000 €</span> (27% de flexibilité)
             </p>
           </div>
 
@@ -393,7 +393,7 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Prix/m²</p>
-              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">3 958 €</p>
+              <p style="margin: 0; font-weight: 700; font-size: 1.2rem; color: var(--primary);">3 125 €</p>
             </div>
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;">
               <p style="margin: 0 0 0.3rem; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Comparatif marché</p>
@@ -430,9 +430,9 @@
         <thead style="background: var(--surface); border-bottom: 2px solid var(--border);">
           <tr>
             <th style="padding: 1rem; text-align: left; font-weight: 700;">Caractéristique</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #1 - Chartrons</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #2 - Talence</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #3 - Bacalan</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #1 - Nandy</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #2 - Savigny</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #3 - Cesson</th>
           </tr>
         </thead>
         <tbody>
@@ -468,15 +468,15 @@
           </tr>
           <tr style="border-bottom: 1px solid var(--border);">
             <td style="padding: 1rem; font-weight: 700;">Estimation médiane</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">320 000 €</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">450 000 €</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">190 000 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">230 000 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">330 000 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700; color: var(--primary);">150 000 €</td>
           </tr>
           <tr style="border-bottom: 1px solid var(--border);">
             <td style="padding: 1rem; font-weight: 700;">Prix/m²</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700;">3 765 €</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700;">3 000 €</td>
-            <td style="padding: 1rem; text-align: center; font-weight: 700;">3 958 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700;">2 700 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700;">2 200 €</td>
+            <td style="padding: 1rem; text-align: center; font-weight: 700;">3 125 €</td>
           </tr>
           <tr>
             <td style="padding: 1rem; font-weight: 700;">Comparatif marché</td>
@@ -547,7 +547,7 @@
       </p>
       <h2>Utilisez notre formulaire d'estimation</h2>
       <p class="lead">
-        Voyez comment nos estimations fonctionnent sur votre propre bien. 
+        Voyez comment nos estimations fonctionnent sur votre propre bien.
         Résultat en 60 secondes.
       </p>
       <a href="/estimation" class="btn btn-primary">

@@ -11,7 +11,7 @@
 <section class="section">
   <div class="container card" style="display: grid; gap: 1.25rem;">
     <h2>Données collectées</h2>
-    <p>Nous collectons uniquement les informations nécessaires au traitement de votre demande d’estimation (coordonnées, informations sur le bien, messages).</p>
+    <p>Nous collectons uniquement les informations nécessaires au traitement de votre demande d'estimation (coordonnées, informations sur le bien, messages).</p>
 
     <h2>Finalités</h2>
     <p>Les données sont utilisées pour répondre à vos demandes, améliorer le service et assurer le suivi commercial si vous y consentez.</p>
@@ -20,6 +20,6 @@
     <p>Les données sont conservées pour la durée strictement nécessaire aux finalités poursuivies, puis archivées ou supprimées.</p>
 
     <h2>Vos droits</h2>
-    <p>Vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-bordeaux.fr">contact@estimation-immobilier-bordeaux.fr</a>.</p>
+    <p>Vous disposez d'un droit d'accès, de rectification, d'opposition, d'effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-nandy.fr">contact@estimation-immobilier-nandy.fr</a>.</p>
   </div>
 </section>

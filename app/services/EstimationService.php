@@ -13,8 +13,8 @@ final class EstimationService
         $surfaceFactor = $this->resolveSurfaceFactor($surface);
         $roomsFactor = $this->resolveRoomsFactor($rooms);
 
-        // Simulation locale simple (pas d'appel API pour l'instant)
-        $basePerSqm = 4200.0;
+        // Prix de base au m² pour la zone Nandy / Sud Seine-et-Marne
+        $basePerSqm = 3000.0;
         $perSqmMid = round($basePerSqm * $cityFactor * $typeFactor * $surfaceFactor * $roomsFactor, 2);
 
         $perSqmLow = round($perSqmMid * 0.9, 2);
@@ -42,8 +42,28 @@ final class EstimationService
     {
         $cityLower = mb_strtolower($city);
 
-        if (str_contains($cityLower, 'bordeaux')) {
-            return 1.14;
+        if (str_contains($cityLower, 'nandy')) {
+            return 1.0;
+        }
+
+        if (str_contains($cityLower, 'melun')) {
+            return 1.05;
+        }
+
+        if (str_contains($cityLower, 'savigny')) {
+            return 0.95;
+        }
+
+        if (str_contains($cityLower, 'cesson')) {
+            return 0.98;
+        }
+
+        if (str_contains($cityLower, 'lieusaint')) {
+            return 0.97;
+        }
+
+        if (str_contains($cityLower, 'moissy')) {
+            return 0.93;
         }
 
         if (str_contains($cityLower, 'paris')) {

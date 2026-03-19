@@ -11,7 +11,7 @@ final class ToolController
     public function calculatrice(): void
     {
         View::render('tools/calculatrice', [
-            'page_title' => 'Calculatrice Immobilière Bordeaux - Estimation Rapide',
+            'page_title' => 'Calculatrice Immobilière Nandy - Estimation Rapide',
         ]);
     }
 }

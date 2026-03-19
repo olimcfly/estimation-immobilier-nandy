@@ -1,4 +1,4 @@
-<?php $page_title = 'Contact - Estimation Immobilière Bordeaux | Nous Sommes Disponibles'; ?>
+<?php $page_title = 'Contact - Estimation Immobilière Nandy | Nous Sommes Disponibles'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -11,7 +11,7 @@
       </p>
       <h1>Parlons de votre projet immobilier</h1>
       <p class="lead">
-        Besoin d'un avis expert ? Des questions sur une estimation ? Notre équipe bordelaise est disponible pour vous accompagner.
+        Besoin d'un avis expert ? Des questions sur une estimation ? Notre équipe locale est disponible pour vous accompagner.
       </p>
     </div>
   </div>
@@ -23,7 +23,7 @@
 <section class="section">
   <div class="container">
     <div class="contact-layout">
-      
+
       <!-- GAUCHE: INFOS CONTACT -->
       <article class="card contact-info">
         <h2>
@@ -36,7 +36,7 @@
             <i class="fas fa-phone"></i> Téléphone
           </p>
           <p class="info-value">
-            <a href="tel:+33556000000">+33 5 56 00 00 00</a>
+            <a href="tel:+33164000000">+33 1 64 00 00 00</a>
           </p>
           <ul class="hours-list">
             <li>
@@ -60,8 +60,8 @@
             <i class="fas fa-envelope"></i> Email
           </p>
           <p class="info-value">
-            <a href="mailto:contact@estimation-immobilier-bordeaux.fr">
-              contact@estimation-immobilier-bordeaux.fr
+            <a href="mailto:contact@estimation-immobilier-nandy.fr">
+              contact@estimation-immobilier-nandy.fr
             </a>
           </p>
           <p class="info-desc">
@@ -75,8 +75,8 @@
             <i class="fas fa-map-marker-alt"></i> Adresse
           </p>
           <p class="info-value">
-            12 Quai des Chartrons<br>
-            33000 Bordeaux<br>
+            15 Rue de l'Église<br>
+            77176 Nandy<br>
             France
           </p>
           <p class="info-desc">
@@ -116,11 +116,11 @@
           <!-- NOM -->
           <label for="nom" class="full-width">
             <span><i class="fas fa-user"></i> Nom complet *</span>
-            <input 
-              type="text" 
-              id="nom" 
-              name="nom" 
-              placeholder="Jean Dupont" 
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Jean Dupont"
               required
             >
           </label>
@@ -128,11 +128,11 @@
           <!-- EMAIL -->
           <label for="email" class="full-width">
             <span><i class="fas fa-envelope"></i> Email *</span>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="jean@exemple.com" 
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jean@exemple.com"
               required
             >
           </label>
@@ -140,11 +140,11 @@
           <!-- TÉLÉPHONE -->
           <label for="telephone" class="full-width">
             <span><i class="fas fa-phone"></i> Téléphone</span>
-            <input 
-              type="tel" 
-              id="telephone" 
-              name="telephone" 
-              placeholder="+33 5 56 00 00 00"
+            <input
+              type="tel"
+              id="telephone"
+              name="telephone"
+              placeholder="+33 1 64 00 00 00"
             >
           </label>
 
@@ -164,22 +164,22 @@
 
           <!-- QUARTIER/VILLE -->
           <label for="quartier" class="full-width">
-            <span><i class="fas fa-map-marker-alt"></i> Quartier / Ville concerné(e)</span>
-            <input 
-              type="text" 
-              id="quartier" 
-              name="quartier" 
-              placeholder="Ex: Chartrons, Talence, Floirac..."
+            <span><i class="fas fa-map-marker-alt"></i> Commune / Secteur concerné(e)</span>
+            <input
+              type="text"
+              id="quartier"
+              name="quartier"
+              placeholder="Ex: Nandy, Savigny-le-Temple, Melun..."
             >
           </label>
 
           <!-- MESSAGE -->
           <label for="message" class="full-width">
             <span><i class="fas fa-pen"></i> Votre message *</span>
-            <textarea 
-              id="message" 
-              name="message" 
-              placeholder="Décrivez votre situation, vos questions..." 
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Décrivez votre situation, vos questions..."
               rows="6"
               required
             ></textarea>
@@ -187,23 +187,23 @@
 
           <!-- CHECKBOX RGPD -->
           <div class="form-checkbox full-width">
-            <input 
-              type="checkbox" 
-              id="rgpd" 
-              name="rgpd" 
+            <input
+              type="checkbox"
+              id="rgpd"
+              name="rgpd"
               required
             >
             <label for="rgpd" style="margin: 0; font-weight: 500; font-size: 0.9rem; color: var(--text); cursor: pointer;">
-              J'accepte la 
-              <a href="/politique-confidentialite">politique de confidentialité</a> 
-              et je consens à recevoir des communications de la part d'Estimation Bordeaux *
+              J'accepte la
+              <a href="/politique-confidentialite">politique de confidentialité</a>
+              et je consens à recevoir des communications de la part d'Estimation Nandy *
             </label>
           </div>
 
           <!-- SUBMIT -->
-          <button 
-            type="submit" 
-            class="btn btn-primary full-width" 
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
             style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 1rem; padding: 1rem;"
           >
             <i class="fas fa-paper-plane"></i> Envoyer mon message
@@ -211,7 +211,7 @@
 
           <!-- LEGAL INFO -->
           <p class="form-footer" style="text-align: center; margin-top: 1rem; font-size: 0.8rem; grid-column: 1 / -1;">
-            <i class="fas fa-lock"></i> Vos données sont sécurisées. 
+            <i class="fas fa-lock"></i> Vos données sont sécurisées.
             <i class="fas fa-check-circle"></i> Nous vous répondrons rapidement.
           </p>
         </form>
@@ -240,10 +240,10 @@
           <i class="fas fa-phone"></i> Par téléphone
         </h3>
         <p>
-          Parlez directement à un expert. Réponses immédiates à vos questions. 
+          Parlez directement à un expert. Réponses immédiates à vos questions.
           Disponible du lundi au samedi, 9h-19h.
         </p>
-        <a href="tel:+33556000000" class="btn btn-small" style="margin-top: 1rem;">
+        <a href="tel:+33164000000" class="btn btn-small" style="margin-top: 1rem;">
           <i class="fas fa-phone"></i> Appeler maintenant
         </a>
       </article>
@@ -254,10 +254,10 @@
           <i class="fas fa-envelope"></i> Par email
         </h3>
         <p>
-          Envoyez-nous un email détaillé. Notre équipe vous répond en moins de 24h. 
+          Envoyez-nous un email détaillé. Notre équipe vous répond en moins de 24h.
           Idéal pour les questions complexes.
         </p>
-        <a href="mailto:contact@estimation-immobilier-bordeaux.fr" class="btn btn-small" style="margin-top: 1rem;">
+        <a href="mailto:contact@estimation-immobilier-nandy.fr" class="btn btn-small" style="margin-top: 1rem;">
           <i class="fas fa-envelope"></i> Envoyer un email
         </a>
       </article>
@@ -268,7 +268,7 @@
           <i class="fas fa-comment-dots"></i> Via le formulaire
         </h3>
         <p>
-          Remplissez le formulaire ci-dessus. Nous traiterons votre demande 
+          Remplissez le formulaire ci-dessus. Nous traiterons votre demande
           en priorité et vous recontacterons rapidement.
         </p>
         <a href="#form-contact" class="btn btn-small" style="margin-top: 1rem;">
@@ -282,7 +282,7 @@
           <i class="fas fa-comments"></i> Chat en direct
         </h3>
         <p>
-          Discussions instantanées avec nos experts (disponible du lundi 
+          Discussions instantanées avec nos experts (disponible du lundi
           au vendredi, 9h-18h). Support immédiat pour vos questions.
         </p>
         <button class="btn btn-small" style="margin-top: 1rem; cursor: pointer;">
@@ -296,7 +296,7 @@
           <i class="fas fa-share-alt"></i> Sur les réseaux sociaux
         </h3>
         <p>
-          Suivez-nous sur Facebook, Instagram et LinkedIn. Actualités, 
+          Suivez-nous sur Facebook, Instagram et LinkedIn. Actualités,
           conseils immobiliers et réponses à vos questions.
         </p>
         <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
@@ -318,8 +318,8 @@
           <i class="fas fa-calendar"></i> Prendre rendez-vous
         </h3>
         <p>
-          Préférez une consultation en personne ? Prenez rendez-vous 
-          avec nos experts au siège à Bordeaux.
+          Préférez une consultation en personne ? Prenez rendez-vous
+          avec nos experts à Nandy.
         </p>
         <button class="btn btn-small" style="margin-top: 1rem; cursor: pointer;">
           <i class="fas fa-calendar"></i> Prendre RDV
@@ -342,68 +342,62 @@
     </div>
 
     <div class="faq-grid">
-      <!-- FAQ 1 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Quel est le meilleur moyen pour me contacter?
         </h3>
         <p>
-          Cela dépend de votre besoin. Pour une question rapide, appelez-nous. 
+          Cela dépend de votre besoin. Pour une question rapide, appelez-nous.
           Pour une demande détaillée, utilisez le formulaire ou l'email. Le chat est parfait pour les urgences.
         </p>
       </article>
 
-      <!-- FAQ 2 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Combien de temps pour obtenir une réponse?
         </h3>
         <p>
-          Par téléphone : immédiat. Par email/formulaire : moins de 24h. 
+          Par téléphone : immédiat. Par email/formulaire : moins de 24h.
           Par chat : réponse en quelques minutes (heures de bureau).
         </p>
       </article>
 
-      <!-- FAQ 3 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Êtes-vous disponibles le week-end?
         </h3>
         <p>
-          Le samedi de 10h à 17h. Le dimanche fermé. Pour les urgences en dehors des heures, 
+          Le samedi de 10h à 17h. Le dimanche fermé. Pour les urgences en dehors des heures,
           utilisez le formulaire et nous vous répondrons dès lundi.
         </p>
       </article>
 
-      <!-- FAQ 4 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Puis-je visiter vos bureaux?
         </h3>
         <p>
-          Oui ! Sur rendez-vous. 12 Quai des Chartrons, Bordeaux. 
+          Oui ! Sur rendez-vous. 15 Rue de l'Église, Nandy.
           Parking gratuit et accès PMR disponibles.
         </p>
       </article>
 
-      <!-- FAQ 5 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Mes données sont-elles sécurisées?
         </h3>
         <p>
-          Absolument. Chiffrement SSL/TLS, RGPD conforme. Vos données ne sont jamais vendues. 
+          Absolument. Chiffrement SSL/TLS, RGPD conforme. Vos données ne sont jamais vendues.
           Nous respectons votre confidentialité.
         </p>
       </article>
 
-      <!-- FAQ 6 -->
       <article class="card faq-card">
         <h3>
           <i class="fas fa-question-circle"></i> Puis-je demander un rappel?
         </h3>
         <p>
-          Oui, indiquez-le dans le formulaire. Nous vous recontacterons au moment qui vous convient. 
+          Oui, indiquez-le dans le formulaire. Nous vous recontacterons au moment qui vous convient.
           Vous pouvez aussi nous appeler directement.
         </p>
       </article>
@@ -422,7 +416,7 @@
       </p>
       <h2>Commencez par une estimation gratuite</h2>
       <p class="lead">
-        Avant de nous contacter, découvrez la fourchette de prix de votre bien. 
+        Avant de nous contacter, découvrez la fourchette de prix de votre bien.
         100% gratuit, résultat en 1 minute.
       </p>
       <a href="/#form-estimation" class="btn btn-primary">

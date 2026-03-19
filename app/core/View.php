@@ -40,7 +40,7 @@ final class View
             return $explicitDescription;
         }
 
-        $pageTitle = trim((string) ($data['page_title'] ?? 'Estimation Immobilière Bordeaux'));
+        $pageTitle = trim((string) ($data['page_title'] ?? 'Estimation Immobilière Nandy'));
         $plainContent = html_entity_decode(strip_tags($pageContent), ENT_QUOTES | ENT_HTML5, 'UTF-8');
         $plainContent = preg_replace('/\s+/u', ' ', $plainContent) ?? '';
         $plainContent = trim($plainContent);
