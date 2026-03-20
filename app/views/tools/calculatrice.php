@@ -1,11 +1,11 @@
-<?php $page_title = 'Calculatrice Immobilière Bordeaux - Estimation Rapide'; ?>
+<?php $page_title = 'Calculatrice Immobilière Nandy - Estimation Rapide'; ?>
 
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-calculator"></i> Outil gratuit</p>
       <h1>Calculatrice de prix immobilier</h1>
-      <p class="lead">Estimez rapidement une valeur de vente à partir de la surface et du prix au m² à Bordeaux.</p>
+      <p class="lead">Estimez rapidement une valeur de vente à partir de la surface et du prix au m² à Nandy et ses environs.</p>
     </div>
   </div>
 </section>
@@ -21,7 +21,7 @@
 
         <div class="form-group">
           <label for="pricePerM2">Prix au m² (€)</label>
-          <input id="pricePerM2" name="pricePerM2" type="number" min="1" step="50" placeholder="Ex: 4800" required>
+          <input id="pricePerM2" name="pricePerM2" type="number" min="1" step="50" placeholder="Ex: 2850" required>
         </div>
 
         <div class="form-group">
@@ -35,7 +35,7 @@
         </button>
       </form>
 
-      <div id="calculatorResult" class="card" style="margin-top: 1.5rem; display:none; background:#fdf7fa; border-color:#efd9e0;">
+      <div id="calculatorResult" class="card" style="margin-top: 1.5rem; display:none; background:#f1f8e9; border-color:#c8e6c9;">
         <h2 style="margin-bottom:0.5rem;">Résultat estimé</h2>
         <p style="margin:0.35rem 0;"><strong>Prix central :</strong> <span id="medianPrice">-</span></p>
         <p style="margin:0.35rem 0;"><strong>Fourchette basse :</strong> <span id="lowPrice">-</span></p>

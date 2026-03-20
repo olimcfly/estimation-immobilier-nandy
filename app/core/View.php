@@ -19,6 +19,11 @@ final class View
         $pageContent = self::renderTemplate($templatePath, $data);
         $data['meta_description'] = self::resolveMetaDescription($data, $pageContent);
 
+        $siteConfig = getSiteConfig();
+        $data['colors'] = $siteConfig['colors'];
+        $data['rgbColors'] = $siteConfig['rgb_colors'];
+        $data['googleMapsApiKey'] = Config::get('google_maps.api_key', '');
+
         extract($data, EXTR_SKIP);
         include __DIR__ . '/../views/layouts/header.php';
         echo $pageContent;
@@ -40,7 +45,7 @@ final class View
             return $explicitDescription;
         }
 
-        $pageTitle = trim((string) ($data['page_title'] ?? 'Estimation Immobilière Bordeaux'));
+        $pageTitle = trim((string) ($data['page_title'] ?? 'Estimation Immobilière Nandy'));
         $plainContent = html_entity_decode(strip_tags($pageContent), ENT_QUOTES | ENT_HTML5, 'UTF-8');
         $plainContent = preg_replace('/\s+/u', ' ', $plainContent) ?? '';
         $plainContent = trim($plainContent);

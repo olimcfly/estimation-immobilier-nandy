@@ -1,4 +1,4 @@
-<?php $page_title = 'Contact - Estimation Immobilière Bordeaux | Nous Sommes Disponibles'; ?>
+<?php $page_title = 'Contact - Estimation Immobilière Nandy | Nous Sommes Disponibles'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -11,7 +11,7 @@
       </p>
       <h1>Parlons de votre projet immobilier</h1>
       <p class="lead">
-        Besoin d'un avis expert ? Des questions sur une estimation ? Notre équipe bordelaise est disponible pour vous accompagner.
+        Besoin d'un avis expert ? Des questions sur une estimation ? Notre équipe locale est disponible pour vous accompagner.
       </p>
     </div>
   </div>
@@ -36,7 +36,7 @@
             <i class="fas fa-phone"></i> Téléphone
           </p>
           <p class="info-value">
-            <a href="tel:+33556000000">+33 5 56 00 00 00</a>
+            <a href="tel:+33164000000">+33 1 64 00 00 00</a>
           </p>
           <ul class="hours-list">
             <li>
@@ -60,8 +60,8 @@
             <i class="fas fa-envelope"></i> Email
           </p>
           <p class="info-value">
-            <a href="mailto:contact@estimation-immobilier-bordeaux.fr">
-              contact@estimation-immobilier-bordeaux.fr
+            <a href="mailto:contact@estimation-immobilier-nandy.fr">
+              contact@estimation-immobilier-nandy.fr
             </a>
           </p>
           <p class="info-desc">
@@ -75,8 +75,8 @@
             <i class="fas fa-map-marker-alt"></i> Adresse
           </p>
           <p class="info-value">
-            12 Quai des Chartrons<br>
-            33000 Bordeaux<br>
+            Nandy<br>
+            77176 Seine-et-Marne<br>
             France
           </p>
           <p class="info-desc">
@@ -144,7 +144,7 @@
               type="tel" 
               id="telephone" 
               name="telephone" 
-              placeholder="+33 5 56 00 00 00"
+              placeholder="+33 1 64 00 00 00"
             >
           </label>
 
@@ -169,7 +169,7 @@
               type="text" 
               id="quartier" 
               name="quartier" 
-              placeholder="Ex: Chartrons, Talence, Floirac..."
+              placeholder="Ex: Nandy, Savigny, Cesson, Melun..."
             >
           </label>
 
@@ -196,7 +196,7 @@
             <label for="rgpd" style="margin: 0; font-weight: 500; font-size: 0.9rem; color: var(--text); cursor: pointer;">
               J'accepte la 
               <a href="/politique-confidentialite">politique de confidentialité</a> 
-              et je consens à recevoir des communications de la part d'Estimation Bordeaux *
+              et je consens à recevoir des communications de la part d'Estimation Nandy *
             </label>
           </div>
 
@@ -243,7 +243,7 @@
           Parlez directement à un expert. Réponses immédiates à vos questions. 
           Disponible du lundi au samedi, 9h-19h.
         </p>
-        <a href="tel:+33556000000" class="btn btn-small" style="margin-top: 1rem;">
+        <a href="tel:+33164000000" class="btn btn-small" style="margin-top: 1rem;">
           <i class="fas fa-phone"></i> Appeler maintenant
         </a>
       </article>
@@ -257,7 +257,7 @@
           Envoyez-nous un email détaillé. Notre équipe vous répond en moins de 24h. 
           Idéal pour les questions complexes.
         </p>
-        <a href="mailto:contact@estimation-immobilier-bordeaux.fr" class="btn btn-small" style="margin-top: 1rem;">
+        <a href="mailto:contact@estimation-immobilier-nandy.fr" class="btn btn-small" style="margin-top: 1rem;">
           <i class="fas fa-envelope"></i> Envoyer un email
         </a>
       </article>
@@ -319,7 +319,7 @@
         </h3>
         <p>
           Préférez une consultation en personne ? Prenez rendez-vous 
-          avec nos experts au siège à Bordeaux.
+          avec nos experts dans nos bureaux.
         </p>
         <button class="btn btn-small" style="margin-top: 1rem; cursor: pointer;">
           <i class="fas fa-calendar"></i> Prendre RDV
@@ -381,7 +381,7 @@
           <i class="fas fa-question-circle"></i> Puis-je visiter vos bureaux?
         </h3>
         <p>
-          Oui ! Sur rendez-vous. 12 Quai des Chartrons, Bordeaux. 
+          Oui ! Sur rendez-vous. Nandy, Seine-et-Marne. 
           Parking gratuit et accès PMR disponibles.
         </p>
       </article>

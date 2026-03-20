@@ -1,13 +1,13 @@
-<?php $page_title = 'Estimation Immobilière Bordeaux - Évaluez Votre Bien'; ?>
+<?php $page_title = 'Estimation Immobilière Nandy - Évaluez Votre Bien'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <p class="eyebrow">✓ Estimation immobilière à Bordeaux</p>
+      <p class="eyebrow">✓ Estimation immobilière à Nandy et environs</p>
       <h1>Vendez au meilleur prix avec une évaluation fiable et professionnelle</h1>
-      <p class="lead">Notre moteur analyse les données locales, les tendances du marché et les caractéristiques de votre bien pour fournir une fourchette de valeur précise en quelques secondes.</p>
+      <p class="lead">Notre moteur analyse les données locales de Nandy et de la Seine-et-Marne, les tendances du marché et les caractéristiques de votre bien pour fournir une fourchette de valeur précise en quelques secondes.</p>
       
       <ul class="trust-list">
         <li><i class="fas fa-check-circle"></i> +2 000 estimations réalisées</li>
@@ -31,7 +31,7 @@
     <div class="features-grid">
       <article class="card feature-card">
         <h3>Données locales fines</h3>
-        <p>Nous nous appuyons sur des références de transactions en Gironde pour une évaluation réaliste de votre bien.</p>
+        <p>Nous nous appuyons sur des références de transactions en Seine-et-Marne pour une évaluation réaliste de votre bien.</p>
         <a class="btn btn-small" href="#simulateur">Estimer mon bien</a>
       </article>
       <article class="card feature-card">
@@ -68,7 +68,7 @@
             </li>
             <li class="benefits-item">
               <i class="fas fa-check-circle benefits-icon"></i>
-              <span style="font-size: 0.9rem;"><strong>Données temps réel</strong> - 5000+ transactions</span>
+              <span style="font-size: 0.9rem;"><strong>Données temps réel</strong> - 3000+ transactions</span>
             </li>
             <li class="benefits-item">
               <i class="fas fa-check-circle benefits-icon"></i>
@@ -156,7 +156,7 @@
           <h3 style="margin: 0 0 1.5rem; font-size: 1.1rem;">Bien estimé</h3>
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
             <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase;">Localisation</p>
-            <p style="margin: 0 0 1rem; font-weight: 600; font-size: 1rem;">Chartrons, Bordeaux</p>
+            <p style="margin: 0 0 1rem; font-weight: 600; font-size: 1rem;">Centre, Nandy</p>
             
             <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase;">Caractéristiques</p>
             <ul style="margin: 0 0 1rem; padding-left: 1.5rem; font-size: 0.9rem;">
@@ -181,15 +181,15 @@
               <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; text-align: center;">
                 <div>
                   <p style="margin: 0; color: var(--muted); font-size: 0.8rem;">Min</p>
-                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: #e24b4a;">280 000 €</p>
+                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: #e24b4a;">215 000 €</p>
                 </div>
                 <div style="border-left: 1px solid var(--border); border-right: 1px solid var(--border);">
                   <p style="margin: 0; color: var(--muted); font-size: 0.8rem;">Médian</p>
-                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: var(--primary);">320 000 €</p>
+                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: var(--primary);">238 000 €</p>
                 </div>
                 <div>
                   <p style="margin: 0; color: var(--muted); font-size: 0.8rem;">Max</p>
-                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: #22c55e;">360 000 €</p>
+                  <p style="margin: 0.3rem 0 0; font-weight: 700; font-size: 1.1rem; color: #22c55e;">261 000 €</p>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@
             <div style="margin-bottom: 1rem;">
               <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 700;">Prix au m²</p>
               <p style="margin: 0; font-weight: 700; font-size: 1rem;">
-                <span style="color: var(--primary);">3 765 €</span>
+                <span style="color: var(--primary);">2 800 €</span>
                 <span style="color: var(--muted); font-size: 0.9rem;"> (médian)</span>
               </p>
             </div>
@@ -206,7 +206,7 @@
             <!-- ANALYSE -->
             <div style="background: rgba(var(--primary-rgb), 0.05); border-radius: 8px; padding: 1rem; font-size: 0.9rem;">
               <p style="margin: 0 0 0.5rem; font-weight: 600; color: var(--primary);">✓ Analyse positive</p>
-              <p style="margin: 0; color: var(--muted); font-size: 0.85rem;">Quartier Chartrons dynamique, prix au m² 12% au-dessus de la moyenne bordelaise, bon potentiel de vente.</p>
+              <p style="margin: 0; color: var(--muted); font-size: 0.85rem;">Nandy centre, proximité RER D et Sénart, bon potentiel de vente.</p>
             </div>
 
           </div>
@@ -231,7 +231,7 @@
       <article class="card step-card">
         <div class="step-number">02</div>
         <h3>Recevez l'estimation</h3>
-        <p>Une fourchette de prix cohérente avec la dynamique actuelle du marché bordelais.</p>
+        <p>Une fourchette de prix cohérente avec la dynamique actuelle du marché de Nandy et environs.</p>
         <a class="btn btn-small" href="#simulateur">Estimer mon bien</a>
       </article>
       <article class="card step-card">

@@ -1,4 +1,4 @@
-<?php $page_title = 'Estimation Immobilière Bordeaux | Évaluez Votre Bien en 1 Minute'; ?>
+<?php $page_title = 'Estimation Immobilière Nandy (77) | Évaluez Votre Bien en 1 Minute'; ?>
 
 <!-- ============================================ -->
 <!-- HERO ULTRA-PREMIUM -->
@@ -9,15 +9,15 @@
     <div>
       <!-- BADGE -->
       <p class="eyebrow">
-        <i class="fas fa-certificate"></i> Estimation certifiée • Données 2024
+        <i class="fas fa-certificate"></i> Estimation certifiée • Données 2025
       </p>
 
       <!-- HEADLINE H1 -->
-      <h1>Découvrez la vraie valeur de votre bien immobilier à Bordeaux</h1>
+      <h1>Découvrez la vraie valeur de votre bien immobilier à Nandy</h1>
 
       <!-- SUBHEADLINE -->
       <p class="lead">
-        En 60 secondes, obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. Aucun engagement, 100% gratuit.
+        En 60 secondes, obtenez une fourchette de prix précise basée sur les données réelles du marché de Nandy et ses environs. Aucun engagement, 100% gratuit.
       </p>
 
       <!-- TRUST INDICATORS -->
@@ -45,7 +45,7 @@
           "L'estimation était très proche de l'offre reçue. Recommandé pour avoir un avis fiable avant de vendre !"
         </p>
         <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Marie D. • Bordeaux Chartrons
+          — Marie D. • Nandy
         </p>
       </div>
 
@@ -78,7 +78,7 @@
               type="text" 
               id="city" 
               name="city" 
-              placeholder="Bordeaux, Talence, Floirac..." 
+              placeholder="Nandy, Savigny, Cesson, Melun..." 
               required
               autocomplete="off"
             >
@@ -90,7 +90,7 @@
               type="text" 
               id="postal_code" 
               name="postal_code" 
-              placeholder="33000" 
+              placeholder="77176" 
               maxlength="5"
               required
             >
@@ -148,7 +148,7 @@
               id="year_built" 
               name="year_built" 
               min="1850" 
-              max="2024"
+              max="2026"
               placeholder="2005" 
               required
             >
@@ -292,7 +292,7 @@
           <i class="fas fa-database"></i>
         </div>
         <h3>Données actualisées</h3>
-        <p>Base de données de 5000+ transactions récentes en Gironde. Marché temps réel, pas de données obsolètes.</p>
+        <p>Base de données de 3000+ transactions récentes en Seine-et-Marne. Marché temps réel, pas de données obsolètes.</p>
       </article>
 
       <!-- AVANTAGE 2 -->
@@ -301,7 +301,7 @@
           <i class="fas fa-robot"></i>
         </div>
         <h3>Algorithme intelligent</h3>
-        <p>Machine learning entraîné sur les tendances bordelaises. Précision ±5% en conditions normales.</p>
+        <p>Machine learning entraîné sur les tendances du marché seine-et-marnais. Précision ±5% en conditions normales.</p>
       </article>
 
       <!-- AVANTAGE 3 -->
@@ -362,31 +362,31 @@
           <p class="eyebrow">
             <i class="fas fa-check-circle"></i> Estimation pour
           </p>
-          <h2>T3 • Bordeaux Chartrons</h2>
+          <h2>T3 • Nandy Centre</h2>
           <p>85 m² • Année 2005 • État bon</p>
         </div>
 
         <div class="kpi-grid">
           <div class="kpi-box kpi-low">
             <p class="kpi-label"><i class="fas fa-arrow-down"></i> Prix minimum</p>
-            <p class="kpi-value">290 K€</p>
+            <p class="kpi-value">215 K€</p>
           </div>
 
           <div class="kpi-box kpi-mid">
             <p class="kpi-label"><i class="fas fa-target"></i> Estimation centrale</p>
-            <p class="kpi-value">315 K€</p>
+            <p class="kpi-value">238 K€</p>
           </div>
 
           <div class="kpi-box kpi-high">
             <p class="kpi-label"><i class="fas fa-arrow-up"></i> Prix maximum</p>
-            <p class="kpi-value">340 K€</p>
+            <p class="kpi-value">261 K€</p>
           </div>
         </div>
 
         <div class="result-detail">
           <p class="detail-label"><i class="fas fa-coins"></i> Prix au m²</p>
-          <p class="detail-value">€3 700</p>
-          <p class="detail-info">Moyenne pour votre quartier : €3 500 - €4 100</p>
+          <p class="detail-value">€2 800</p>
+          <p class="detail-info">Moyenne pour votre quartier : €2 500 - €3 100</p>
         </div>
       </div>
 
@@ -411,7 +411,7 @@
           </h3>
           <ul style="margin: 0; padding-left: 1.5rem; list-style: none;">
             <li style="margin-bottom: 0.5rem; color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation prime (Chartrons)
+              <span style="color: var(--primary); font-weight: 700;">✓</span> Proximité gare RER D
             </li>
             <li style="margin-bottom: 0.5rem; color: var(--text);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Bien entretenu (+5%)
@@ -491,7 +491,7 @@
         Estimez votre bien en 60 secondes
       </h2>
       <p class="lead" style="max-width: 600px; margin: 0 auto 2rem;">
-        Obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. 100% gratuit, sans engagement, confidentiel.
+        Obtenez une fourchette de prix précise basée sur les données réelles du marché de Nandy et environs. 100% gratuit, sans engagement, confidentiel.
       </p>
       <a href="#form-estimation" class="btn btn-primary" style="display: inline-flex; font-size: 1.1rem; padding: 1.2rem 2rem;">
         <i class="fas fa-calculator"></i> Lancer mon estimation gratuite
@@ -504,3 +504,40 @@
     </div>
   </div>
 </section>
+
+<!-- Google Places Autocomplete -->
+<script>
+function initAutocomplete() {
+  const cityInput = document.getElementById('city');
+  if (!cityInput || typeof google === 'undefined') return;
+
+  const autocomplete = new google.maps.places.Autocomplete(cityInput, {
+    types: ['(cities)'],
+    componentRestrictions: { country: 'fr' },
+    fields: ['address_components', 'name']
+  });
+
+  autocomplete.addListener('place_changed', function() {
+    const place = autocomplete.getPlace();
+    if (!place.address_components) return;
+
+    const postalInput = document.getElementById('postal_code');
+    if (postalInput) {
+      for (const component of place.address_components) {
+        if (component.types.includes('postal_code')) {
+          postalInput.value = component.long_name;
+          break;
+        }
+      }
+    }
+  });
+}
+
+if (typeof google !== 'undefined' && google.maps) {
+  initAutocomplete();
+} else {
+  window.addEventListener('load', function() {
+    setTimeout(initAutocomplete, 500);
+  });
+}
+</script>
