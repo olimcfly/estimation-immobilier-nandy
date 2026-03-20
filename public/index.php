@@ -35,11 +35,11 @@ if (PHP_SAPI !== 'cli') {
         "base-uri 'self'",
         "frame-ancestors 'none'",
         "form-action 'self'",
-        "script-src 'self' 'unsafe-inline'",
+        "script-src 'self' 'unsafe-inline' https://maps.googleapis.com",
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
         "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:",
-        "img-src 'self' data: https:",
-        "connect-src 'self'",
+        "img-src 'self' data: https: https://maps.googleapis.com https://maps.gstatic.com",
+        "connect-src 'self' https://maps.googleapis.com",
         "upgrade-insecure-requests",
     ]);
 

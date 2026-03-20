@@ -1,10 +1,10 @@
-<?php $page_title = 'Newsletter - Estimation Immobilière Bordeaux | Conseils & Tendances'; ?>
+<?php $page_title = 'Newsletter - Estimation Immobilière Nandy | Conseils & Tendances'; ?>
 
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-envelope-open-text"></i> Newsletter</p>
-      <h1>Recevez nos conseils immobiliers à Bordeaux</h1>
+      <h1>Recevez nos conseils immobiliers à Nandy et environs</h1>
       <p class="lead">
         Chaque semaine, profitez d'analyses du marché local, de conseils de vente et d'alertes sur les tendances des prix.
       </p>
@@ -18,7 +18,7 @@
       <h2><i class="fas fa-paper-plane"></i> Inscription rapide</h2>
       <p>
         Laissez votre email pour recevoir notre newsletter. Aucune publicité inutile : uniquement du contenu utile
-        pour mieux estimer, vendre ou acheter à Bordeaux.
+        pour mieux estimer, vendre ou acheter à Nandy et environs.
       </p>
 
       <?php if (isset($success_message)): ?>

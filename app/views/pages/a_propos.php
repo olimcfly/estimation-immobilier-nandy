@@ -1,4 +1,4 @@
-<?php $page_title = 'À Propos - Estimation Immobilière Bordeaux | Notre Histoire & Équipe'; ?>
+<?php $page_title = 'À Propos - Estimation Immobilière Nandy | Notre Histoire & Équipe'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -9,9 +9,9 @@
       <p class="eyebrow">
         <i class="fas fa-info-circle"></i> À propos de nous
       </p>
-      <h1>L'expertise immobilière bordelaise à votre service</h1>
+      <h1>L'expertise immobilière de Nandy et environs à votre service</h1>
       <p class="lead">
-        Depuis 2023, nous accompagnons les vendeurs de Bordeaux et région à valoriser leur bien immobilier avec fiabilité et professionnalisme.
+        Depuis 2023, nous accompagnons les vendeurs de Nandy et environs à valoriser leur bien immobilier avec fiabilité et professionnalisme.
       </p>
     </div>
   </div>
@@ -30,7 +30,7 @@
         </div>
         <h2>Notre Mission</h2>
         <p>
-          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de la région Bordeaux-Métropole. 
+          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de Nandy et environs.
           Nous croyons qu'une bonne évaluation est la première étape d'une vente réussie.
         </p>
       </article>
@@ -42,8 +42,8 @@
         </div>
         <h2>Notre Vision</h2>
         <p>
-          Devenir la plateforme de référence pour l'estimation immobilière en Gironde, 
-          en combinant technologie intelligente et expertise locale du marché bordelais.
+          Devenir la plateforme de référence pour l'estimation immobilière en Seine-et-Marne,
+          en combinant technologie intelligente et expertise locale du marché de Nandy et environs.
         </p>
       </article>
     </div>
@@ -65,9 +65,9 @@
     <div class="stats-grid">
       <!-- STAT 1 -->
       <div class="card stat-box">
-        <p class="stat-number">3 847</p>
+        <p class="stat-number">2 147</p>
         <p class="stat-label">Estimations réalisées</p>
-        <p class="stat-desc">Dans la région Bordeaux depuis 2023</p>
+        <p class="stat-desc">Dans la région de Nandy depuis 2023</p>
       </div>
 
       <!-- STAT 2 -->
@@ -86,9 +86,9 @@
 
       <!-- STAT 4 -->
       <div class="card stat-box">
-        <p class="stat-number">12</p>
-        <p class="stat-label">Quartiers couverts</p>
-        <p class="stat-desc">Bordeaux intra-muros + banlieue</p>
+        <p class="stat-number">15</p>
+        <p class="stat-label">Communes couvertes</p>
+        <p class="stat-desc">Nandy et les communes alentour</p>
       </div>
     </div>
   </div>
@@ -115,7 +115,7 @@
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
         <p class="team-bio">
-          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché bordelais. 
+          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché seine-et-marnais. 
           Passionné par l'innovation et la transparence.
         </p>
       </article>
@@ -128,7 +128,7 @@
         <h3>Sophie Dupont</h3>
         <p class="team-role">Analyste Marché Immobilier</p>
         <p class="team-bio">
-          Données & analyse. Suit en temps réel les tendances du marché bordelais. 
+          Données & analyse. Suit en temps réel les tendances du marché local. 
           Garantit la précision de chaque estimation grâce à l'algorithme propriétaire.
         </p>
       </article>
@@ -180,7 +180,7 @@
         </div>
         <h3>Données Locales</h3>
         <p>
-          Analyse basée sur 5000+ transactions réelles à Bordeaux et région. Marché temps réel, pas de statistiques obsolètes.
+          Analyse basée sur 3000+ transactions récentes en Seine-et-Marne. Marché temps réel, pas de statistiques obsolètes.
         </p>
       </article>
 
@@ -241,7 +241,7 @@
         <div class="timeline-content">
           <h3>Analyse comparative</h3>
           <p>
-            Notre moteur compare avec 5000+ biens similaires vendus récemment à Bordeaux et région.
+            Notre moteur compare avec 3000+ biens similaires vendus récemment en Seine-et-Marne.
           </p>
         </div>
       </div>
@@ -297,7 +297,7 @@
       <p class="eyebrow">
         <i class="fas fa-map-marker-alt"></i> Nos quartiers couverts
       </p>
-      <h2>Présents partout à Bordeaux et région</h2>
+      <h2>Présents partout à Nandy et environs</h2>
     </div>
 
     <div class="features-grid">
@@ -306,9 +306,9 @@
         <div class="feature-icon">
           <i class="fas fa-building"></i>
         </div>
-        <h3>Bordeaux Centre</h3>
+        <h3>Nandy & Savigny</h3>
         <p>
-          Chartrons, Vieux Bordeaux, Pey Berland. Marché premium, quartiers historiques avec forte demande.
+          Nandy centre, Savigny-le-Temple. Communes résidentielles, RER D, proximité Sénart.
         </p>
       </article>
 
@@ -317,9 +317,9 @@
         <div class="feature-icon">
           <i class="fas fa-tree"></i>
         </div>
-        <h3>Rive Gauche</h3>
+        <h3>Melun & Cesson</h3>
         <p>
-          Saint-Michel, Sainte-Croix, Bacalan. Quartiers dynamiques, rénovation urbaine en cours.
+          Melun préfecture, Cesson résidentiel. Marché actif, forte demande.
         </p>
       </article>
 
@@ -328,9 +328,9 @@
         <div class="feature-icon">
           <i class="fas fa-home"></i>
         </div>
-        <h3>Banlieue Proche</h3>
+        <h3>Sénart & environs</h3>
         <p>
-          Talence, Floirac, Villenave. Familles, maisons, proximité avec centre-ville.
+          Moissy-Cramayel, Lieusaint, Combs-la-Ville. Ville nouvelle dynamique.
         </p>
       </article>
 
@@ -339,9 +339,9 @@
         <div class="feature-icon">
           <i class="fas fa-map"></i>
         </div>
-        <h3>Région Gironde</h3>
+        <h3>Sud Seine-et-Marne</h3>
         <p>
-          Saint-Émilion, Pauillac, Libourne. Extension progressive vers les communes girondines.
+          Fontainebleau, Dammarie-les-Lys, Le Mée-sur-Seine. Extension vers le sud.
         </p>
       </article>
 
@@ -350,9 +350,9 @@
         <div class="feature-icon">
           <i class="fas fa-chart-area"></i>
         </div>
-        <h3>Secteur Nord</h3>
+        <h3>Vert-Saint-Denis & Réau</h3>
         <p>
-          Bruges, Caudéran. Zones résidentielles, familles, petits commerces.
+          Communes résidentielles calmes entre Nandy et Melun.
         </p>
       </article>
 
@@ -361,9 +361,9 @@
         <div class="feature-icon">
           <i class="fas fa-shopping-cart"></i>
         </div>
-        <h3>Secteur Merignac</h3>
+        <h3>Seine-Port & Ponthierry</h3>
         <p>
-          Mérignac, Pessac. Proximité aéroport, commerces, zone dynamique.
+          Communes en bord de Seine, cadre exceptionnel et verdoyant.
         </p>
       </article>
     </div>
@@ -389,7 +389,7 @@
           <i class="fas fa-question-circle"></i> Qui êtes-vous exactement?
         </h3>
         <p>
-          Nous sommes une équipe d'experts immobiliers basée à Bordeaux. Notre mission : 
+          Nous sommes une équipe d'experts immobiliers basée à Nandy. Notre mission : 
           rendre l'estimation fiable, rapide et accessible pour tous les vendeurs de la région.
         </p>
       </article>
@@ -400,8 +400,8 @@
           <i class="fas fa-question-circle"></i> Depuis quand opérez-vous?
         </h3>
         <p>
-          Depuis 2023. Nous avons déjà réalisé plus de 3 800 estimations avec une satisfaction client de 4.8/5. 
-          Une équipe jeune mais expérimentée du marché bordelais.
+          Depuis 2023. Nous avons déjà réalisé plus de 2 000 estimations avec une satisfaction client de 4.8/5.
+          Une équipe jeune mais expérimentée du marché local.
         </p>
       </article>
 
@@ -411,7 +411,7 @@
           <i class="fas fa-question-circle"></i> Pourquoi faire confiance à votre estimation?
         </h3>
         <p>
-          Notre algorithme analyse 5000+ transactions réelles à Bordeaux. Pas de théorie, 
+          Notre algorithme analyse 3000+ transactions récentes en Seine-et-Marne. Pas de théorie,
           des chiffres vérifiés. Précision moyenne ±3% avec le prix de vente final.
         </p>
       </article>
@@ -422,8 +422,8 @@
           <i class="fas fa-question-circle"></i> Couvrez-vous tous les quartiers?
         </h3>
         <p>
-          Oui, Bordeaux intra-muros + banlieue proche. Extension progressive vers la Gironde. 
-          Plus de 12 secteurs couverts avec données temps réel.
+          Oui, Nandy et les communes alentour. Extension progressive vers le sud Seine-et-Marne.
+          Plus de 15 communes couvertes avec données temps réel.
         </p>
       </article>
 
@@ -461,10 +461,10 @@
       <p class="eyebrow">
         <i class="fas fa-handshake"></i> Prêt à découvrir la valeur de votre bien?
       </p>
-      <h2>Faites confiance aux experts de Bordeaux</h2>
+      <h2>Faites confiance aux experts de Nandy</h2>
       <p class="lead">
         Une équipe locale, une méthodologie éprouvée, une estimation fiable. 
-        3 800+ vendeurs ont déjà été satisfaits.
+        2 000+ vendeurs ont déjà été satisfaits.
       </p>
       <a href="/#form-estimation" class="btn btn-primary">
         <i class="fas fa-calculator"></i> Estimer mon bien gratuitement

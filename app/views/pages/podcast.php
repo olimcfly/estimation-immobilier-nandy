@@ -1,12 +1,12 @@
-<?php $page_title = 'Podcast Immobilier Bordeaux - Conseils & Tendances'; ?>
+<?php $page_title = 'Podcast Immobilier Nandy - Conseils & Tendances'; ?>
 
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-podcast"></i> Podcast immobilier</p>
-      <h1>Le podcast immobilier à Bordeaux</h1>
+      <h1>Le podcast immobilier à Nandy</h1>
       <p class="lead">
-        Retrouvez nos épisodes dédiés au marché bordelais : conseils de vente,
+        Retrouvez nos épisodes dédiés au marché de Nandy et environs : conseils de vente,
         tendances locales et retours d'expérience concrets pour mieux valoriser votre bien.
       </p>
     </div>
@@ -23,7 +23,7 @@
     <article class="card" style="padding: 2rem; text-align: center;">
       <p>
         Nous préparons actuellement les premiers épisodes. Revenez bientôt pour écouter
-        nos analyses du marché immobilier bordelais et nos recommandations d'experts.
+        nos analyses du marché immobilier local et nos recommandations d'experts.
       </p>
       <p style="margin-top: 1rem;">
         <a class="btn btn-primary" href="/contact">

@@ -1,12 +1,12 @@
-<?php $page_title = 'À Propos - Estimation Immobilier Bordeaux'; ?>
+<?php $page_title = 'À Propos - Estimation Immobilier Nandy'; ?>
 
 <!-- HERO PAGE -->
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-info-circle"></i> À propos de nous</p>
-      <h1>Une équipe bordelaise dédiée à la réussite de votre vente immobilière</h1>
-      <p class="lead">Estimation Immobilier Bordeaux est né de l'envie de rendre l'estimation immobilière plus claire, plus rapide et plus fiable pour les propriétaires girondins.</p>
+      <h1>Une équipe seine-et-marnaise dédiée à la réussite de votre vente immobilière</h1>
+      <p class="lead">Estimation Immobilier Nandy est né de l'envie de rendre l'estimation immobilière plus claire, plus rapide et plus fiable pour les propriétaires seine-et-marnais.</p>
     </div>
   </div>
 </section>
@@ -28,7 +28,7 @@
           <i class="fas fa-chart-bar"></i>
         </div>
         <h2>Notre expertise</h2>
-        <p>Nous nous appuyons sur la dynamique des quartiers bordelais, l'analyse approfondie du marché immobilier local et les méthodes d'évaluation utilisées par les professionnels. Notre algorithme intègre données réelles et tendances du marché girond.</p>
+        <p>Nous nous appuyons sur la dynamique des communes de Nandy et environs, l'analyse approfondie du marché immobilier local et les méthodes d'évaluation utilisées par les professionnels. Notre algorithme intègre données réelles et tendances du marché seine-et-marnais.</p>
       </article>
     </div>
   </div>
@@ -64,7 +64,7 @@
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <h3>Proximité</h3>
-        <p>Basés à Bordeaux, nous connaissons les quartiers, les tendances locales et les dynamiques immobilières spécifiques de la Gironde et du Grand Bordeaux.</p>
+        <p>Basés à Nandy, nous connaissons les communes, les tendances locales et les dynamiques immobilières spécifiques du sud Seine-et-Marne.</p>
       </article>
 
       <article class="card value-card">
@@ -83,7 +83,7 @@
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Nos avantages</p>
-      <h2>Pourquoi Estimation Immobilier Bordeaux ?</h2>
+      <h2>Pourquoi Estimation Immobilier Nandy ?</h2>
     </div>
 
     <div class="features-grid">
@@ -100,7 +100,7 @@
           <i class="fas fa-database"></i>
         </div>
         <h3>Données locales réelles</h3>
-        <p>Notre moteur analyse les transactions réelles en Gironde, les prix de marché et les caractéristiques spécifiques de votre quartier.</p>
+        <p>Notre moteur analyse les transactions réelles en Seine-et-Marne, les prix de marché et les caractéristiques spécifiques de votre quartier.</p>
       </article>
 
       <article class="card feature-card">
@@ -126,7 +126,7 @@
       <div class="stat-box card">
         <p class="stat-number">+2 000</p>
         <p class="stat-label">Estimations réalisées</p>
-        <p class="stat-desc">De propriétaires satisfaits en Gironde</p>
+        <p class="stat-desc">De propriétaires satisfaits en Seine-et-Marne</p>
       </div>
 
       <div class="stat-box card">
@@ -165,7 +165,7 @@
         </div>
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
-        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé à Bordeaux depuis 2020.</p>
+        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé en Seine-et-Marne.</p>
       </article>
 
       <article class="card team-card">
@@ -183,7 +183,7 @@
         </div>
         <h3>Analystes Marché</h3>
         <p class="team-role">Suivi continu du marché immobilier</p>
-        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché bordelais pour affiner nos estimations et vous informer.</p>
+        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché local pour affiner nos estimations et vous informer.</p>
       </article>
     </div>
   </div>
@@ -201,7 +201,7 @@
       <div class="step-item">
         <div class="step-number">1</div>
         <h3>Données de référence</h3>
-        <p>Nous collectons les données réelles de transactions en Gironde : prix de vente, caractéristiques des biens, quartiers, dates de vente.</p>
+        <p>Nous collectons les données réelles de transactions en Seine-et-Marne : prix de vente, caractéristiques des biens, quartiers, dates de vente.</p>
       </div>
 
       <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -248,13 +248,13 @@
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Questions fréquentes</p>
-      <h2>Tout savoir sur Estimation Immobilier Bordeaux</h2>
+      <h2>Tout savoir sur Estimation Immobilier Nandy</h2>
     </div>
 
     <div class="faq-grid">
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment l'estimation est-elle calculée ?</h3>
-        <p>Notre algorithme analyse les transactions réelles en Gironde, compare votre bien avec des propriétés similaires, et intègre les tendances actuelles du marché pour générer une fourchette de prix réaliste.</p>
+        <p>Notre algorithme analyse les transactions réelles en Seine-et-Marne, compare votre bien avec des propriétés similaires, et intègre les tendances actuelles du marché pour générer une fourchette de prix réaliste.</p>
       </article>
 
       <article class="card faq-card">
@@ -264,7 +264,7 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Qui peut utiliser le service ?</h3>
-        <p>Tous les propriétaires d'un bien immobilier situé en Gironde ou sa région. Appartements, maisons, studios... peu importe le type, nous estimons tous les biens.</p>
+        <p>Tous les propriétaires d'un bien immobilier situé en Seine-et-Marne ou sa région. Appartements, maisons, studios... peu importe le type, nous estimons tous les biens.</p>
       </article>
 
       <article class="card faq-card">
@@ -279,7 +279,7 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment me contacter ?</h3>
-        <p>Vous pouvez nous contacter par email (contact@estimation-bordeaux.fr) ou téléphone (05 XX XX XX XX). Nous répondons en moins de 24h.</p>
+        <p>Vous pouvez nous contacter par email (contact@estimation-immobilier-nandy.fr) ou téléphone (01 64 XX XX XX). Nous répondons en moins de 24h.</p>
       </article>
     </div>
   </div>
@@ -315,7 +315,7 @@
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <h3>Proximité</h3>
-        <p>Basés à Bordeaux, nous connaissons les quartiers, les tendances locales et les dynamiques immobilières spécifiques de la Gironde et du Grand Bordeaux.</p>
+        <p>Basés à Nandy, nous connaissons les communes, les tendances locales et les dynamiques immobilières spécifiques du sud Seine-et-Marne.</p>
       </article>
 
       <article class="card value-card">
@@ -334,7 +334,7 @@
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Nos avantages</p>
-      <h2>Pourquoi Estimation Immobilier Bordeaux ?</h2>
+      <h2>Pourquoi Estimation Immobilier Nandy ?</h2>
     </div>
 
     <div class="features-grid">
@@ -351,7 +351,7 @@
           <i class="fas fa-database"></i>
         </div>
         <h3>Données locales réelles</h3>
-        <p>Notre moteur analyse les transactions réelles en Gironde, les prix de marché et les caractéristiques spécifiques de votre quartier.</p>
+        <p>Notre moteur analyse les transactions réelles en Seine-et-Marne, les prix de marché et les caractéristiques spécifiques de votre quartier.</p>
       </article>
 
       <article class="card feature-card">
@@ -377,7 +377,7 @@
       <div class="stat-box card">
         <p class="stat-number">+2 000</p>
         <p class="stat-label">Estimations réalisées</p>
-        <p class="stat-desc">De propriétaires satisfaits en Gironde</p>
+        <p class="stat-desc">De propriétaires satisfaits en Seine-et-Marne</p>
       </div>
 
       <div class="stat-box card">
@@ -416,7 +416,7 @@
         </div>
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
-        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé à Bordeaux depuis 2020.</p>
+        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé en Seine-et-Marne.</p>
       </article>
 
       <article class="card team-card">
@@ -434,7 +434,7 @@
         </div>
         <h3>Analystes Marché</h3>
         <p class="team-role">Suivi continu du marché immobilier</p>
-        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché bordelais pour affiner nos estimations et vous informer.</p>
+        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché local pour affiner nos estimations et vous informer.</p>
       </article>
     </div>
   </div>
@@ -452,7 +452,7 @@
       <div class="step-item">
         <div class="step-number">1</div>
         <h3>Données de référence</h3>
-        <p>Nous collectons les données réelles de transactions en Gironde : prix de vente, caractéristiques des biens, quartiers, dates de vente.</p>
+        <p>Nous collectons les données réelles de transactions en Seine-et-Marne : prix de vente, caractéristiques des biens, quartiers, dates de vente.</p>
       </div>
 
       <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -499,13 +499,13 @@
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Questions fréquentes</p>
-      <h2>Tout savoir sur Estimation Immobilier Bordeaux</h2>
+      <h2>Tout savoir sur Estimation Immobilier Nandy</h2>
     </div>
 
     <div class="faq-grid">
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment l'estimation est-elle calculée ?</h3>
-        <p>Notre algorithme analyse les transactions réelles en Gironde, compare votre bien avec des propriétés similaires, et intègre les tendances actuelles du marché pour générer une fourchette de prix réaliste.</p>
+        <p>Notre algorithme analyse les transactions réelles en Seine-et-Marne, compare votre bien avec des propriétés similaires, et intègre les tendances actuelles du marché pour générer une fourchette de prix réaliste.</p>
       </article>
 
       <article class="card faq-card">
@@ -515,7 +515,7 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Qui peut utiliser le service ?</h3>
-        <p>Tous les propriétaires d'un bien immobilier situé en Gironde ou sa région. Appartements, maisons, studios... peu importe le type, nous estimons tous les biens.</p>
+        <p>Tous les propriétaires d'un bien immobilier situé en Seine-et-Marne ou sa région. Appartements, maisons, studios... peu importe le type, nous estimons tous les biens.</p>
       </article>
 
       <article class="card faq-card">
@@ -530,10 +530,8 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment me contacter ?</h3>
-        <p>Vous pouvez nous contacter par email (contact@estimation-bordeaux.fr) ou téléphone (05 XX XX XX XX). Nous répondons en moins de 24h.</p>
+        <p>Vous pouvez nous contacter par email (contact@estimation-immobilier-nandy.fr) ou téléphone (01 64 XX XX XX). Nous répondons en moins de 24h.</p>
       </article>
     </div>
   </div>
 </section>
-
-<?php include 'footer.php'; ?>

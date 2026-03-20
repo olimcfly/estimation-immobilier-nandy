@@ -32,7 +32,7 @@
           </select>
         </label>
         <label>Sujet de l'article
-          <input type="text" name="topic" placeholder="Ex: Est-ce le bon moment pour vendre à Bordeaux ?" required>
+          <input type="text" name="topic" placeholder="Ex: Est-ce le bon moment pour vendre à Nandy ?" required>
         </label>
         <button type="submit" class="btn">Générer avec IA</button>
       </form>

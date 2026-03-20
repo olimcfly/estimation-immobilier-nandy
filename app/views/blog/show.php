@@ -20,11 +20,11 @@ $jsonLd = [
     'datePublished' => $createdAt,
     'author' => [
         '@type' => 'Organization',
-        'name' => 'Estimation Immobilière Bordeaux',
+        'name' => 'Estimation Immobilière Nandy',
     ],
     'publisher' => [
         '@type' => 'Organization',
-        'name' => 'Estimation Immobilière Bordeaux',
+        'name' => 'Estimation Immobilière Nandy',
     ],
     'mainEntityOfPage' => [
         '@type' => 'WebPage',
@@ -49,7 +49,7 @@ $jsonLd = array_filter($jsonLd, static fn (mixed $value): bool => $value !== nul
 
     <section class="card cta-card">
       <h2>Besoin d'un prix de vente réaliste et défendable ?</h2>
-      <p class="muted">Profitez de notre simulateur pour obtenir une fourchette fiable adaptée à Bordeaux.</p>
+      <p class="muted">Profitez de notre simulateur pour obtenir une fourchette fiable adaptée à Nandy et ses environs.</p>
       <a href="/estimation" class="btn">Demander mon estimation</a>
     </section>
   </div>

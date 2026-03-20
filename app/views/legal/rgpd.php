@@ -17,7 +17,7 @@
     <p>Des cookies techniques peuvent être utilisés pour le bon fonctionnement du site. Les cookies de mesure d’audience sont paramétrés de manière respectueuse de la vie privée.</p>
 
     <h2>Exercer vos droits</h2>
-    <p>Pour toute demande relative à vos données personnelles, contactez-nous à <a href="mailto:contact@estimation-immobilier-bordeaux.fr">contact@estimation-immobilier-bordeaux.fr</a>.</p>
+    <p>Pour toute demande relative à vos données personnelles, contactez-nous à <a href="mailto:contact@estimation-immobilier-nandy.fr">contact@estimation-immobilier-nandy.fr</a>.</p>
 
     <h2>Réclamation</h2>
     <p>Vous pouvez introduire une réclamation auprès de l’autorité de contrôle compétente, notamment la CNIL (France).</p>

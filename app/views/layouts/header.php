@@ -16,10 +16,10 @@
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilière Bordeaux - Évaluez votre bien gratuitement et découvrez nos guides immobiliers.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="theme-color" content="#8B1538">
+  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilière gratuite à Nandy et ses environs (77176). Évaluez votre bien en 60 secondes. Données du marché Seine-et-Marne.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="theme-color" content="#1B5E20">
   <link rel="canonical" href="<?= e($canonicalUrl) ?>">
-  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilière Bordeaux' ?></title>
+  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilière Nandy' ?></title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,6 +30,9 @@
   <!-- CSS Principal -->
   <link rel="stylesheet" href="/assets/css/app.css">
 
+  <!-- Google Maps Places -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=<?= e((string) ($googleMapsApiKey ?? '')) ?>&libraries=places&callback=Function.prototype" async defer></script>
+
   <!-- CSS Header Personnalisé -->
   <style>
 
@@ -38,8 +41,8 @@
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
       --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
       --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#1B5E20')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#0D3B13')) ?>;
       --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
       --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
       --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
@@ -50,7 +53,7 @@
       --neutral: <?= e((string) ($colors['neutral'] ?? '#000000')) ?>;
       --bg-rgb: <?= e((string) ($rgbColors['bg'] ?? '250, 249, 247')) ?>;
       --border-rgb: <?= e((string) ($rgbColors['border'] ?? '232, 223, 215')) ?>;
-      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '139, 21, 56')) ?>;
+      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '27, 94, 32')) ?>;
       --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '212, 175, 55')) ?>;
       --success-rgb: <?= e((string) ($rgbColors['success'] ?? '34, 197, 94')) ?>;
       --warning-rgb: <?= e((string) ($rgbColors['warning'] ?? '249, 115, 22')) ?>;
@@ -101,7 +104,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #2E7D32);
       border-radius: 10px;
       color: #fff;
       font-size: 1.2rem;
@@ -270,7 +273,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.8rem 1.6rem;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #2E7D32);
       color: #fff;
       text-decoration: none;
       border: none;
@@ -286,7 +289,7 @@
     .btn-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
-      background: linear-gradient(135deg, var(--primary-dark), #a01833);
+      background: linear-gradient(135deg, var(--primary-dark), #1B5E20);
     }
 
     .btn-cta i {
@@ -449,7 +452,7 @@
 <!-- ============================= -->
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a href="/" class="brand">Bordeaux<span>Estimate</span></a>
+    <a href="/" class="brand">Nandy<span>Estimate</span></a>
 
     <nav class="top-nav" aria-label="Navigation principale">
       <div class="nav-item has-dropdown">
@@ -491,7 +494,7 @@
         <ul class="dropdown-menu" aria-label="Sous-menu ressources">
           <li><a href="/guides">Guides complets</a></li>
           <li><a href="/tools/calculatrice">Calculatrice prix</a></li>
-          <li><a href="/quartiers">Quartiers Bordeaux</a></li>
+          <li><a href="/quartiers">Communes alentour</a></li>
           <li><a href="/podcast">Podcast immobilier</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
         </ul>

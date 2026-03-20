@@ -20,6 +20,6 @@
     <p>Les données sont conservées pour la durée strictement nécessaire aux finalités poursuivies, puis archivées ou supprimées.</p>
 
     <h2>Vos droits</h2>
-    <p>Vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-bordeaux.fr">contact@estimation-immobilier-bordeaux.fr</a>.</p>
+    <p>Vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-nandy.fr">contact@estimation-immobilier-nandy.fr</a>.</p>
   </div>
 </section>
