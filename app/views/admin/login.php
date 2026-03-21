@@ -15,16 +15,16 @@ $step = $step ?? 'email';
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     :root {
-      --bg: #faf9f7;
+      --bg: #f5f7fa;
       --surface: #ffffff;
-      --text: #1a1410;
-      --muted: #6b6459;
-      --primary: #8B1538;
-      --primary-dark: #6b0f2d;
-      --border: #e8dfd7;
+      --text: #1a2332;
+      --muted: #5a6577;
+      --primary: #1565C0;
+      --primary-dark: #0D47A1;
+      --border: #dce3ed;
       --danger: #e24b4a;
       --success: #22c55e;
-      --primary-rgb: 139, 21, 56;
+      --primary-rgb: 21, 101, 192;
       --neutral-rgb: 0, 0, 0;
       --success-rgb: 34, 197, 94;
     }
@@ -57,7 +57,7 @@ $step = $step ?? 'email';
       justify-content: center;
       width: 64px;
       height: 64px;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #1976D2);
       border-radius: 16px;
       margin-bottom: 1rem;
       box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.25);
@@ -156,7 +156,7 @@ $step = $step ?? 'email';
     .btn-submit {
       width: 100%;
       padding: 1rem;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #1976D2);
       color: #fff;
       border: none;
       border-radius: 10px;

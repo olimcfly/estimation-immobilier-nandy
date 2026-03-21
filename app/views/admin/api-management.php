@@ -242,7 +242,7 @@
   }
 
   .btn-test:hover {
-    background: #6b0f2d;
+    background: #0D47A1;
   }
 
   .btn-test:disabled {
@@ -413,7 +413,7 @@
   .api-modal-field input:focus {
     outline: none;
     border-color: var(--admin-primary);
-    box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08);
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.08);
   }
 
   .api-modal-footer {
@@ -442,7 +442,7 @@
   }
 
   .btn-save:hover {
-    background: #6b0f2d;
+    background: #0D47A1;
   }
 
   .btn-cancel {

@@ -59,14 +59,14 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Estimation Prix */
   .tpl-estimation {
     width: 1080px; height: 1080px;
-    background: linear-gradient(135deg, #8B1538 0%, #5a0e25 60%, #1a0510 100%);
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 60%, #051D3E 100%);
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: #fff; text-align: center; padding: 80px;
   }
   .tpl-estimation .badge-top {
-    background: rgba(212, 175, 55, 0.2); border: 1px solid #D4AF37;
+    background: rgba(46, 125, 50, 0.2); border: 1px solid #2E7D32;
     padding: 10px 28px; border-radius: 30px; font-size: 22px; font-weight: 600;
-    color: #D4AF37; margin-bottom: 40px; letter-spacing: 0.05em;
+    color: #2E7D32; margin-bottom: 40px; letter-spacing: 0.05em;
   }
   .tpl-estimation .big-price {
     font-size: 96px; font-weight: 700; line-height: 1.1; margin-bottom: 20px;
@@ -75,7 +75,7 @@ $error = (string) ($_GET['error'] ?? '');
     font-size: 28px; color: rgba(255,255,255,0.7); margin-bottom: 50px;
   }
   .tpl-estimation .divider {
-    width: 80px; height: 3px; background: #D4AF37; margin-bottom: 50px;
+    width: 80px; height: 3px; background: #2E7D32; margin-bottom: 50px;
   }
   .tpl-estimation .quartier {
     font-size: 36px; font-weight: 600; margin-bottom: 15px;
@@ -96,12 +96,12 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 0;
   }
   .tpl-conseil .header-bar {
-    background: #8B1538; padding: 40px 60px;
+    background: #1565C0; padding: 40px 60px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .tpl-conseil .header-bar .brand { color: #fff; font-size: 22px; font-weight: 700; }
   .tpl-conseil .header-bar .tag {
-    background: #D4AF37; color: #1a1410; padding: 8px 20px; border-radius: 20px;
+    background: #2E7D32; color: #1a1410; padding: 8px 20px; border-radius: 20px;
     font-size: 16px; font-weight: 600;
   }
   .tpl-conseil .content-area {
@@ -109,7 +109,7 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 60px 80px;
   }
   .tpl-conseil .tip-number {
-    font-size: 72px; font-weight: 700; color: #D4AF37; margin-bottom: 20px; line-height: 1;
+    font-size: 72px; font-weight: 700; color: #2E7D32; margin-bottom: 20px; line-height: 1;
   }
   .tpl-conseil .tip-title {
     font-size: 48px; font-weight: 700; color: #1a1410; line-height: 1.2; margin-bottom: 30px;
@@ -121,7 +121,7 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 30px 60px; border-top: 2px solid #e8dfd7;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .tpl-conseil .footer-bar .url { font-size: 18px; color: #8B1538; font-weight: 600; }
+  .tpl-conseil .footer-bar .url { font-size: 18px; color: #1565C0; font-weight: 600; }
   .tpl-conseil .footer-bar .cta { font-size: 18px; color: #6b6459; }
 
   /* Template: Statistique / Chiffre Clé */
@@ -136,10 +136,10 @@ $error = (string) ($_GET['error'] ?? '');
     letter-spacing: 0.15em; margin-bottom: 30px;
   }
   .tpl-stat .stat-value {
-    font-size: 120px; font-weight: 700; color: #D4AF37; line-height: 1; margin-bottom: 20px;
+    font-size: 120px; font-weight: 700; color: #2E7D32; line-height: 1; margin-bottom: 20px;
   }
   .tpl-stat .stat-unit {
-    font-size: 36px; color: #D4AF37; font-weight: 500; margin-bottom: 50px;
+    font-size: 36px; color: #2E7D32; font-weight: 500; margin-bottom: 50px;
   }
   .tpl-stat .stat-desc {
     font-size: 28px; color: rgba(255,255,255,0.7); line-height: 1.4; max-width: 700px;
@@ -152,7 +152,7 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Story (9:16) */
   .tpl-story {
     width: 1080px; height: 1920px;
-    background: linear-gradient(180deg, #8B1538 0%, #5a0e25 40%, #1a0510 100%);
+    background: linear-gradient(180deg, #1565C0 0%, #0D47A1 40%, #051D3E 100%);
     display: flex; flex-direction: column; justify-content: space-between;
     color: #fff; padding: 80px 60px;
   }
@@ -174,7 +174,7 @@ $error = (string) ($_GET['error'] ?? '');
   }
   .tpl-story .story-bottom { text-align: center; }
   .tpl-story .story-cta {
-    display: inline-block; background: #D4AF37; color: #1a0510; padding: 20px 50px;
+    display: inline-block; background: #2E7D32; color: #051D3E; padding: 20px 50px;
     border-radius: 40px; font-size: 24px; font-weight: 700;
   }
   .tpl-story .story-url {
@@ -184,7 +184,7 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Paysage (16:9) */
   .tpl-paysage {
     width: 1200px; height: 628px;
-    background: linear-gradient(135deg, #8B1538 0%, #5a0e25 50%, #2d0a18 100%);
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #0A3472 100%);
     display: flex; color: #fff;
   }
   .tpl-paysage .left-panel {
@@ -196,7 +196,7 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 40px;
   }
   .tpl-paysage .tag-line {
-    font-size: 16px; color: #D4AF37; text-transform: uppercase;
+    font-size: 16px; color: #2E7D32; text-transform: uppercase;
     letter-spacing: 0.1em; font-weight: 600; margin-bottom: 20px;
   }
   .tpl-paysage .main-title {
@@ -206,7 +206,7 @@ $error = (string) ($_GET['error'] ?? '');
     font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.5;
   }
   .tpl-paysage .right-big {
-    font-size: 72px; font-weight: 700; color: #D4AF37; line-height: 1;
+    font-size: 72px; font-weight: 700; color: #2E7D32; line-height: 1;
   }
   .tpl-paysage .right-label {
     font-size: 18px; color: rgba(255,255,255,0.6); margin-top: 10px; text-align: center;
@@ -320,8 +320,8 @@ $error = (string) ($_GET['error'] ?? '');
         { id: 'quartier', label: 'Quartier', type: 'select', options: ['Nandy Centre', <?php foreach ($quartiers as $q): ?>'<?= $q ?>',<?php endforeach; ?>], value: 'Nandy Centre' },
         { id: 'badge', label: 'Badge', type: 'text', value: 'ESTIMATION GRATUITE' },
         { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-nandy.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#1a0510' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1565C0' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#051D3E' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-estimation" style="background:linear-gradient(135deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +
@@ -385,8 +385,8 @@ $error = (string) ($_GET['error'] ?? '');
         { id: 'text', label: 'Texte', type: 'textarea', value: 'Obtenez une estimation gratuite et pr\u00e9cise en quelques minutes.' },
         { id: 'cta', label: 'Bouton CTA', type: 'text', value: 'Estimer mon bien' },
         { id: 'url', label: 'URL', type: 'text', value: 'estimation-immobilier-nandy.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#1a0510' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1565C0' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#051D3E' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-story" style="background:linear-gradient(180deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +
@@ -411,8 +411,8 @@ $error = (string) ($_GET['error'] ?? '');
         { id: 'bigValue', label: 'Chiffre droite', type: 'text', value: '4 800\u20ac' },
         { id: 'bigLabel', label: 'Label droite', type: 'text', value: 'Prix moyen / m\u00b2' },
         { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-nandy.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#2d0a18' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1565C0' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#0A3472' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-paysage" style="background:linear-gradient(135deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +

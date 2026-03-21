@@ -16,8 +16,8 @@
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilier Nandy - Obtenez votre avis de valeur immobilier gratuit. Données réelles du marché de nandy, résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="theme-color" content="#8B1538">
+  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilier Nandy - Obtenez votre avis de valeur immobilier gratuit. Données réelles du marché de Nandy, résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="theme-color" content="#1565C0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="<?= e($canonicalUrl) ?>">
   <title><?= isset($page_title) ? $page_title : 'Estimation Immobilier Nandy' ?></title>
@@ -77,15 +77,15 @@
   <style>
 
     :root {
-      --bg: <?= e((string) ($colors['bg'] ?? '#faf9f7')) ?>;
+      --bg: <?= e((string) ($colors['bg'] ?? '#f5f7fa')) ?>;
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
-      --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
-      --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
-      --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
-      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
-      --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
+      --text: <?= e((string) ($colors['text'] ?? '#1a2332')) ?>;
+      --muted: <?= e((string) ($colors['muted'] ?? '#5a6577')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#1565C0')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#0D47A1')) ?>;
+      --accent: <?= e((string) ($colors['accent'] ?? '#2E7D32')) ?>;
+      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#43A047')) ?>;
+      --border: <?= e((string) ($colors['border'] ?? '#dce3ed')) ?>;
       --success: <?= e((string) ($colors['success'] ?? '#22c55e')) ?>;
       --warning: <?= e((string) ($colors['warning'] ?? '#f97316')) ?>;
       --danger: <?= e((string) ($colors['danger'] ?? '#e24b4a')) ?>;
@@ -93,8 +93,8 @@
       --neutral: <?= e((string) ($colors['neutral'] ?? '#000000')) ?>;
       --bg-rgb: <?= e((string) ($rgbColors['bg'] ?? '250, 249, 247')) ?>;
       --border-rgb: <?= e((string) ($rgbColors['border'] ?? '232, 223, 215')) ?>;
-      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '139, 21, 56')) ?>;
-      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '212, 175, 55')) ?>;
+      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '21, 101, 192')) ?>;
+      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '46, 125, 50')) ?>;
       --success-rgb: <?= e((string) ($rgbColors['success'] ?? '34, 197, 94')) ?>;
       --warning-rgb: <?= e((string) ($rgbColors['warning'] ?? '249, 115, 22')) ?>;
       --neutral-rgb: <?= e((string) ($rgbColors['neutral'] ?? '0, 0, 0')) ?>;
@@ -145,7 +145,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #1976D2);
       border-radius: 10px;
       color: #fff;
       font-size: 1.2rem;
@@ -315,7 +315,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.8rem 1.6rem;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #1976D2);
       color: #fff;
       text-decoration: none;
       border: none;
@@ -331,7 +331,7 @@
     .btn-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
-      background: linear-gradient(135deg, var(--primary-dark), #a01833);
+      background: linear-gradient(135deg, var(--primary-dark), #0D47A1);
     }
 
     .btn-cta i {
@@ -548,7 +548,7 @@
         justify-content: center;
         gap: 0.5rem;
         padding: 1rem;
-        background: linear-gradient(135deg, var(--primary), #C41E3A);
+        background: linear-gradient(135deg, var(--primary), #1976D2);
         color: #fff;
         text-decoration: none;
         border-radius: 10px;

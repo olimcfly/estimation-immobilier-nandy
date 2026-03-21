@@ -32,13 +32,13 @@
           <span class="footer-logo-text">Estimation Immobilier <strong>Nandy</strong></span>
         </a>
         <p class="footer-desc">
-          Votre partenaire de confiance pour l'estimation immobilière sur Nandy et la métropole de nandye depuis 2020.
+          Votre partenaire de confiance pour l'estimation immobilière à Nandy et en Seine-et-Marne depuis 2020.
         </p>
         <div class="footer-social">
           <a href="https://facebook.com/estimation-nandy" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/estimation-nandy" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
           <a href="https://linkedin.com/company/estimation-nandy" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/estimation_bdx" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://twitter.com/estimation_nandy" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="social-icon"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -86,9 +86,9 @@
             <span>Nandy, 77176<br>Île-de-France</span>
           </li>
           <li>
-            <a href="tel:+33556000000">
+            <a href="tel:+33164000000">
               <i class="fas fa-phone"></i>
-              <span>05 56 00 00 00</span>
+              <span>01 64 00 00 00</span>
             </a>
           </li>
           <li>
@@ -108,7 +108,7 @@
         <i class="fas fa-envelope-open-text"></i>
         <div>
           <strong>Restez informé</strong>
-          <span>Recevez nos analyses du marché de nandy et nos conseils immobiliers.</span>
+          <span>Recevez nos analyses du marché de Nandy et nos conseils immobiliers.</span>
         </div>
       </div>
       <form class="footer-newsletter-form" method="POST" action="/api/newsletter">

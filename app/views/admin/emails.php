@@ -35,7 +35,7 @@
     font-family: inherit;
   }
 
-  .btn-new-template:hover { background: #6b0f2d; color: #fff; }
+  .btn-new-template:hover { background: #0D47A1; color: #fff; }
 
   .email-tabs {
     display: flex;

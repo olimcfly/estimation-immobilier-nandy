@@ -1,17 +1,17 @@
 :root {
   color-scheme: light;
-  --bg: #faf9f7;
+  --bg: #f5f7fa;
   --surface: #ffffff;
-  --text: #1a1410;
-  --muted: #6b6459;
-  --primary: #8B1538;
-  --primary-dark: #6b0f2d;
-  --accent: #D4AF37;
-  --accent-light: #E8C547;
-  --border: #e8dfd7;
+  --text: #1a2332;
+  --muted: #5a6577;
+  --primary: #1565C0;
+  --primary-dark: #0D47A1;
+  --accent: #2E7D32;
+  --accent-light: #43A047;
+  --border: #dce3ed;
   --radius: 16px;
-  --shadow: 0 20px 45px rgba(139, 21, 56, 0.08);
-  --shadow-lg: 0 30px 60px rgba(139, 21, 56, 0.12);
+  --shadow: 0 20px 45px rgba(21, 101, 192, 0.08);
+  --shadow-lg: 0 30px 60px rgba(21, 101, 192, 0.12);
 }
 
 * { 
@@ -27,8 +27,8 @@ body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.08), transparent 32%),
-    radial-gradient(circle at 90% 0%, rgba(139, 21, 56, 0.08), transparent 30%),
+    radial-gradient(circle at 15% 10%, rgba(46, 125, 50, 0.06), transparent 32%),
+    radial-gradient(circle at 90% 0%, rgba(21, 101, 192, 0.06), transparent 30%),
     var(--bg);
   line-height: 1.6;
 }
@@ -133,7 +133,7 @@ a {
 
 .dropdown-menu a:hover {
   color: var(--primary);
-  background: rgba(139, 21, 56, 0.08);
+  background: rgba(21, 101, 192, 0.08);
 }
 
 .has-dropdown:hover .dropdown-menu,
@@ -153,20 +153,20 @@ a {
   border: 0;
   border-radius: 999px;
   padding: 0.85rem 1.6rem;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   color: #fff;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.25);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.25);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(139, 21, 56, 0.35);
-  background: linear-gradient(135deg, var(--primary-dark), #a01833);
+  box-shadow: 0 12px 32px rgba(21, 101, 192, 0.35);
+  background: linear-gradient(135deg, var(--primary-dark), #0D47A1);
 }
 
 .btn:active {
@@ -190,7 +190,7 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   font-size: 1rem;
 }
 
@@ -410,7 +410,7 @@ input:focus,
 select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08);
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.08);
   background: #fafaf9;
 }
 
@@ -445,7 +445,7 @@ textarea::placeholder {
 textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08);
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.08);
 }
 
 .form-checkbox {
@@ -453,9 +453,9 @@ textarea:focus {
   align-items: flex-start;
   gap: 0.8rem;
   padding: 1rem;
-  background: rgba(212, 175, 55, 0.04);
+  background: rgba(46, 125, 50, 0.04);
   border-radius: 10px;
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(46, 125, 50, 0.15);
 }
 
 .form-checkbox input[type="checkbox"] {
@@ -493,8 +493,8 @@ textarea:focus {
 }
 
 .section-alt { 
-  background: rgba(212, 175, 55, 0.04);
-  border-block: 1px solid rgba(212, 175, 55, 0.15);
+  background: rgba(46, 125, 50, 0.04);
+  border-block: 1px solid rgba(46, 125, 50, 0.15);
 }
 
 .section-heading { 
@@ -693,7 +693,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(139, 21, 56, 0.08);
+  background: rgba(21, 101, 192, 0.08);
   border-radius: 12px;
   color: var(--primary);
   font-size: 1.5rem;
@@ -742,11 +742,11 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-radius: 50%;
   color: #fff;
   font-size: 1.5rem;
-  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.2);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
 }
 
 .step-card h3 {
@@ -763,8 +763,8 @@ textarea:focus {
 
 .estimation-result {
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.03), rgba(212, 175, 55, 0.02));
-  border-top: 1px solid rgba(139, 21, 56, 0.1);
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.03), rgba(46, 125, 50, 0.02));
+  border-top: 1px solid rgba(21, 101, 192, 0.1);
 }
 
 .result-layout {
@@ -783,7 +783,7 @@ textarea:focus {
 .result-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 2px solid rgba(46, 125, 50, 0.3);
 }
 
 .result-header .eyebrow {
@@ -836,15 +836,15 @@ textarea:focus {
 }
 
 .kpi-mid {
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.08), rgba(139, 21, 56, 0.03));
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.08), rgba(21, 101, 192, 0.03));
   border: 2px solid var(--primary);
   transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.12);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.12);
 }
 
 .kpi-mid:hover {
   transform: scale(1.03);
-  box-shadow: 0 12px 30px rgba(139, 21, 56, 0.18);
+  box-shadow: 0 12px 30px rgba(21, 101, 192, 0.18);
 }
 
 .kpi-high {
@@ -891,8 +891,8 @@ textarea:focus {
 
 .result-detail {
   padding: 1.5rem;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(46, 125, 50, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.2);
   border-radius: 12px;
   border-left: 4px solid var(--accent);
 }
@@ -931,10 +931,10 @@ textarea:focus {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   color: #fff;
   border: none;
-  box-shadow: 0 15px 40px rgba(139, 21, 56, 0.25);
+  box-shadow: 0 15px 40px rgba(21, 101, 192, 0.25);
 }
 
 .cta-header {
@@ -1058,7 +1058,7 @@ textarea {
 textarea:focus {
   outline: none;
   border-color: var(--primary) !important;
-  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08) !important;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.08) !important;
 }
 
 .form-actions {
@@ -1101,7 +1101,7 @@ textarea:focus {
 
 .page-hero {
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.05), rgba(212, 175, 55, 0.03));
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.05), rgba(46, 125, 50, 0.03));
 }
 
 .page-hero-inner {
@@ -1148,7 +1148,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(139, 21, 56, 0.08);
+  background: rgba(21, 101, 192, 0.08);
   border-radius: 12px;
   color: var(--primary);
   font-size: 1.8rem;
@@ -1187,7 +1187,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(212, 175, 55, 0.08));
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.1), rgba(46, 125, 50, 0.08));
   border-radius: 12px;
   color: var(--primary);
   font-size: 1.5rem;
@@ -1266,11 +1266,11 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-radius: 50%;
   color: #fff;
   font-size: 3rem;
-  box-shadow: 0 8px 24px rgba(139, 21, 56, 0.2);
+  box-shadow: 0 8px 24px rgba(21, 101, 192, 0.2);
 }
 
 .team-card h3 {
@@ -1299,9 +1299,9 @@ textarea:focus {
   gap: 1.5rem;
   align-items: center;
   padding: 2rem;
-  background: rgba(212, 175, 55, 0.04);
+  background: rgba(46, 125, 50, 0.04);
   border-radius: var(--radius);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(46, 125, 50, 0.15);
 }
 
 .step-item {
@@ -1322,7 +1322,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-radius: 50%;
   color: #fff;
   font-size: 1.3rem;
@@ -1354,7 +1354,7 @@ textarea:focus {
 .cta-final {
   text-align: center;
   padding: 3rem 2.5rem;
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.04), rgba(212, 175, 55, 0.03));
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.04), rgba(46, 125, 50, 0.03));
   border: 2px solid var(--accent);
   border-radius: var(--radius);
 }
@@ -1538,12 +1538,12 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-radius: 16px;
   color: #fff;
   font-size: 2.2rem;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.2);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
 }
 
 .service-header > div {
@@ -1579,7 +1579,7 @@ textarea:focus {
 
 .service-features {
   padding: 1.5rem;
-  background: rgba(212, 175, 55, 0.04);
+  background: rgba(46, 125, 50, 0.04);
   border-radius: 12px;
   border-left: 3px solid var(--accent);
 }
@@ -1622,7 +1622,7 @@ textarea:focus {
 
 .service-process {
   padding: 1.5rem;
-  background: rgba(139, 21, 56, 0.04);
+  background: rgba(21, 101, 192, 0.04);
   border-radius: 12px;
   border-left: 3px solid var(--primary);
 }
@@ -1714,7 +1714,7 @@ textarea:focus {
   grid-template-columns: 80px 1fr;
   gap: 2rem;
   padding: 1.5rem;
-  background: rgba(212, 175, 55, 0.03);
+  background: rgba(46, 125, 50, 0.03);
   border-radius: 12px;
   border-left: 4px solid var(--primary);
 }
@@ -1725,13 +1725,13 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-radius: 50%;
   color: #fff;
   font-size: 1.8rem;
   font-weight: 800;
   font-family: 'Playfair Display', serif;
-  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.2);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
 }
 
 .timeline-content h3 {
@@ -1774,7 +1774,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(139, 21, 56, 0.08);
+  background: rgba(21, 101, 192, 0.08);
   border-radius: 12px;
   color: var(--primary);
   font-size: 1.6rem;
@@ -1815,7 +1815,7 @@ textarea:focus {
 
 .pricing-featured {
   border: 2px solid var(--primary);
-  box-shadow: 0 12px 40px rgba(139, 21, 56, 0.15);
+  box-shadow: 0 12px 40px rgba(21, 101, 192, 0.15);
   transform: scale(1.02);
 }
 
@@ -1828,7 +1828,7 @@ textarea:focus {
   top: -12px;
   right: 20px;
   padding: 0.4rem 1rem;
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(46, 125, 50, 0.1);
   border: 1px solid var(--accent);
   border-radius: 999px;
   font-size: 0.75rem;
@@ -1839,7 +1839,7 @@ textarea:focus {
 }
 
 .pricing-badge.primary {
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   border-color: var(--primary);
   color: #fff;
 }
@@ -1910,8 +1910,8 @@ textarea:focus {
 .pricing-note {
   text-align: center;
   padding: 1.5rem;
-  background: rgba(212, 175, 55, 0.04);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(46, 125, 50, 0.04);
+  border: 1px solid rgba(46, 125, 50, 0.2);
   border-radius: 12px;
 }
 
@@ -1930,7 +1930,7 @@ textarea:focus {
 .cta-services {
   text-align: center;
   padding: 3rem;
-  background: linear-gradient(135deg, rgba(139, 21, 56, 0.04), rgba(212, 175, 55, 0.03));
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.04), rgba(46, 125, 50, 0.03));
   border: 2px solid var(--accent);
 }
 
@@ -2019,7 +2019,7 @@ textarea:focus {
 
 /* PRE-FOOTER CTA BAND */
 .footer-cta-band {
-  background: linear-gradient(135deg, var(--primary, #8B1538), var(--primary-dark, #6b0f2d));
+  background: linear-gradient(135deg, var(--primary, #1565C0), var(--primary-dark, #0D47A1));
   padding: 3rem 0;
   margin-top: 0;
 }
@@ -2052,7 +2052,7 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--accent, #D4AF37);
+  background: var(--accent, #2E7D32);
   color: #1a1410;
   font-weight: 600;
   font-size: 0.95rem;
@@ -2065,7 +2065,7 @@ textarea:focus {
 }
 
 .btn-footer-cta:hover {
-  background: var(--accent-light, #E8C547);
+  background: var(--accent-light, #43A047);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
@@ -2104,7 +2104,7 @@ textarea:focus {
 .footer-logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--accent, #D4AF37);
+  background: var(--accent, #2E7D32);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -2123,7 +2123,7 @@ textarea:focus {
 }
 
 .footer-logo-text strong {
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
 }
 
 .footer-desc {
@@ -2155,8 +2155,8 @@ textarea:focus {
 }
 
 .social-icon:hover {
-  background: var(--accent, #D4AF37);
-  border-color: var(--accent, #D4AF37);
+  background: var(--accent, #2E7D32);
+  border-color: var(--accent, #2E7D32);
   color: #1a1410;
   transform: translateY(-2px);
 }
@@ -2170,7 +2170,7 @@ textarea:focus {
   letter-spacing: 0.08em;
   margin: 0 0 1rem;
   padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--accent, #D4AF37);
+  border-bottom: 2px solid var(--accent, #2E7D32);
   display: inline-block;
 }
 
@@ -2194,7 +2194,7 @@ textarea:focus {
 }
 
 .footer-links a:hover {
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
   padding-left: 4px;
 }
 
@@ -2220,12 +2220,12 @@ textarea:focus {
 }
 
 .footer-contact a:hover {
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
 }
 
 .footer-contact i {
   width: 16px;
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
   margin-top: 0.2rem;
   font-size: 0.85rem;
   flex-shrink: 0;
@@ -2249,7 +2249,7 @@ textarea:focus {
 
 .footer-newsletter-text > i {
   font-size: 1.4rem;
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
   flex-shrink: 0;
 }
 
@@ -2289,13 +2289,13 @@ textarea:focus {
 }
 
 .footer-newsletter-form input[type="email"]:focus {
-  border-color: var(--accent, #D4AF37);
+  border-color: var(--accent, #2E7D32);
 }
 
 .footer-newsletter-form button {
-  background: var(--accent, #D4AF37);
+  background: var(--accent, #2E7D32);
   color: #1a1410;
-  border: 1px solid var(--accent, #D4AF37);
+  border: 1px solid var(--accent, #2E7D32);
   border-radius: 0 6px 6px 0;
   padding: 0.7rem 1.2rem;
   font-weight: 600;
@@ -2306,8 +2306,8 @@ textarea:focus {
 }
 
 .footer-newsletter-form button:hover {
-  background: var(--accent-light, #E8C547);
-  border-color: var(--accent-light, #E8C547);
+  background: var(--accent-light, #43A047);
+  border-color: var(--accent-light, #43A047);
 }
 
 /* FOOTER BOTTOM */
@@ -2349,7 +2349,7 @@ textarea:focus {
 
 .trust-badge i {
   font-size: 0.7rem;
-  color: var(--accent, #D4AF37);
+  color: var(--accent, #2E7D32);
 }
 
 .back-to-top {
@@ -2367,8 +2367,8 @@ textarea:focus {
 }
 
 .back-to-top:hover {
-  background: var(--accent, #D4AF37);
-  border-color: var(--accent, #D4AF37);
+  background: var(--accent, #2E7D32);
+  border-color: var(--accent, #2E7D32);
   color: #1a1410;
   transform: translateY(-2px);
 }
@@ -2443,7 +2443,7 @@ main {
     box-shadow: none;
     border: none;
     border-radius: 0;
-    background: rgba(139, 21, 56, 0.04);
+    background: rgba(21, 101, 192, 0.04);
     transform: none;
     transition: max-height 0.3s ease, opacity 0.2s ease;
     min-width: auto;

@@ -36,7 +36,7 @@
       <article class="card">
         <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: start;">
           <div style="text-align: center;">
-            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), #C41E3A); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">1</div>
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), #1976D2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">1</div>
           </div>
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">
@@ -77,7 +77,7 @@
       <article class="card" style="background: rgba(var(--accent-rgb), 0.03);">
         <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: start;">
           <div style="text-align: center;">
-            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), #E8C547); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">2</div>
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), #43A047); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">2</div>
           </div>
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">

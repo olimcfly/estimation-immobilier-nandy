@@ -123,7 +123,7 @@ try {
     $mail->Subject = "Test SMTP — Estimation Immobilier Nandy ($now)";
     $mail->Body    = <<<HTML
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h2 style="color: #8B1538;">Test d'envoi SMTP réussi</h2>
+        <h2 style="color: #1565C0;">Test d'envoi SMTP réussi</h2>
         <p>Cet email confirme que la configuration SMTP fonctionne correctement.</p>
         <table style="border-collapse: collapse; width: 100%; margin-top: 15px;">
             <tr><td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Date</td>

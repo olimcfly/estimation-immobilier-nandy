@@ -128,7 +128,7 @@
     margin-top: 0.5rem;
   }
 
-  .btn-save:hover { background: #6b0f2d; }
+  .btn-save:hover { background: #0D47A1; }
 
   .btn-test-send {
     display: inline-flex;

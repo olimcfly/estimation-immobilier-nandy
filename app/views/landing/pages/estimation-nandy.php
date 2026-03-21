@@ -29,14 +29,14 @@ $formError = $form_error ?? '';
 
       <p class="lp-lead">
         Obtenez une <strong>fourchette de prix fiable</strong> pour votre bien immobilier à Nandy.
-        Basé sur les données réelles du marché de nandy. <strong>100% gratuit</strong>, sans engagement.
+        Basé sur les données réelles du marché de Nandy. <strong>100% gratuit</strong>, sans engagement.
       </p>
 
       <ul class="lp-trust-list">
         <li><i class="fas fa-bolt"></i> <strong>Résultat immédiat</strong> — en 60 secondes</li>
         <li><i class="fas fa-hand-holding-usd"></i> <strong>100% gratuit</strong> — aucun frais caché</li>
         <li><i class="fas fa-shield-alt"></i> <strong>Données sécurisées</strong> — RGPD conforme</li>
-        <li><i class="fas fa-chart-bar"></i> <strong>Marché actuel</strong> — prix réels Nandy 2024</li>
+        <li><i class="fas fa-chart-bar"></i> <strong>Marché actuel</strong> — prix réels Nandy 2026</li>
       </ul>
 
       <!-- Social proof compact -->
@@ -175,7 +175,7 @@ $formError = $form_error ?? '';
       <div class="lp-step">
         <div class="lp-step-number">2</div>
         <h3>Recevez votre estimation</h3>
-        <p>Notre algorithme calcule une fourchette de prix basée sur les données réelles du marché de nandy.</p>
+        <p>Notre algorithme calcule une fourchette de prix basée sur les données réelles du marché de Nandy.</p>
       </div>
       <div class="lp-step-arrow"><i class="fas fa-chevron-right"></i></div>
       <div class="lp-step">

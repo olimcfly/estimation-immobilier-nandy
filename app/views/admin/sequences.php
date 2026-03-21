@@ -35,7 +35,7 @@
     font-family: inherit;
   }
 
-  .btn-new-seq:hover { background: #6b0f2d; color: #fff; }
+  .btn-new-seq:hover { background: #0D47A1; color: #fff; }
 
   .seq-tabs {
     display: flex;

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<?= e((string) ($meta_description ?? '')) ?>">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="<?= e((string) ($colors['primary'] ?? '#8B1538')) ?>">
+  <meta name="theme-color" content="<?= e((string) ($colors['primary'] ?? '#1565C0')) ?>">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title><?= e((string) ($page_title ?? 'Estimation Immobilier Nandy')) ?></title>
 
@@ -31,21 +31,21 @@
 
   <style>
     :root {
-      --bg: <?= e((string) ($colors['bg'] ?? '#faf9f7')) ?>;
+      --bg: <?= e((string) ($colors['bg'] ?? '#f5f7fa')) ?>;
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
-      --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
-      --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
-      --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
-      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
-      --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
+      --text: <?= e((string) ($colors['text'] ?? '#1a2332')) ?>;
+      --muted: <?= e((string) ($colors['muted'] ?? '#5a6577')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#1565C0')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#0D47A1')) ?>;
+      --accent: <?= e((string) ($colors['accent'] ?? '#2E7D32')) ?>;
+      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#43A047')) ?>;
+      --border: <?= e((string) ($colors['border'] ?? '#dce3ed')) ?>;
       --success: <?= e((string) ($colors['success'] ?? '#22c55e')) ?>;
       --warning: <?= e((string) ($colors['warning'] ?? '#f97316')) ?>;
       --danger: <?= e((string) ($colors['danger'] ?? '#e24b4a')) ?>;
       --info: <?= e((string) ($colors['info'] ?? '#3b82f6')) ?>;
-      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '139, 21, 56')) ?>;
-      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '212, 175, 55')) ?>;
+      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '21, 101, 192')) ?>;
+      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '46, 125, 50')) ?>;
       --success-rgb: <?= e((string) ($rgbColors['success'] ?? '34, 197, 94')) ?>;
       --border-rgb: <?= e((string) ($rgbColors['border'] ?? '232, 223, 215')) ?>;
     }

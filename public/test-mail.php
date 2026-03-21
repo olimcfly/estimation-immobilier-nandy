@@ -189,10 +189,10 @@ $check = static fn(bool $ok): string => $ok
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #faf9f7; color: #1a1410; padding: 2rem; }
-        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #8B1538; }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #1565C0; }
         table { border-collapse: collapse; width: 100%; max-width: 800px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
         th, td { padding: .75rem 1rem; text-align: left; border-bottom: 1px solid #e8dfd7; }
-        th { background: #8B1538; color: #fff; font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+        th { background: #1565C0; color: #fff; font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
         td { font-size: .95rem; }
         tr:last-child td { border-bottom: none; }
         .mono { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .85rem; color: #6b6459; }
@@ -201,7 +201,7 @@ $check = static fn(bool $ok): string => $ok
         .section h2 { font-size: 1.1rem; margin-bottom: .5rem; color: #333; }
         .env-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
         .env-item { background: #fff; padding: .5rem .75rem; border-radius: 4px; border: 1px solid #e8dfd7; font-size: .85rem; }
-        .env-key { font-weight: 600; color: #8B1538; }
+        .env-key { font-weight: 600; color: #1565C0; }
         .env-val { font-family: monospace; color: #6b6459; }
     </style>
 </head>
