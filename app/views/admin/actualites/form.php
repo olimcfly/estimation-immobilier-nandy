@@ -164,7 +164,7 @@
   .admin-alert-info { background: rgba(59, 130, 246, 0.08); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.2); }
   .admin-char-count { display: block; font-size: 0.75rem; color: var(--admin-muted); margin-top: 0.25rem; text-align: right; }
   .admin-char-count.over { color: #dc2626; font-weight: 600; }
-  .source-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem; background: rgba(139,21,56,0.08); color: var(--admin-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+  .source-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem; background: rgba(21,101,192,0.08); color: var(--admin-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
   .admin-meta-value { font-size: 0.85rem; color: var(--admin-muted); margin: 0; line-height: 1.5; word-break: break-word; }
 
   @media (max-width: 1024px) {
