@@ -126,7 +126,7 @@ $quartiers = [
       <iframe
         id="google-map-quartiers"
         title="Carte des quartiers de Nandy"
-        src="https://maps.google.com/maps?q=44.8378,-0.5792&z=13&output=embed"
+        src="https://maps.google.com/maps?q=48.5810,2.5590&z=14&output=embed"
         width="100%"
         height="480"
         style="border: 0; border-radius: var(--radius-xl); display: block;"
@@ -161,7 +161,7 @@ $quartiers = [
               </p>
             </div>
             <div style="text-align: right;">
-              <div style="background: linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(212, 175, 55, 0.08)); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);">
+              <div style="background: linear-gradient(135deg, rgba(21, 101, 192, 0.1), rgba(46, 125, 50, 0.08)); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);">
                 <p style="margin: 0; font-weight: 700; font-size: var(--size-lg); color: var(--primary);">
                   <?= number_format((int) $quartier['prix_m2'], 0, ',', ' '); ?> €/m²
                 </p>
@@ -313,97 +313,12 @@ $quartiers = [
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4);">
-      <!-- Chartrons -->
-      <figure style="margin: 0;">
-        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
-          <img
-            src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier des Chartrons à Nandy"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
-        </div>
-        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-wine-glass-alt"></i> Chartrons
-        </figcaption>
-      </figure>
-
-      <!-- Saint-Pierre -->
-      <figure style="margin: 0;">
-        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
-          <img
-            src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Saint-Pierre Nandy"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
-        </div>
-        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-landmark"></i> Saint-Pierre
-        </figcaption>
-      </figure>
-
-      <!-- Saint-Michel -->
-      <figure style="margin: 0;">
-        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
-          <img
-            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Saint-Michel Nandy"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
-        </div>
-        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-church"></i> Saint-Michel
-        </figcaption>
-      </figure>
-
-      <!-- Caudéran -->
-      <figure style="margin: 0;">
-        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
-          <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier résidentiel Caudéran"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
-        </div>
-        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-home"></i> Caudéran
-        </figcaption>
-      </figure>
-
-      <!-- Bastide -->
-      <figure style="margin: 0;">
-        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Bastide - rive droite"
-            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
-        </div>
-        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-water"></i> Bastide
-        </figcaption>
-      </figure>
-
-      <!-- Mériadeck -->
+      <!-- Centre-Ville -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Mériadeck"
+            alt="Centre-Ville de Nandy"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -411,7 +326,92 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-building"></i> Mériadeck
+          <i class="fas fa-landmark"></i> Centre-Ville
+        </figcaption>
+      </figure>
+
+      <!-- Les Bois de Nandy -->
+      <figure style="margin: 0;">
+        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
+          <img
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80"
+            alt="Les Bois de Nandy - Forêt de Sénart"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
+        </div>
+        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
+          <i class="fas fa-tree"></i> Les Bois de Nandy
+        </figcaption>
+      </figure>
+
+      <!-- Quartier de la Seine -->
+      <figure style="margin: 0;">
+        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
+          <img
+            src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=500&q=80"
+            alt="Quartier de la Seine à Nandy"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
+        </div>
+        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
+          <i class="fas fa-water"></i> Quartier de la Seine
+        </figcaption>
+      </figure>
+
+      <!-- Quartier des Écoles -->
+      <figure style="margin: 0;">
+        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
+          <img
+            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=500&q=80"
+            alt="Quartier des Écoles à Nandy"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
+        </div>
+        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
+          <i class="fas fa-graduation-cap"></i> Quartier des Écoles
+        </figcaption>
+      </figure>
+
+      <!-- Zone Parc d'Activités -->
+      <figure style="margin: 0;">
+        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
+          <img
+            src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=500&q=80"
+            alt="Zone Parc d'Activités de Nandy"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
+        </div>
+        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
+          <i class="fas fa-building"></i> Zone Parc d'Activités
+        </figcaption>
+      </figure>
+
+      <!-- Quartier du Parc -->
+      <figure style="margin: 0;">
+        <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
+          <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80"
+            alt="Quartier du Parc à Nandy"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
+        </div>
+        <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
+          <i class="fas fa-leaf"></i> Quartier du Parc
         </figcaption>
       </figure>
     </div>
@@ -436,7 +436,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel est le quartier le plus dynamique ?
         </h3>
         <p>
-          La Bastide affiche la tendance la plus forte (+7.3%) grâce aux projets urbains majeurs (Darwin, Euratlantique). Saint-Michel suit avec +6.2% porté par la rénovation du quartier.
+          Le Quartier de la Seine affiche la tendance la plus forte (+5.1%) grâce à l'arrivée de résidences récentes. La Zone Parc d'Activités suit avec +4.5% portée par le développement économique local.
         </p>
       </article>
 
@@ -445,7 +445,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel quartier pour une famille ?
         </h3>
         <p>
-          Caudéran est le quartier familial par excellence avec ses maisons avec jardin, ses écoles réputées et son ambiance résidentielle calme. Les Chartrons offrent aussi un excellent cadre de vie.
+          Le Quartier des Écoles est le secteur familial par excellence avec ses groupes scolaires, ses parcs de jeux et son ambiance résidentielle calme. Les Bois de Nandy offrent aussi un excellent cadre de vie proche de la forêt de Sénart.
         </p>
       </article>
 
@@ -454,7 +454,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Où trouver le meilleur investissement ?
         </h3>
         <p>
-          La Bastide et Saint-Michel combinent des prix encore accessibles avec de fortes perspectives de plus-value grâce aux projets de rénovation urbaine en cours.
+          Le Quartier de la Seine et la Zone Parc d'Activités combinent des prix encore accessibles avec de bonnes perspectives de valorisation grâce au développement de la commune et à la proximité de l'A5.
         </p>
       </article>
 
@@ -463,7 +463,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel quartier offre le meilleur rapport qualité/prix ?
         </h3>
         <p>
-          Mériadeck et Saint-Michel proposent des prix au m² plus abordables tout en restant très centraux. Idéal pour les primo-accédants souhaitant rester intra-rocade.
+          La Zone Parc d'Activités et le Quartier de la Seine proposent des prix au m² plus abordables tout en offrant un bon accès aux axes routiers. Idéal pour les primo-accédants en Seine-et-Marne.
         </p>
       </article>
 
@@ -472,7 +472,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Les prix varient-ils beaucoup d'un quartier à l'autre ?
         </h3>
         <p>
-          Oui, de 4 100 €/m² (Bastide) à 5 800 €/m² (Saint-Pierre). L'écart reflète la centralité, le patrimoine architectural et la demande. Nandy reste attractif comparé aux métropoles similaires.
+          Oui, de 2 900 €/m² (Zone Parc d'Activités) à 3 600 €/m² (Les Bois de Nandy). L'écart reflète la proximité de la forêt, le calme résidentiel et la demande. Nandy reste très attractif comparé aux communes voisines d'Île-de-France.
         </p>
       </article>
 
@@ -481,7 +481,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Comment choisir son quartier pour vendre ?
         </h3>
         <p>
-          Votre bien s'adapte à un profil de client. Utilisez notre estimation pour connaître le prix du marché, puis explorez les tendances de votre quartier pour fixer le bon prix de vente.
+          Votre bien s'adapte à un profil d'acheteur. Utilisez notre estimation pour connaître le prix du marché, puis explorez les tendances de votre quartier pour fixer le bon prix de vente.
         </p>
       </article>
     </div>

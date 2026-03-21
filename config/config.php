@@ -12,19 +12,19 @@ if (!defined('CITY_CODE_POSTAL')) {
     define('CITY_CODE_POSTAL', '77176');
 }
 if (!defined('QUARTIERS')) {
-    define('QUARTIERS', ['Chartrons', 'Saint-Pierre', 'Saint-Michel', 'Caudéran', 'Bastide', 'Mériadeck']);
+    define('QUARTIERS', ['Centre-Ville', 'Les Bois de Nandy', 'Quartier de la Seine', 'Quartier des Écoles', 'Quartier du Parc', 'Zone Parc d\'Activités']);
 }
 if (!defined('PRIX_M2_MOYEN')) {
-    define('PRIX_M2_MOYEN', 3200);
+    define('PRIX_M2_MOYEN', 2900);
 }
 if (!defined('COLOR_PRIMARY')) {
-    define('COLOR_PRIMARY', '#2E7D32');
+    define('COLOR_PRIMARY', '#1565C0');
 }
 if (!defined('COLOR_SECONDARY')) {
     define('COLOR_SECONDARY', '#FFFFFF');
 }
 if (!defined('COLOR_ACCENT')) {
-    define('COLOR_ACCENT', '#FF8F00');
+    define('COLOR_ACCENT', '#2E7D32');
 }
 
 return [
@@ -90,15 +90,15 @@ return [
     ],
     'site' => [
         'colors' => [
-            'bg' => $_ENV['SITE_COLOR_BG'] ?? '#faf9f7',
+            'bg' => $_ENV['SITE_COLOR_BG'] ?? '#f5f7fa',
             'surface' => $_ENV['SITE_COLOR_SURFACE'] ?? '#ffffff',
-            'text' => $_ENV['SITE_COLOR_TEXT'] ?? '#1a1410',
-            'muted' => $_ENV['SITE_COLOR_MUTED'] ?? '#6b6459',
-            'primary' => $_ENV['SITE_COLOR_PRIMARY'] ?? '#8B1538',
-            'primary_dark' => $_ENV['SITE_COLOR_PRIMARY_DARK'] ?? '#6b0f2d',
-            'accent' => $_ENV['SITE_COLOR_ACCENT'] ?? '#D4AF37',
-            'accent_light' => $_ENV['SITE_COLOR_ACCENT_LIGHT'] ?? '#E8C547',
-            'border' => $_ENV['SITE_COLOR_BORDER'] ?? '#e8dfd7',
+            'text' => $_ENV['SITE_COLOR_TEXT'] ?? '#1a2332',
+            'muted' => $_ENV['SITE_COLOR_MUTED'] ?? '#5a6577',
+            'primary' => $_ENV['SITE_COLOR_PRIMARY'] ?? '#1565C0',
+            'primary_dark' => $_ENV['SITE_COLOR_PRIMARY_DARK'] ?? '#0D47A1',
+            'accent' => $_ENV['SITE_COLOR_ACCENT'] ?? '#2E7D32',
+            'accent_light' => $_ENV['SITE_COLOR_ACCENT_LIGHT'] ?? '#43A047',
+            'border' => $_ENV['SITE_COLOR_BORDER'] ?? '#dce3ed',
             'success' => $_ENV['SITE_COLOR_SUCCESS'] ?? '#22c55e',
             'warning' => $_ENV['SITE_COLOR_WARNING'] ?? '#f97316',
             'danger' => $_ENV['SITE_COLOR_DANGER'] ?? '#e24b4a',

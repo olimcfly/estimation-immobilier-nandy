@@ -22,9 +22,9 @@
       --admin-sidebar-bg: #1a1410;
       --admin-sidebar-text: #c8c0b8;
       --admin-sidebar-hover: rgba(255,255,255,0.08);
-      --admin-sidebar-active: rgba(139, 21, 56, 0.4);
-      --admin-primary: #8B1538;
-      --admin-accent: #D4AF37;
+      --admin-sidebar-active: rgba(21, 101, 192, 0.4);
+      --admin-primary: #1565C0;
+      --admin-accent: #2E7D32;
     }
 
     * { box-sizing: border-box; }
@@ -74,7 +74,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--admin-primary), #C41E3A);
+      background: linear-gradient(135deg, var(--admin-primary), #1976D2);
       border-radius: 8px;
       color: #fff;
       font-size: 1rem;
@@ -182,7 +182,7 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--admin-primary), #C41E3A);
+      background: linear-gradient(135deg, var(--admin-primary), #1976D2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -289,7 +289,7 @@
     }
 
     .admin-topbar-link:hover {
-      background: rgba(139, 21, 56, 0.06);
+      background: rgba(21, 101, 192, 0.06);
       color: var(--admin-primary);
     }
 

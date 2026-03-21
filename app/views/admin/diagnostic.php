@@ -43,7 +43,7 @@
   }
 
   .btn-refresh:hover {
-    background: #6b0f2d;
+    background: #0D47A1;
     color: #fff;
   }
 

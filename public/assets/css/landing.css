@@ -264,7 +264,7 @@
 }
 
 .lp-btn-primary {
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   color: #fff;
   box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.25);
 }
@@ -421,7 +421,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
@@ -655,7 +655,7 @@
 
 /* ─── CTA Section ───────────────────────────────────── */
 .lp-cta-section {
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   padding: 4rem 0;
 }
 
@@ -836,7 +836,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), #C41E3A);
+  background: linear-gradient(135deg, var(--primary), #1976D2);
   color: #fff;
   border-radius: 8px;
   font-size: 0.9rem;

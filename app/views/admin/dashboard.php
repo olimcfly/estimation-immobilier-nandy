@@ -13,7 +13,7 @@
     <div class="card" style="padding: 1.5rem;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
         <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b6459;">Leads total</span>
-        <span style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(139,21,56,0.08); border-radius: 8px; color: #8B1538;"><i class="fas fa-users"></i></span>
+        <span style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(21,101,192,0.08); border-radius: 8px; color: #1565C0;"><i class="fas fa-users"></i></span>
       </div>
       <div style="font-size: 2rem; font-weight: 700; color: #1a1410;"><?= (int) ($stats['total_leads'] ?? 0) ?></div>
       <div style="font-size: 0.8rem; color: #6b6459; margin-top: 0.25rem;">
@@ -59,8 +59,8 @@
     <div class="card" style="padding: 1.5rem;">
       <h2 style="font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem;">Actions rapides</h2>
       <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-        <a href="/admin/leads" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(139,21,56,0.05); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
-          <i class="fas fa-users" style="color: #8B1538; width: 20px; text-align: center;"></i>
+        <a href="/admin/leads" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(21,101,192,0.05); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
+          <i class="fas fa-users" style="color: #1565C0; width: 20px; text-align: center;"></i>
           Voir tous les leads
         </a>
         <a href="/admin/blog/create" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(59,130,246,0.05); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
@@ -71,8 +71,8 @@
           <i class="fas fa-newspaper" style="color: #3b82f6; width: 20px; text-align: center;"></i>
           Gestion du blog
         </a>
-        <a href="/admin/images" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(212,175,55,0.08); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
-          <i class="fas fa-images" style="color: #D4AF37; width: 20px; text-align: center;"></i>
+        <a href="/admin/images" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(46,125,50,0.08); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
+          <i class="fas fa-images" style="color: #2E7D32; width: 20px; text-align: center;"></i>
           Generateur d'images
         </a>
         <a href="/admin/diagnostic" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(107,100,89,0.05); border-radius: 8px; text-decoration: none; color: #1a1410; font-size: 0.9rem; transition: background 0.15s;">
@@ -86,7 +86,7 @@
     <div class="card" style="padding: 1.5rem;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
         <h2 style="font-size: 1.1rem; font-weight: 700; margin: 0;">Derniers leads</h2>
-        <a href="/admin/leads" style="font-size: 0.85rem; color: #8B1538; text-decoration: none;">Voir tout <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
+        <a href="/admin/leads" style="font-size: 0.85rem; color: #1565C0; text-decoration: none;">Voir tout <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
       </div>
 
       <?php if (empty($recent_leads ?? [])): ?>
@@ -113,7 +113,7 @@
                     <?php
                       $scoreColor = match((string) $lead['score']) {
                         'chaud' => '#f97316',
-                        'tiede' => '#D4AF37',
+                        'tiede' => '#2E7D32',
                         default => '#6b6459',
                       };
                     ?>

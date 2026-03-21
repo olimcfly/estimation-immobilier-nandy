@@ -32,7 +32,7 @@ $formError = $form_error ?? '';
         <div class="lp-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
-        <span>4.8/5 — Service noté par nos clients de nandy</span>
+        <span>4.8/5 — Service noté par nos clients de Nandy</span>
       </div>
     </div>
 

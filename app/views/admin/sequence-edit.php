@@ -95,7 +95,7 @@
     font-family: inherit;
   }
 
-  .btn-save:hover { background: #6b0f2d; }
+  .btn-save:hover { background: #0D47A1; }
 
   /* Steps section */
   .steps-section {

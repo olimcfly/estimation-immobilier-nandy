@@ -43,7 +43,7 @@
           "L'avis de valeur était très proche de l'offre reçue. Recommandé pour avoir une estimation fiable avant de vendre à Nandy !"
         </p>
         <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Marie D. • Nandy Chartrons
+          — Marie D. • Nandy Centre-Ville
         </p>
       </div>
 
@@ -103,7 +103,7 @@
             type="text"
             id="ville"
             name="ville"
-            placeholder="Nandy, Talence, Mérignac..."
+            placeholder="Nandy, Savigny-le-Temple, Cesson..."
             required
             autocomplete="off"
           >

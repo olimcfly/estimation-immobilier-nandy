@@ -151,7 +151,7 @@
   .admin-form-group:last-child { margin-bottom: 0; }
   .admin-label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--admin-text); margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.03em; }
   .admin-input, .admin-select, .admin-textarea { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--admin-border); border-radius: 6px; font-size: 0.9rem; font-family: inherit; background: #fff; }
-  .admin-input:focus, .admin-select:focus, .admin-textarea:focus { outline: none; border-color: var(--admin-primary); box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1); }
+  .admin-input:focus, .admin-select:focus, .admin-textarea:focus { outline: none; border-color: var(--admin-primary); box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1); }
   .admin-textarea-code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.85rem; line-height: 1.6; }
   .admin-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.15s ease; }
   .admin-btn-primary { background: var(--admin-primary); color: #fff; }
@@ -164,7 +164,7 @@
   .admin-alert-info { background: rgba(59, 130, 246, 0.08); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.2); }
   .admin-char-count { display: block; font-size: 0.75rem; color: var(--admin-muted); margin-top: 0.25rem; text-align: right; }
   .admin-char-count.over { color: #dc2626; font-weight: 600; }
-  .source-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem; background: rgba(139,21,56,0.08); color: var(--admin-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+  .source-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem; background: rgba(21,101,192,0.08); color: var(--admin-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
   .admin-meta-value { font-size: 0.85rem; color: var(--admin-muted); margin: 0; line-height: 1.5; word-break: break-word; }
 
   @media (max-width: 1024px) {

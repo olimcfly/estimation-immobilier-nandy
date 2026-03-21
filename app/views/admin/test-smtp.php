@@ -88,7 +88,7 @@
   .form-group select:focus {
     outline: none;
     border-color: var(--admin-primary);
-    box-shadow: 0 0 0 3px rgba(139,21,56,0.1);
+    box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
   }
 
   .form-row {
@@ -123,7 +123,7 @@
     transition: background 0.15s;
   }
 
-  .btn-primary:hover { background: #6b0f2d; }
+  .btn-primary:hover { background: #0D47A1; }
   .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 
   .btn-secondary {
