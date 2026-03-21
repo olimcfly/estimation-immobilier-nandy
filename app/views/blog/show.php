@@ -49,7 +49,7 @@ $jsonLd = array_filter($jsonLd, static fn (mixed $value): bool => $value !== nul
 
     <section class="card cta-card">
       <h2>Besoin d'un prix de vente réaliste et défendable ?</h2>
-      <p class="muted">Profitez de notre simulateur pour obtenir une fourchette fiable adaptée à Nandy et ses environs.</p>
+      <p class="muted">Profitez de notre simulateur pour obtenir une fourchette fiable adaptée à Nandy.</p>
       <a href="/estimation" class="btn">Demander mon estimation</a>
     </section>
   </div>

@@ -84,7 +84,7 @@
               <i class="fas fa-database"></i> Recherche comparative
             </h3>
             <p style="margin: 0 0 1rem; color: var(--muted);">
-              Notre moteur recherche les biens similaires vendus récemment à Nandy et en Seine-et-Marne.
+              Notre moteur recherche les biens similaires vendus récemment à Nandy et région.
             </p>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
@@ -92,7 +92,7 @@
               <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; text-align: center;">
                 <div>
                   <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem;">Transactions</p>
-                  <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: var(--primary);">3 000+</p>
+                  <p style="margin: 0; font-weight: 700; font-size: 1.3rem; color: var(--primary);">5 000+</p>
                 </div>
                 <div>
                   <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem;">Derniers 24 mois</p>
@@ -158,7 +158,7 @@
               <i class="fas fa-sliders-h"></i> Ajustements locaux
             </h3>
             <p style="margin: 0 0 1rem; color: var(--muted);">
-              Application des ajustements spécifiques à Nandy et en Seine-et-Marne. Expertise locale.
+              Application des ajustements spécifiques à Nandy et région. Expertise locale.
             </p>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
@@ -245,7 +245,7 @@
       <article class="card feature-card">
         <h3><i class="fas fa-brain"></i> Machine Learning</h3>
         <p>
-          Algorithme IA entrainé sur 3000+ transactions. Apprentissage continu des tendances marché Seine-et-Marne.
+          Algorithme IA entrainé sur 5000+ transactions. Apprentissage continu des tendances marché Nandy.
         </p>
       </article>
 
@@ -343,7 +343,7 @@
         <div style="display: grid; gap: 1rem;">
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Quartier exact</p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Nandy vs Savigny-le-Temple → prix différents.</p>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Chartrons vs Saint-Michel → prix différents.</p>
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Proximité transports</p>
@@ -376,7 +376,7 @@
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid #22c55e; border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Prix au m²</p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Comparatif Nandy/communes/Seine-et-Marne.</p>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Comparatif Nandy/banlieue/région.</p>
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid #22c55e; border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Offre & demande</p>
@@ -388,7 +388,7 @@
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid #22c55e; border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Biens comparables</p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">3000+ transactions analysées.</p>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">5000+ transactions analysées.</p>
           </div>
         </div>
       </article>
@@ -462,10 +462,10 @@
       <!-- STAT 3 -->
       <article class="card service-additional">
         <h3>
-          <i class="fas fa-database"></i> 3000+ transactions
+          <i class="fas fa-database"></i> 5000+ transactions
         </h3>
         <p>
-          Biens analysés dans notre base de données. Couverture complète du marché local & région.
+          Biens analysés dans notre base de données. Couverture complète du marché de nandy & région.
         </p>
       </article>
 
@@ -600,7 +600,7 @@
         <h3><i class="fas fa-question-circle"></i> Vos données viennent d'où?</h3>
         <p>
           Sources : notaires (transactions finalisées), annonces immobilières, données publiques,
-          suivi marché temps réel. 3000+ biens analysés sur 24 mois.
+          suivi marché temps réel. 5000+ biens analysés sur 24 mois.
         </p>
       </article>
 

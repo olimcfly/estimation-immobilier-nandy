@@ -82,13 +82,6 @@ final class PageController
     }
 
 
-    public function podcast(): void
-    {
-        View::render('pages/podcast', [
-            'page_title' => 'Podcast Immobilier Nandy - Conseils & Tendances',
-        ]);
-    }
-
     public function newsletterSubscribe(): void
     {
         $hasConsent = isset($_POST['newsletter_rgpd']) && $_POST['newsletter_rgpd'] === 'on';

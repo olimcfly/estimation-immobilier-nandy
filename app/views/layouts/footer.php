@@ -1,131 +1,208 @@
 </main>
 
-<!-- ============================================ -->
-<!-- FOOTER -->
+<!-- ================================================ -->
+<!-- FOOTER PRO -->
+<!-- ================================================ -->
+
+<!-- PRE-FOOTER CTA -->
+<section class="footer-cta-band">
+  <div class="container">
+    <div class="footer-cta-inner">
+      <div class="footer-cta-text">
+        <h3>Estimez votre bien immobilier gratuitement</h3>
+        <p>Algorithme IA + expertise locale pour une estimation fiable en quelques minutes.</p>
+      </div>
+      <a href="/#form-estimation" class="btn-footer-cta">
+        <i class="fas fa-chart-line"></i> Estimer mon bien
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
-    <!-- FOOTER GRID (4 COLONNES) -->
+
+    <!-- FOOTER MAIN -->
     <div class="footer-grid">
-      
-      <!-- COLONNE 1: LOGO + DESCRIPTION -->
-      <div>
-        <p class="brand-footer">
-          Estimation <span>Nandy</span>
+
+      <!-- COL 1: BRAND -->
+      <div class="footer-column footer-col-brand">
+        <a href="/" class="footer-logo-link">
+          <span class="footer-logo-icon"><i class="fas fa-home"></i></span>
+          <span class="footer-logo-text">Estimation Immobilier <strong>Nandy</strong></span>
+        </a>
+        <p class="footer-desc">
+          Votre partenaire de confiance pour l'estimation immobilière sur Nandy et la métropole de nandye depuis 2020.
         </p>
-        <p class="muted" style="margin: 0.8rem 0 0; font-size: 0.95rem; line-height: 1.6;">
-          Plateforme d'estimation immobilière fiable et rapide à Nandy et ses environs en Seine-et-Marne.
-          Découvrez la vraie valeur de votre bien en 60 secondes.
-        </p>
+        <div class="footer-social">
+          <a href="https://facebook.com/estimation-nandy" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/estimation-nandy" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/estimation-nandy" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/estimation_bdx" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+        </div>
       </div>
 
-      <!-- COLONNE 2: LIENS PAGES -->
-      <div>
-        <h4 style="margin: 0 0 1rem; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text);">
-          Pages
-        </h4>
+      <!-- COL 2: SERVICES -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Services</h4>
         <ul class="footer-links">
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/about">À propos</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><a href="/#form-estimation">Estimation en ligne</a></li>
+          <li><a href="/processus-estimation">Notre processus</a></li>
+          <li><a href="/quartiers">Quartiers de Nandy</a></li>
+          <li><a href="/#how-it-works">Comment ça marche</a></li>
+          <li><a href="/#example-result">Voir un exemple</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: RESSOURCES -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Ressources</h4>
+        <ul class="footer-links">
+          <li><a href="/blog">Blog & actualités</a></li>
+          <li><a href="/guides">Guides immobiliers</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: ENTREPRISE -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Entreprise</h4>
+        <ul class="footer-links">
+          <li><a href="/a-propos">À propos</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/faq">FAQ</a></li>
-        </ul>
-      </div>
-
-      <!-- COLONNE 3: CONTACT -->
-      <div>
-        <h4 style="margin: 0 0 1rem; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text);">
-          Contact
-        </h4>
-        <div style="margin-bottom: 1rem;">
-          <p style="margin: 0 0 0.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-envelope"></i> Email
-          </p>
-          <p style="margin: 0; color: var(--text); font-weight: 500;">
-            <a href="mailto:contact@estimation-immobilier-nandy.fr" style="color: var(--primary); text-decoration: none;">
-              contact@estimation-immobilier-nandy.fr
-            </a>
-          </p>
-        </div>
-
-        <div style="margin-bottom: 1rem;">
-          <p style="margin: 0 0 0.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-phone"></i> Téléphone
-          </p>
-          <p style="margin: 0; color: var(--text); font-weight: 500;">
-            <a href="tel:+33164000000" style="color: var(--primary); text-decoration: none;">
-              +33 1 64 00 00 00
-            </a>
-          </p>
-          <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted);">
-            Lun-Ven : 9h-19h
-          </p>
-        </div>
-
-        <div>
-          <p style="margin: 0 0 0.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-map-marker-alt"></i> Adresse
-          </p>
-          <p style="margin: 0; color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.6;">
-            Nandy, 77176<br>
-            Seine-et-Marne<br>
-            France
-          </p>
-        </div>
-      </div>
-
-      <!-- COLONNE 4: LÉGAL + RÉSEAU -->
-      <div>
-        <h4 style="margin: 0 0 1rem; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text);">
-          Légal
-        </h4>
-        <ul class="footer-links">
           <li><a href="/mentions-legales">Mentions légales</a></li>
-          <li><a href="/politique-confidentialite">Politique de confidentialité</a></li>
-          <li><a href="/conditions-utilisation">Conditions d'utilisation</a></li>
-          <li><a href="/sitemap.xml">Plan du site</a></li>
-          <li><a href="/rgpd">RGPD & Cookies</a></li>
+          <li><a href="/politique-confidentialite">Confidentialité</a></li>
+          <li><a href="/conditions-utilisation">CGU</a></li>
         </ul>
+      </div>
 
-        <h4 style="margin: 1.5rem 0 1rem; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text);">
-          Suivez-nous
-        </h4>
-        <div style="display: flex; gap: 1rem;">
-          <a href="#facebook" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 8px; color: var(--primary); text-decoration: none; transition: all 0.2s;" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#instagram" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 8px; color: var(--primary); text-decoration: none; transition: all 0.2s;" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#linkedin" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 8px; color: var(--primary); text-decoration: none; transition: all 0.2s;" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#twitter" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 8px; color: var(--primary); text-decoration: none; transition: all 0.2s;" title="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
+      <!-- COL 5: CONTACT -->
+      <div class="footer-column">
+        <h4 class="footer-heading">Nous contacter</h4>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Nandy, 77176<br>Île-de-France</span>
+          </li>
+          <li>
+            <a href="tel:+33556000000">
+              <i class="fas fa-phone"></i>
+              <span>05 56 00 00 00</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact@estimation-immobilier-nandy.fr">
+              <i class="fas fa-envelope"></i>
+              <span>contact@estimation-immobilier-nandy.fr</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
 
-    <div class="footer-bottom">
-      <p class="muted">&copy; 2026 Estimation Immobilier Nandy. Tous droits réservés.</p>
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter-band">
+      <div class="footer-newsletter-text">
+        <i class="fas fa-envelope-open-text"></i>
+        <div>
+          <strong>Restez informé</strong>
+          <span>Recevez nos analyses du marché de nandy et nos conseils immobiliers.</span>
+        </div>
+      </div>
+      <form class="footer-newsletter-form" method="POST" action="/api/newsletter">
+        <input type="email" name="email" placeholder="Votre adresse email" required aria-label="Email pour newsletter">
+        <button type="submit">S'inscrire</button>
+      </form>
     </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p>&copy; 2026 Estimation Immobilier Nandy &mdash; SAS OCDM Agency. Tous droits réservés.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <div class="footer-trust">
+          <span class="trust-badge"><i class="fas fa-lock"></i> SSL</span>
+          <span class="trust-badge"><i class="fas fa-shield-alt"></i> RGPD</span>
+          <span class="trust-badge"><i class="fas fa-check-circle"></i> Vérifié</span>
+        </div>
+        <a href="#top" class="back-to-top" aria-label="Retour en haut">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+
   </div>
 </footer>
 
 <script>
+  // Property image alt text
   document.querySelectorAll('img[data-address][data-bedrooms]').forEach((propertyImage) => {
     const address = (propertyImage.dataset.address || '').trim();
     const bedrooms = (propertyImage.dataset.bedrooms || '').trim();
-
-    if (!address || !bedrooms) {
-      return;
-    }
-
+    if (!address || !bedrooms) return;
     propertyImage.alt = `${address} - ${bedrooms} pièces`;
   });
+
+  // Mobile menu toggle
+  (function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.top-nav');
+    if (!toggle || !nav) return;
+
+    function closeMenu() {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Ouvrir le menu');
+      document.body.style.overflow = '';
+      document.querySelectorAll('.has-dropdown').forEach(function(d) {
+        d.classList.remove('active');
+      });
+    }
+
+    toggle.addEventListener('click', function() {
+      const isOpen = nav.classList.toggle('active');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Mobile dropdown toggles (touch-friendly)
+    document.querySelectorAll('.has-dropdown > .nav-link').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          var parent = this.parentElement;
+          // Close other dropdowns
+          document.querySelectorAll('.has-dropdown').forEach(function(d) {
+            if (d !== parent) d.classList.remove('active');
+          });
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Close menu on resize to desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+
+    // Close menu when clicking a dropdown sub-link or regular nav link (mobile)
+    nav.querySelectorAll('.dropdown-menu a, .nav-item:not(.has-dropdown) .nav-link, .nav-cta-mobile a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          closeMenu();
+        }
+      });
+    });
+  })();
 </script>
 
 </body>

@@ -9,9 +9,9 @@
       <p class="eyebrow">
         <i class="fas fa-info-circle"></i> À propos de nous
       </p>
-      <h1>L'expertise immobilière de Nandy et environs à votre service</h1>
+      <h1>L'expertise immobilière de nandye à votre service</h1>
       <p class="lead">
-        Depuis 2023, nous accompagnons les vendeurs de Nandy et environs à valoriser leur bien immobilier avec fiabilité et professionnalisme.
+        Depuis 2023, nous accompagnons les vendeurs de Nandy et région à valoriser leur bien immobilier avec fiabilité et professionnalisme.
       </p>
     </div>
   </div>
@@ -30,7 +30,7 @@
         </div>
         <h2>Notre Mission</h2>
         <p>
-          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de Nandy et environs.
+          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de la région Nandy-Métropole. 
           Nous croyons qu'une bonne évaluation est la première étape d'une vente réussie.
         </p>
       </article>
@@ -42,8 +42,8 @@
         </div>
         <h2>Notre Vision</h2>
         <p>
-          Devenir la plateforme de référence pour l'estimation immobilière en Seine-et-Marne,
-          en combinant technologie intelligente et expertise locale du marché de Nandy et environs.
+          Devenir la plateforme de référence pour l'estimation immobilière en Seine-et-Marne, 
+          en combinant technologie intelligente et expertise locale du marché de nandy.
         </p>
       </article>
     </div>
@@ -65,9 +65,9 @@
     <div class="stats-grid">
       <!-- STAT 1 -->
       <div class="card stat-box">
-        <p class="stat-number">2 147</p>
+        <p class="stat-number">3 847</p>
         <p class="stat-label">Estimations réalisées</p>
-        <p class="stat-desc">Dans la région de Nandy depuis 2023</p>
+        <p class="stat-desc">Dans la région Nandy depuis 2023</p>
       </div>
 
       <!-- STAT 2 -->
@@ -86,9 +86,9 @@
 
       <!-- STAT 4 -->
       <div class="card stat-box">
-        <p class="stat-number">15</p>
-        <p class="stat-label">Communes couvertes</p>
-        <p class="stat-desc">Nandy et les communes alentour</p>
+        <p class="stat-number">12</p>
+        <p class="stat-label">Quartiers couverts</p>
+        <p class="stat-desc">Nandy intra-muros + banlieue</p>
       </div>
     </div>
   </div>
@@ -115,7 +115,7 @@
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
         <p class="team-bio">
-          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché seine-et-marnais. 
+          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché de nandy. 
           Passionné par l'innovation et la transparence.
         </p>
       </article>
@@ -128,7 +128,7 @@
         <h3>Sophie Dupont</h3>
         <p class="team-role">Analyste Marché Immobilier</p>
         <p class="team-bio">
-          Données & analyse. Suit en temps réel les tendances du marché local. 
+          Données & analyse. Suit en temps réel les tendances du marché de nandy. 
           Garantit la précision de chaque estimation grâce à l'algorithme propriétaire.
         </p>
       </article>
@@ -180,7 +180,7 @@
         </div>
         <h3>Données Locales</h3>
         <p>
-          Analyse basée sur 3000+ transactions récentes en Seine-et-Marne. Marché temps réel, pas de statistiques obsolètes.
+          Analyse basée sur 5000+ transactions réelles à Nandy et région. Marché temps réel, pas de statistiques obsolètes.
         </p>
       </article>
 
@@ -241,7 +241,7 @@
         <div class="timeline-content">
           <h3>Analyse comparative</h3>
           <p>
-            Notre moteur compare avec 3000+ biens similaires vendus récemment en Seine-et-Marne.
+            Notre moteur compare avec 5000+ biens similaires vendus récemment à Nandy et région.
           </p>
         </div>
       </div>
@@ -297,7 +297,7 @@
       <p class="eyebrow">
         <i class="fas fa-map-marker-alt"></i> Nos quartiers couverts
       </p>
-      <h2>Présents partout à Nandy et environs</h2>
+      <h2>Présents partout à Nandy et région</h2>
     </div>
 
     <div class="features-grid">
@@ -306,9 +306,9 @@
         <div class="feature-icon">
           <i class="fas fa-building"></i>
         </div>
-        <h3>Nandy & Savigny</h3>
+        <h3>Nandy Centre</h3>
         <p>
-          Nandy centre, Savigny-le-Temple. Communes résidentielles, RER D, proximité Sénart.
+          Chartrons, Vieux Nandy, Pey Berland. Marché premium, quartiers historiques avec forte demande.
         </p>
       </article>
 
@@ -317,9 +317,9 @@
         <div class="feature-icon">
           <i class="fas fa-tree"></i>
         </div>
-        <h3>Melun & Cesson</h3>
+        <h3>Rive Gauche</h3>
         <p>
-          Melun préfecture, Cesson résidentiel. Marché actif, forte demande.
+          Saint-Michel, Sainte-Croix, Bacalan. Quartiers dynamiques, rénovation urbaine en cours.
         </p>
       </article>
 
@@ -328,9 +328,9 @@
         <div class="feature-icon">
           <i class="fas fa-home"></i>
         </div>
-        <h3>Sénart & environs</h3>
+        <h3>Banlieue Proche</h3>
         <p>
-          Moissy-Cramayel, Lieusaint, Combs-la-Ville. Ville nouvelle dynamique.
+          Talence, Floirac, Villenave. Familles, maisons, proximité avec centre-ville.
         </p>
       </article>
 
@@ -339,9 +339,9 @@
         <div class="feature-icon">
           <i class="fas fa-map"></i>
         </div>
-        <h3>Sud Seine-et-Marne</h3>
+        <h3>Région Seine-et-Marne</h3>
         <p>
-          Fontainebleau, Dammarie-les-Lys, Le Mée-sur-Seine. Extension vers le sud.
+          Saint-Émilion, Pauillac, Libourne. Extension progressive vers les communes girondines.
         </p>
       </article>
 
@@ -350,9 +350,9 @@
         <div class="feature-icon">
           <i class="fas fa-chart-area"></i>
         </div>
-        <h3>Vert-Saint-Denis & Réau</h3>
+        <h3>Secteur Nord</h3>
         <p>
-          Communes résidentielles calmes entre Nandy et Melun.
+          Bruges, Caudéran. Zones résidentielles, familles, petits commerces.
         </p>
       </article>
 
@@ -361,9 +361,9 @@
         <div class="feature-icon">
           <i class="fas fa-shopping-cart"></i>
         </div>
-        <h3>Seine-Port & Ponthierry</h3>
+        <h3>Secteur Merignac</h3>
         <p>
-          Communes en bord de Seine, cadre exceptionnel et verdoyant.
+          Mérignac, Pessac. Proximité aéroport, commerces, zone dynamique.
         </p>
       </article>
     </div>
@@ -400,8 +400,8 @@
           <i class="fas fa-question-circle"></i> Depuis quand opérez-vous?
         </h3>
         <p>
-          Depuis 2023. Nous avons déjà réalisé plus de 2 000 estimations avec une satisfaction client de 4.8/5.
-          Une équipe jeune mais expérimentée du marché local.
+          Depuis 2023. Nous avons déjà réalisé plus de 3 800 estimations avec une satisfaction client de 4.8/5. 
+          Une équipe jeune mais expérimentée du marché de nandy.
         </p>
       </article>
 
@@ -411,7 +411,7 @@
           <i class="fas fa-question-circle"></i> Pourquoi faire confiance à votre estimation?
         </h3>
         <p>
-          Notre algorithme analyse 3000+ transactions récentes en Seine-et-Marne. Pas de théorie,
+          Notre algorithme analyse 5000+ transactions réelles à Nandy. Pas de théorie, 
           des chiffres vérifiés. Précision moyenne ±3% avec le prix de vente final.
         </p>
       </article>
@@ -422,8 +422,8 @@
           <i class="fas fa-question-circle"></i> Couvrez-vous tous les quartiers?
         </h3>
         <p>
-          Oui, Nandy et les communes alentour. Extension progressive vers le sud Seine-et-Marne.
-          Plus de 15 communes couvertes avec données temps réel.
+          Oui, Nandy intra-muros + banlieue proche. Extension progressive vers la Seine-et-Marne. 
+          Plus de 12 secteurs couverts avec données temps réel.
         </p>
       </article>
 
@@ -464,7 +464,7 @@
       <h2>Faites confiance aux experts de Nandy</h2>
       <p class="lead">
         Une équipe locale, une méthodologie éprouvée, une estimation fiable. 
-        2 000+ vendeurs ont déjà été satisfaits.
+        3 800+ vendeurs ont déjà été satisfaits.
       </p>
       <a href="/#form-estimation" class="btn btn-primary">
         <i class="fas fa-calculator"></i> Estimer mon bien gratuitement

@@ -38,6 +38,11 @@ final class Router
             $path = substr($path, strlen('/index.php'));
         }
 
+        // Normalize trailing slash: /admin/ → /admin (except root /)
+        if ($path !== '/' && str_ends_with($path, '/')) {
+            $path = rtrim($path, '/');
+        }
+
         if ($path === '/front/page.php') {
             $legacyPage = $this->sanitizeLegacyPage($queryParams['page'] ?? null);
             if ($legacyPage !== null) {
@@ -55,7 +60,15 @@ final class Router
 
         [$controllerClass, $controllerMethod] = $action;
         $controller = new $controllerClass();
-        $controller->{$controllerMethod}(...$params);
+
+        try {
+            $controller->{$controllerMethod}(...$params);
+        } catch (\Throwable $e) {
+            error_log(sprintf('[router][error] %s::%s - %s', $controllerClass, $controllerMethod, $e->getMessage()));
+            http_response_code(500);
+            header('Content-Type: text/html; charset=utf-8');
+            echo '<h1>Erreur 500</h1><p>Une erreur interne est survenue. Veuillez réessayer plus tard.</p>';
+        }
     }
 
     private function resolveRoute(string $method, string $path): array

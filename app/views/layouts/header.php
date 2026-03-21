@@ -16,10 +16,53 @@
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilière gratuite à Nandy et ses environs (77176). Évaluez votre bien en 60 secondes. Données du marché Seine-et-Marne.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="theme-color" content="#1B5E20">
+  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilier Nandy - Obtenez votre avis de valeur immobilier gratuit. Données réelles du marché de nandy, résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="theme-color" content="#8B1538">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="<?= e($canonicalUrl) ?>">
-  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilière Nandy' ?></title>
+  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilier Nandy' ?></title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Nandy' ?>">
+  <meta property="og:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Obtenez votre avis de valeur immobilier gratuit à Nandy. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta property="og:url" content="<?= e($canonicalUrl) ?>">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Estimation Immobilier Nandy">
+  <meta property="og:image" content="https://estimation-immobilier-nandy.fr/assets/images/og-estimation-nandy.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Nandy' ?>">
+  <meta name="twitter:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Avis de valeur immobilier gratuit à Nandy. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="twitter:image" content="https://estimation-immobilier-nandy.fr/assets/images/og-estimation-nandy.png">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Estimation Immobilier Nandy",
+    "description": "Avis de valeur et estimation immobilière gratuite à Nandy et en Seine-et-Marne.",
+    "url": "https://estimation-immobilier-nandy.fr",
+    "telephone": "+33164000000",
+    "email": "contact@estimation-immobilier-nandy.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nandy",
+      "addressRegion": "Île-de-France",
+      "postalCode": "77176",
+      "addressCountry": "FR"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Nandy"
+    },
+    "priceRange": "Gratuit"
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,9 +73,6 @@
   <!-- CSS Principal -->
   <link rel="stylesheet" href="/assets/css/app.css">
 
-  <!-- Google Maps Places -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=<?= e((string) ($googleMapsApiKey ?? '')) ?>&libraries=places&callback=Function.prototype" async defer></script>
-
   <!-- CSS Header Personnalisé -->
   <style>
 
@@ -41,8 +81,8 @@
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
       --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
       --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#1B5E20')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#0D3B13')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
       --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
       --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
       --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
@@ -53,7 +93,7 @@
       --neutral: <?= e((string) ($colors['neutral'] ?? '#000000')) ?>;
       --bg-rgb: <?= e((string) ($rgbColors['bg'] ?? '250, 249, 247')) ?>;
       --border-rgb: <?= e((string) ($rgbColors['border'] ?? '232, 223, 215')) ?>;
-      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '27, 94, 32')) ?>;
+      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '139, 21, 56')) ?>;
       --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '212, 175, 55')) ?>;
       --success-rgb: <?= e((string) ($rgbColors['success'] ?? '34, 197, 94')) ?>;
       --warning-rgb: <?= e((string) ($rgbColors['warning'] ?? '249, 115, 22')) ?>;
@@ -96,6 +136,7 @@
       font-size: 1.4rem;
       letter-spacing: -0.02em;
       flex-shrink: 0;
+      min-width: 200px;
     }
 
     .brand-icon {
@@ -104,7 +145,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary), #2E7D32);
+      background: linear-gradient(135deg, var(--primary), #C41E3A);
       border-radius: 10px;
       color: #fff;
       font-size: 1.2rem;
@@ -116,9 +157,10 @@
     }
 
     /* NAVIGATION PRINCIPALE */
-    .nav-main {
+    .top-nav {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       flex: 1;
     }
@@ -131,7 +173,7 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.8rem 1.2rem;
+      padding: 0.8rem 0.9rem;
       text-decoration: none;
       color: var(--muted);
       font-weight: 500;
@@ -157,23 +199,23 @@
     }
 
     /* DROPDOWN MENU */
-    .nav-dropdown {
+    .has-dropdown {
       position: relative;
     }
 
-    .dropdown-toggle::after {
+    .has-dropdown > .nav-link::after {
       content: '';
       display: inline-block;
       width: 0.4rem;
       height: 0.4rem;
       border-right: 2px solid currentColor;
       border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
       margin-left: 0.4rem;
       transition: transform 0.2s ease;
     }
 
-    .nav-dropdown:hover .dropdown-toggle::after {
+    .has-dropdown:hover > .nav-link::after {
       transform: rotate(-135deg);
     }
 
@@ -196,7 +238,7 @@
       z-index: 1000;
     }
 
-    .nav-dropdown:hover .dropdown-menu {
+    .has-dropdown:hover .dropdown-menu {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -273,7 +315,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.8rem 1.6rem;
-      background: linear-gradient(135deg, var(--primary), #2E7D32);
+      background: linear-gradient(135deg, var(--primary), #C41E3A);
       color: #fff;
       text-decoration: none;
       border: none;
@@ -289,7 +331,7 @@
     .btn-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
-      background: linear-gradient(135deg, var(--primary-dark), #1B5E20);
+      background: linear-gradient(135deg, var(--primary-dark), #a01833);
     }
 
     .btn-cta i {
@@ -305,6 +347,7 @@
       border: none;
       cursor: pointer;
       padding: 0.5rem;
+      z-index: 999;
     }
 
     .menu-toggle span {
@@ -315,9 +358,21 @@
       transition: all 0.3s ease;
     }
 
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -4px);
+    }
+
     /* RESPONSIVE */
     @media (max-width: 1024px) {
-      .nav-main {
+      .top-nav {
         gap: 0;
       }
 
@@ -340,32 +395,44 @@
         display: flex;
       }
 
-      .nav-main {
+      .top-nav {
         position: fixed;
-        top: 60px;
+        top: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         background: var(--surface);
         flex-direction: column;
         gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border-bottom: 1px solid var(--border);
+        padding-top: 70px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        z-index: 998;
       }
 
-      .nav-main.active {
-        max-height: 500px;
+      .top-nav.active {
+        transform: translateX(0);
       }
 
-      .nav-item {
+      .top-nav > .nav-item {
         width: 100%;
+        border-bottom: 1px solid var(--border);
       }
 
       .nav-link {
         padding: 1rem 1.5rem;
         border-radius: 0;
         justify-content: space-between;
+        width: 100%;
+        font-size: 1.05rem;
+      }
+
+      /* Disable hover-based dropdown on mobile */
+      .has-dropdown:hover .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
       }
 
       .dropdown-menu {
@@ -376,15 +443,23 @@
         overflow: hidden;
         box-shadow: none;
         border: none;
+        border-radius: 0;
         background: rgba(var(--primary-rgb), 0.04);
         transform: none;
-        transition: all 0.2s ease;
+        transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s ease;
+        padding: 0;
       }
 
-      .nav-dropdown.active .dropdown-menu {
+      .has-dropdown.active .dropdown-menu {
         opacity: 1;
         visibility: visible;
-        max-height: 400px;
+        max-height: 500px;
+        padding: 0.5rem 0;
+      }
+
+      /* Rotate arrow when dropdown is open */
+      .has-dropdown.active > .nav-link::after {
+        transform: rotate(-135deg);
       }
 
       .dropdown-menu a {
@@ -405,7 +480,7 @@
       }
 
       .brand {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .brand-icon {
@@ -425,8 +500,8 @@
       }
 
       .brand {
-        font-size: 1.1rem;
-        gap: 0.5rem;
+        font-size: 0.85rem;
+        gap: 0.4rem;
       }
 
       .brand-icon {
@@ -443,6 +518,45 @@
         display: none;
       }
     }
+
+    /* Header CTA button */
+    .btn-header-cta {
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      flex-shrink: 0;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .nav-cta-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .btn-header-cta {
+        display: none;
+      }
+
+      .nav-cta-mobile {
+        display: block;
+        padding: 1.5rem;
+      }
+
+      .nav-cta-mobile a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, var(--primary), #C41E3A);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.25);
+      }
+    }
   </style>
 </head>
 <body>
@@ -452,7 +566,11 @@
 <!-- ============================= -->
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a href="/" class="brand">Nandy<span>Estimate</span></a>
+    <a href="/" class="brand">Estimation Immobilier <span>Nandy</span></a>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
     <nav class="top-nav" aria-label="Navigation principale">
       <div class="nav-item has-dropdown">
@@ -476,6 +594,10 @@
         </ul>
       </div>
 
+      <div class="nav-item">
+        <a href="/actualites" class="nav-link">Actualités</a>
+      </div>
+
       <div class="nav-item has-dropdown">
         <a href="/services" class="nav-link">Services</a>
         <ul class="dropdown-menu" aria-label="Sous-menu services">
@@ -486,22 +608,29 @@
         </ul>
       </div>
 
-      <a href="/about" class="nav-link">À propos</a>
-      <a href="/contact" class="nav-link">Contact</a>
+      <div class="nav-item">
+        <a href="/a-propos" class="nav-link">À propos</a>
+      </div>
+      <div class="nav-item">
+        <a href="/contact" class="nav-link">Contact</a>
+      </div>
 
       <div class="nav-item has-dropdown">
         <a href="/guides" class="nav-link">Ressources</a>
         <ul class="dropdown-menu" aria-label="Sous-menu ressources">
           <li><a href="/guides">Guides complets</a></li>
           <li><a href="/tools/calculatrice">Calculatrice prix</a></li>
-          <li><a href="/quartiers">Communes alentour</a></li>
-          <li><a href="/podcast">Podcast immobilier</a></li>
+          <li><a href="/quartiers">Quartiers Nandy</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
         </ul>
       </div>
+
+      <div class="nav-cta-mobile">
+        <a href="/estimation#form-estimation">Estimer mon bien</a>
+      </div>
     </nav>
 
-    <a href="/estimation#form-estimation" class="btn btn-small">Estimer mon bien</a>
+    <a href="/estimation#form-estimation" class="btn btn-header-cta">Estimer mon bien</a>
   </div>
 </header>
 

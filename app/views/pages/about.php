@@ -5,8 +5,8 @@
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-info-circle"></i> À propos de nous</p>
-      <h1>Une équipe seine-et-marnaise dédiée à la réussite de votre vente immobilière</h1>
-      <p class="lead">Estimation Immobilier Nandy est né de l'envie de rendre l'estimation immobilière plus claire, plus rapide et plus fiable pour les propriétaires seine-et-marnais.</p>
+      <h1>Une équipe de nandye dédiée à la réussite de votre vente immobilière</h1>
+      <p class="lead">Estimation Immobilier Nandy est né de l'envie de rendre l'estimation immobilière plus claire, plus rapide et plus fiable pour les propriétaires girondins.</p>
     </div>
   </div>
 </section>
@@ -28,7 +28,7 @@
           <i class="fas fa-chart-bar"></i>
         </div>
         <h2>Notre expertise</h2>
-        <p>Nous nous appuyons sur la dynamique des communes de Nandy et environs, l'analyse approfondie du marché immobilier local et les méthodes d'évaluation utilisées par les professionnels. Notre algorithme intègre données réelles et tendances du marché seine-et-marnais.</p>
+        <p>Nous nous appuyons sur la dynamique des quartiers de nandy, l'analyse approfondie du marché immobilier local et les méthodes d'évaluation utilisées par les professionnels. Notre algorithme intègre données réelles et tendances du marché girond.</p>
       </article>
     </div>
   </div>
@@ -64,7 +64,7 @@
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <h3>Proximité</h3>
-        <p>Basés à Nandy, nous connaissons les communes, les tendances locales et les dynamiques immobilières spécifiques du sud Seine-et-Marne.</p>
+        <p>Basés à Nandy, nous connaissons les quartiers, les tendances locales et les dynamiques immobilières spécifiques de la Seine-et-Marne et du Grand Nandy.</p>
       </article>
 
       <article class="card value-card">
@@ -165,7 +165,7 @@
         </div>
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
-        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé en Seine-et-Marne.</p>
+        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé à Nandy depuis 2020.</p>
       </article>
 
       <article class="card team-card">
@@ -183,7 +183,7 @@
         </div>
         <h3>Analystes Marché</h3>
         <p class="team-role">Suivi continu du marché immobilier</p>
-        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché local pour affiner nos estimations et vous informer.</p>
+        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché de nandy pour affiner nos estimations et vous informer.</p>
       </article>
     </div>
   </div>
@@ -279,7 +279,7 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment me contacter ?</h3>
-        <p>Vous pouvez nous contacter par email (contact@estimation-immobilier-nandy.fr) ou téléphone (01 64 XX XX XX). Nous répondons en moins de 24h.</p>
+        <p>Vous pouvez nous contacter par email (contact@estimation-nandy.fr) ou téléphone (05 XX XX XX XX). Nous répondons en moins de 24h.</p>
       </article>
     </div>
   </div>
@@ -315,7 +315,7 @@
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <h3>Proximité</h3>
-        <p>Basés à Nandy, nous connaissons les communes, les tendances locales et les dynamiques immobilières spécifiques du sud Seine-et-Marne.</p>
+        <p>Basés à Nandy, nous connaissons les quartiers, les tendances locales et les dynamiques immobilières spécifiques de la Seine-et-Marne et du Grand Nandy.</p>
       </article>
 
       <article class="card value-card">
@@ -416,7 +416,7 @@
         </div>
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
-        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé en Seine-et-Marne.</p>
+        <p class="team-bio">25 ans d'expérience en immobilier et digital. Spécialiste en stratégie de vente et évaluation de bien. Basé à Nandy depuis 2020.</p>
       </article>
 
       <article class="card team-card">
@@ -434,7 +434,7 @@
         </div>
         <h3>Analystes Marché</h3>
         <p class="team-role">Suivi continu du marché immobilier</p>
-        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché local pour affiner nos estimations et vous informer.</p>
+        <p class="team-bio">Nos spécialistes analysent quotidiennement les tendances du marché de nandy pour affiner nos estimations et vous informer.</p>
       </article>
     </div>
   </div>
@@ -530,8 +530,10 @@
 
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> Comment me contacter ?</h3>
-        <p>Vous pouvez nous contacter par email (contact@estimation-immobilier-nandy.fr) ou téléphone (01 64 XX XX XX). Nous répondons en moins de 24h.</p>
+        <p>Vous pouvez nous contacter par email (contact@estimation-nandy.fr) ou téléphone (05 XX XX XX XX). Nous répondons en moins de 24h.</p>
       </article>
     </div>
   </div>
 </section>
+
+<?php include 'footer.php'; ?>

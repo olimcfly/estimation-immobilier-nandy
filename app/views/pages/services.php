@@ -11,7 +11,7 @@
       </p>
       <h1>Un accompagnement immobilier complet, de l'estimation à la signature</h1>
       <p class="lead">
-        Nous combinons technologie intelligente, expertise locale et suivi humain pour sécuriser votre projet de vente à Nandy et environs.
+        Nous combinons technologie intelligente, expertise locale et suivi humain pour sécuriser votre projet de vente à Nandy.
       </p>
     </div>
   </div>
@@ -43,8 +43,8 @@
         </div>
 
         <p>
-          Notre moteur analyse en temps réel les données du marché de Nandy et environs pour vous fournir une fourchette de prix fiable.
-          Basée sur 3000+ transactions récentes en Seine-et-Marne, pas sur la théorie.
+          Notre moteur analyse en temps réel les données du marché de nandy pour vous fournir une fourchette de prix fiable. 
+          Basée sur 5000+ transactions réelles, pas sur la théorie.
         </p>
 
         <div class="service-content">
@@ -343,7 +343,7 @@
         </div>
         <h3>Précis</h3>
         <p>
-          Basé sur 3000+ transactions récentes en Seine-et-Marne. Précision moyenne ±3% vs prix de vente final.
+          Basé sur 5000+ transactions réelles. Précision moyenne ±3% vs prix de vente final.
         </p>
       </article>
 
@@ -376,7 +376,7 @@
         </div>
         <h3>Experts Locaux</h3>
         <p>
-          Équipe basée à Nandy et ses environs. Nous connaissons chaque commune, chaque tendance du marché.
+          Équipe basée à Nandy. Nous connaissons chaque quartier, chaque tendance du marché.
         </p>
       </article>
 
@@ -387,7 +387,7 @@
         </div>
         <h3>Fiable</h3>
         <p>
-          2 000+ estimations réalisées, 4.8/5 de satisfaction client. Référence du marché local.
+          3 800+ estimations réalisées, 4.8/5 de satisfaction client. Référence du marché de nandy.
         </p>
       </article>
     </div>
@@ -521,7 +521,7 @@
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> À quelle précision m'attendre?</h3>
         <p>
-          Précision moyenne ±3% comparé au prix de vente final. Basée sur 3000+ transactions récentes en Seine-et-Marne.
+          Précision moyenne ±3% comparé au prix de vente final. Basée sur 5000+ transactions réelles à Nandy.
         </p>
       </article>
 

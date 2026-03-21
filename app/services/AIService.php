@@ -12,7 +12,7 @@ final class AIService
     {
         $trendInsights = $this->fetchPerplexityTrends($topic, $persona);
 
-        $prompt = "Tu es un copywriter immobilier expert Nandy et Seine-et-Marne. Rédige un article SEO en HTML strict avec les balises <h2>, <h3>, <p>, <ul>, <li>.\n"
+        $prompt = "Tu es un copywriter immobilier expert Nandy. Rédige un article SEO en HTML strict avec les balises <h2>, <h3>, <p>, <ul>, <li>.\n"
             . "Persona cible: {$persona}. Niveau de conscience: {$awarenessLevel}. Sujet: {$topic}.\n"
             . "Intègre ce contexte marché:\n{$trendInsights}\n"
             . "Structure attendue: introduction engageante, 3 sections H2, sous-sections H3, FAQ, puis CTA estimation.\n"
@@ -55,7 +55,7 @@ final class AIService
         return [
             'title' => (string) $decoded['title'],
             'meta_title' => (string) ($decoded['meta_title'] ?? $decoded['title']),
-            'meta_description' => (string) ($decoded['meta_description'] ?? 'Découvrez notre analyse du marché immobilier à Nandy et ses environs.'),
+            'meta_description' => (string) ($decoded['meta_description'] ?? 'Découvrez notre analyse du marché immobilier à Nandy.'),
             'content' => (string) $decoded['content_html'],
         ];
     }
@@ -64,14 +64,14 @@ final class AIService
     {
         $apiKey = (string) Config::get('perplexity.api_key', '');
         if ($apiKey === '') {
-            return 'Tendance locale stable, demande soutenue sur Nandy et le bassin melunais, forte sensibilité au prix juste.';
+            return 'Tendance locale stable, demande soutenue sur Nandy intra-rocade, forte sensibilité au prix juste.';
         }
 
         $endpoint = (string) Config::get('perplexity.endpoint');
         $model = (string) Config::get('perplexity.model');
 
         $prompt = sprintf(
-            'Résume en 6 points les tendances immobilières vendeurs à Nandy et en Seine-et-Marne pour le sujet "%s" et le persona "%s".',
+            'Résume en 6 points les tendances immobilières vendeurs à Nandy pour le sujet "%s" et le persona "%s".',
             $topic,
             $persona
         );
@@ -88,7 +88,7 @@ final class AIService
         ]);
 
         if (!is_array($response)) {
-            return 'Tendance locale stable, demande soutenue sur Nandy et le bassin melunais, forte sensibilité au prix juste.';
+            return 'Tendance locale stable, demande soutenue sur Nandy intra-rocade, forte sensibilité au prix juste.';
         }
 
         $content = $response['choices'][0]['message']['content'] ?? '';
@@ -124,7 +124,7 @@ final class AIService
         return [
             'title' => $title,
             'meta_title' => $title . ' | Blog Immobilier Nandy',
-            'meta_description' => 'Conseils concrets pour vendre votre bien à Nandy et ses environs selon votre situation.',
+            'meta_description' => 'Conseils concrets pour vendre votre bien à Nandy selon votre situation.',
             'content' => '<p>Vous souhaitez vendre dans les meilleures conditions ? Voici un guide pragmatique orienté résultats.</p>'
                 . '<h2>Ce que dit le marché local</h2><p>' . nl2br(e($trendInsights)) . '</p>'
                 . '<h2>Plan d\'action pour ' . e($persona) . '</h2><p>Commencez par une estimation précise puis préparez un plan de mise en vente adapté.</p>'

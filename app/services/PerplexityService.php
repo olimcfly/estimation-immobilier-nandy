@@ -67,19 +67,14 @@ final class PerplexityService
 
     private function fallback(string $city, string $propertyType): array
     {
-        $baseline = 2800.0;
-        $cityLower = mb_strtolower($city);
+        $baseline = 4200.0;
 
-        if (str_contains($cityLower, 'melun')) {
-            $baseline = 3000.0;
-        } elseif (str_contains($cityLower, 'fontainebleau')) {
-            $baseline = 3500.0;
-        } elseif (str_contains($cityLower, 'seine-port')) {
-            $baseline = 3200.0;
+        if (str_contains(mb_strtolower($city), 'nandy')) {
+            $baseline = 4800.0;
         }
 
         if (str_contains(mb_strtolower($propertyType), 'maison')) {
-            $baseline *= 1.10;
+            $baseline *= 1.08;
         }
 
         return [
