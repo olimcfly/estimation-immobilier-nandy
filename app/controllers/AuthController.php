@@ -79,7 +79,7 @@ final class AuthController
 
     private function handleSendCode(): void
     {
-        $email = trim((string) ($_POST['email'] ?? ''));
+        $email = strtolower(trim((string) ($_POST['email'] ?? '')));
 
         if ($email === '') {
             View::renderBare('admin/login', [
@@ -104,10 +104,17 @@ final class AuthController
         $code = AdminUser::generateCode();
         AdminUser::storeLoginCode($email, $code);
 
+        // Use no-reply address as FROM to avoid self-delivery issues
+        // (when admin email = SMTP username, sending to yourself can be filtered)
+        $noReplyFrom = (string) Config::get('mail.noreply', '') ?: 'no-reply@estimation-immobilier-nandy.fr';
+        $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Nandy');
+
         $sent = Mailer::send(
             $email,
             'Votre code de connexion - Estimation Immobilier Nandy',
-            $this->buildCodeEmail($code, (string) ($user['name'] ?? 'Administrateur'))
+            $this->buildCodeEmail($code, (string) ($user['name'] ?? 'Administrateur')),
+            $noReplyFrom,
+            $fromName
         );
 
         if (!$sent) {
@@ -129,7 +136,7 @@ final class AuthController
 
     private function handleVerifyCode(): void
     {
-        $email = trim((string) ($_POST['email'] ?? ''));
+        $email = strtolower(trim((string) ($_POST['email'] ?? '')));
         $code = trim((string) ($_POST['code'] ?? ''));
 
         if ($email === '' || $code === '') {

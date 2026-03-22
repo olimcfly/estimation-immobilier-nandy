@@ -13,7 +13,7 @@ final class Mailer
 {
     private const MAX_RETRIES = 2;
 
-    public static function send(string $to, string $subject, string $htmlBody): bool
+    public static function send(string $to, string $subject, string $htmlBody, ?string $fromAddress = null, ?string $fromName = null): bool
     {
         if (!class_exists(PHPMailer::class)) {
             error_log('Mailer error: PHPMailer is not installed. Run "composer install".');
@@ -28,7 +28,7 @@ final class Mailer
                 usleep($attempt * 500_000); // 0.5s, 1s backoff
             }
 
-            $result = self::attemptSend($to, $subject, $htmlBody, $lastError);
+            $result = self::attemptSend($to, $subject, $htmlBody, $lastError, $fromAddress, $fromName);
             if ($result) {
                 self::logToDb($to, $subject, $htmlBody, 'sent');
                 return true;
@@ -46,14 +46,14 @@ final class Mailer
         return false;
     }
 
-    private static function attemptSend(string $to, string $subject, string $htmlBody, string &$errorOut): bool
+    private static function attemptSend(string $to, string $subject, string $htmlBody, string &$errorOut, ?string $customFrom = null, ?string $customFromName = null): bool
     {
         $mail = new PHPMailer(true);
 
         try {
             $smtpHost = (string) Config::get('mail.smtp_host');
-            $fromAddress = (string) Config::get('mail.from', 'no-reply@estimation-immobilier-nandy.fr');
-            $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Nandy');
+            $fromAddress = $customFrom ?? (string) Config::get('mail.from', 'no-reply@estimation-immobilier-nandy.fr');
+            $fromName = $customFromName ?? (string) Config::get('mail.from_name', 'Estimation Immobilier Nandy');
             $smtpUser = (string) Config::get('mail.smtp_user');
 
             if ($smtpHost !== '') {

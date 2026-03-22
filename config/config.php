@@ -55,6 +55,7 @@ return [
         'smtp_user' => $_ENV['MAIL_SMTP_USER'] ?? $_ENV['MAIL_USERNAME'] ?? '',
         'smtp_pass' => $_ENV['MAIL_SMTP_PASS'] ?? $_ENV['MAIL_PASSWORD'] ?? '',
         'smtp_encryption' => $_ENV['MAIL_SMTP_ENCRYPTION'] ?? $_ENV['MAIL_ENCRYPTION'] ?? 'tls',
+        'noreply' => $_ENV['MAIL_NOREPLY'] ?? 'no-reply@estimation-immobilier-nandy.fr',
     ],
     'openai' => [
         'api_key' => $_ENV['OPENAI_API_KEY'] ?? '',
