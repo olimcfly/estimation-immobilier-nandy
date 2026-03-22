@@ -90,6 +90,21 @@ final class AuthController
             return;
         }
 
+        // Auto-provision: create admin_users table + seed admin if email matches .env
+        try {
+            AdminUser::createTable();
+            $adminEmails = array_filter(array_map('strtolower', array_map('trim', [
+                (string) ($_ENV['ADMIN_EMAIL'] ?? ''),
+                (string) ($_ENV['MAIL_FROM_ADDRESS'] ?? ''),
+                (string) ($_ENV['MAIL_USERNAME'] ?? ''),
+            ])));
+            if (in_array($email, $adminEmails, true)) {
+                AdminUser::seedDefaultAdmin($email);
+            }
+        } catch (\Throwable $e) {
+            error_log('Auto-provision admin: ' . $e->getMessage());
+        }
+
         $user = AdminUser::findByEmail($email);
 
         if ($user === null) {
@@ -118,10 +133,12 @@ final class AuthController
         );
 
         if (!$sent) {
+            // Fallback: display the code on screen if SMTP fails
             View::renderBare('admin/login', [
                 'page_title' => 'Connexion Admin - Estimation Immobilier Nandy',
-                'step' => 'email',
-                'error_message' => 'Impossible d\'envoyer l\'email. Vérifiez la configuration SMTP.',
+                'step' => 'code',
+                'login_email' => $email,
+                'error_message' => 'Impossible d\'envoyer l\'email (SMTP indisponible). Votre code de connexion est : <strong>' . $code . '</strong>',
             ]);
             return;
         }
@@ -301,8 +318,11 @@ final class AuthController
         return $_SESSION['csrf_token'];
     }
 
-    private function verifyCsrfToken(string $token): bool
+    public static function verifyCsrfToken(?string $token = null): bool
     {
+        if ($token === null) {
+            $token = (string) ($_POST['csrf_token'] ?? '');
+        }
         $sessionToken = $_SESSION['csrf_token'] ?? '';
         if ($sessionToken === '' || $token === '') {
             return false;

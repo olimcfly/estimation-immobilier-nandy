@@ -324,7 +324,7 @@
     <a href="/admin/leads" class="btn"><i class="fas fa-arrow-left"></i> Retour</a>
     <a href="/admin/leads/edit?id=<?= $leadId ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Modifier</a>
     <form method="POST" action="/admin/leads/delete" class="delete-form" onsubmit="return confirm('Supprimer ce lead ?');">
-      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\App\Controllers\AuthController::generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
       <input type="hidden" name="id" value="<?= $leadId ?>">
       <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Supprimer</button>
     </form>
@@ -461,7 +461,7 @@
     <div class="detail-card-header"><i class="fas fa-comment-dots"></i> Notes CRM</div>
     <div class="detail-card-body">
       <form method="POST" action="/admin/leads/add-note" class="note-form">
-        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\App\Controllers\AuthController::generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
         <input type="hidden" name="lead_id" value="<?= $leadId ?>">
         <textarea name="content" placeholder="Ajouter une note..." required></textarea>
         <div class="note-form-actions">
@@ -479,7 +479,7 @@
               <span>
                 <span class="note-date"><?= e((string) ($note['created_at'] ?? '')) ?></span>
                 <form method="POST" action="/admin/leads/delete-note" class="delete-form" style="display:inline;" onsubmit="return confirm('Supprimer cette note ?');">
-                  <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+                  <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\App\Controllers\AuthController::generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
                   <input type="hidden" name="note_id" value="<?= (int) ($note['id'] ?? 0) ?>">
                   <input type="hidden" name="lead_id" value="<?= $leadId ?>">
                   <button type="submit" class="note-delete" title="Supprimer"><i class="fas fa-times"></i></button>

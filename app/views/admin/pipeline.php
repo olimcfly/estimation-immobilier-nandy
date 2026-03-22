@@ -471,7 +471,7 @@
 
 <script>
 (function() {
-  var csrfToken = <?= json_encode($_SESSION['csrf_token'] ?? '', JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+  var csrfToken = <?= json_encode(\App\Controllers\AuthController::generateCsrfToken(), JSON_HEX_TAG | JSON_HEX_AMP) ?>;
 
   function showToast(message, type) {
     var toast = document.getElementById('pipelineToast');
