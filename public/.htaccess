@@ -1,11 +1,12 @@
 ServerSignature Off
+DirectorySlash Off
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   # Keep admin API reachable before any hardening deny rules (e.g. ^modules/ - [F]).
   RewriteRule ^admin/api/ - [L]
+  # No !-d condition — physical directories must not bypass the PHP router.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.php [L,QSA]
 </IfModule>
 

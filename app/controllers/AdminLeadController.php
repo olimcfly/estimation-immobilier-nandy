@@ -12,6 +12,22 @@ use App\Models\Partenaire;
 
 final class AdminLeadController
 {
+    private static bool $tablesChecked = false;
+
+    private static function ensureTables(): void
+    {
+        if (self::$tablesChecked) {
+            return;
+        }
+        try {
+            LeadNote::createTable();
+            LeadActivity::createTable();
+        } catch (\Throwable $e) {
+            error_log('Lead tables auto-create: ' . $e->getMessage());
+        }
+        self::$tablesChecked = true;
+    }
+
     public function index(): void
     {
         AuthController::requireAuth();
@@ -20,6 +36,7 @@ final class AdminLeadController
         $dbError = null;
 
         try {
+            self::ensureTables();
             $leadModel = new Lead();
             $scoreFilter = isset($_GET['score']) ? trim((string) $_GET['score']) : null;
             $typeFilter = isset($_GET['type']) ? trim((string) $_GET['type']) : null;

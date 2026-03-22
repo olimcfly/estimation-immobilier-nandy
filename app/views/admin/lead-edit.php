@@ -188,7 +188,7 @@
 <?php endif; ?>
 
 <form method="POST" action="/admin/leads/update">
-  <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+  <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\App\Controllers\AuthController::generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
   <input type="hidden" name="id" value="<?= $leadId ?>">
 
   <!-- Read-only contact info -->

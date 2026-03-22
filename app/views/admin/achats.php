@@ -422,7 +422,7 @@
                 <div class="actions-cell">
                   <a href="/admin/achats/edit?id=<?= (int)$a['id'] ?>" class="btn-edit"><i class="fas fa-pen"></i></a>
                   <form method="POST" action="/admin/achats/delete" style="display:inline;" onsubmit="return confirm('Supprimer cet achat ?');">
-                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\App\Controllers\AuthController::generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
                     <input type="hidden" name="id" value="<?= (int)$a['id'] ?>">
                     <button type="submit" class="btn-delete"><i class="fas fa-trash"></i></button>
                   </form>

@@ -545,7 +545,7 @@
   const display = document.getElementById('default-rate-display');
   const totalCommissionEl = document.getElementById('total-commission');
   const avgRateEl = document.getElementById('avg-rate');
-  const csrfToken = <?= json_encode($_SESSION['csrf_token'] ?? '') ?>;
+  const csrfToken = <?= json_encode(\App\Controllers\AuthController::generateCsrfToken()) ?>;
 
   function formatNumber(n) {
     return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
