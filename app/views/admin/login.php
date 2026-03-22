@@ -51,23 +51,6 @@ $step = $step ?? 'email';
       margin-bottom: 2.5rem;
     }
 
-    .login-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 64px;
-      height: 64px;
-      background: linear-gradient(135deg, var(--primary), #1976D2);
-      border-radius: 16px;
-      margin-bottom: 1rem;
-      box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.25);
-    }
-
-    .login-icon i {
-      font-size: 1.8rem;
-      color: #fff;
-    }
-
     .login-header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -216,9 +199,9 @@ $step = $step ?? 'email';
   <div class="login-container">
 
     <div class="login-header">
-      <div class="login-icon">
-        <i class="fas fa-<?= $step === 'code' ? 'envelope-open-text' : 'lock' ?>"></i>
-      </div>
+      <a href="/" style="display: inline-block; margin-bottom: 1rem; text-decoration: none;">
+        <img src="/favicon.svg" alt="Estimation Immobilier Nandy" style="width: 56px; height: 56px; border-radius: 12px; box-shadow: 0 4px 16px rgba(21, 101, 192, 0.18);">
+      </a>
       <h1>Espace Administrateur</h1>
       <?php if ($step === 'email'): ?>
         <p>Entrez votre adresse email pour recevoir un code de connexion</p>
