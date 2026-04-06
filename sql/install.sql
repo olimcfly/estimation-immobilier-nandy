@@ -306,3 +306,39 @@ CREATE TABLE IF NOT EXISTS sessions (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- Tables complémentaires utilisées par le module admin avancé
+CREATE TABLE IF NOT EXISTS admin_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_login_at DATETIME NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS ads_checklist_progress (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    admin_id INT NOT NULL,
+    step_key VARCHAR(100) NOT NULL,
+    completed TINYINT(1) DEFAULT 0,
+    completed_at DATETIME NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY uniq_admin_step (admin_id, step_key),
+    INDEX idx_admin_id (admin_id),
+    CONSTRAINT fk_ads_checklist_admin FOREIGN KEY (admin_id) REFERENCES users(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS google_ads_drafts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    campaign_type VARCHAR(30) NOT NULL,
+    titres JSON NOT NULL,
+    descriptions JSON NOT NULL,
+    final_url VARCHAR(255) NOT NULL,
+    path1 VARCHAR(15) DEFAULT '',
+    path2 VARCHAR(15) DEFAULT '',
+    is_active TINYINT(1) DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
