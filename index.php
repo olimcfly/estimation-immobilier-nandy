@@ -27,8 +27,8 @@ $agenceNom = (string) ($config['agence_nom'] ?? 'Votre agence');
 $villePrincipale = (string) ($config['ville_principale'] ?? 'Nandy');
 $logo = (string) ($config['logo'] ?? '');
 $couleur = (string) ($config['couleur'] ?? '#1e3a5f');
-$h1 = (string) ($config['h1_titre'] ?? ('Évitez de vendre trop bas : découvrez le vrai prix de votre bien à ' . $villePrincipale));
-$sousTitre = (string) ($config['sous_titre'] ?? 'En 2 minutes, obtenez une fourchette réaliste pour Nandy, Cesson et Savigny-le-Temple — avant de prendre une décision qui peut vous coûter cher.');
+$h1 = (string) ($config['h1_titre'] ?? ('Combien vaut votre bien à ' . $villePrincipale . ' ?'));
+$sousTitre = (string) ($config['sous_titre'] ?? 'À Nandy, vendre au bon prix dès le départ est la clé : obtenez une estimation stratégique pour sécuriser votre délai de vente.');
 $metaDescription = (string) ($config['meta_description'] ?? ('Estimation gratuite à ' . $villePrincipale . ' et en Seine-et-Marne'));
 $villes = $config['villes'] ?? [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel', 'Lieusaint', 'Saint-Pierre-du-Perray', 'Réau', 'Combs-la-Ville'];
 if (!is_array($villes) || $villes === []) {
@@ -57,11 +57,7 @@ if (!is_array($villes) || $villes === []) {
                     </p>
                     <h1 class="mt-4 text-4xl font-bold sm:text-5xl lg:text-6xl"><?= htmlspecialchars($h1, ENT_QUOTES); ?></h1>
                     <p class="mt-6 text-lg sm:text-xl"><?= htmlspecialchars($sousTitre, ENT_QUOTES); ?></p>
-                    <div class="mt-6 grid gap-2 text-left text-sm sm:grid-cols-3">
-                        <p class="rounded-xl border border-white/20 bg-white/10 px-3 py-2">✅ Estimation locale basée sur votre secteur</p>
-                        <p class="rounded-xl border border-white/20 bg-white/10 px-3 py-2">✅ Résultat immédiat, sans engagement</p>
-                        <p class="rounded-xl border border-white/20 bg-white/10 px-3 py-2">✅ Idéal pour vendre au bon prix, sans stress</p>
-                    </div>
+                    <p class="mt-3 text-sm text-blue-100 sm:text-base">Même dans un marché plus sélectif, la demande est bien présente pour les biens correctement positionnés.</p>
 
                     <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         <div class="sm:col-span-2 lg:col-span-3 rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-left text-sm text-blue-50">
@@ -111,7 +107,7 @@ if (!is_array($villes) || $villes === []) {
 
                         <div class="sm:col-span-2 lg:col-span-3">
                             <button type="submit" class="w-full rounded-xl bg-white px-4 py-4 font-semibold text-blue-700 transition hover:bg-gray-100">
-                                Voir le vrai prix de mon bien →
+                                Obtenir mon estimation gratuite maintenant →
                             </button>
                             <p class="mt-2 text-center text-xs text-blue-100">Résultat instantané et gratuit · Sans engagement</p>
                         </div>
@@ -275,15 +271,45 @@ if (!is_array($villes) || $villes === []) {
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">2</div>
                         <p class="text-2xl">⚡</p>
-                        <h3 class="mt-3 text-lg font-semibold">Découvrez votre fourchette de prix réelle</h3>
-                        <p class="mt-2 text-sm text-slate-600">Notre estimation s’appuie sur le marché local de Seine-et-Marne pour vous donner un prix cohérent, pas une valeur au hasard.</p>
+                        <h3 class="mt-3 text-lg font-semibold">Estimation stratégique</h3>
+                        <p class="mt-2 text-sm text-slate-600">Recevez une fourchette cohérente avec la demande locale pour éviter la surévaluation, préserver l'attractivité de votre annonce et réduire les délais.</p>
                     </article>
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">3</div>
                         <p class="text-2xl">📞</p>
-                        <h3 class="mt-3 text-lg font-semibold">Passez à l’action avec un expert local</h3>
-                        <p class="mt-2 text-sm text-slate-600">Un conseiller vous aide à sécuriser votre prix de vente et à éviter les erreurs qui font perdre du temps… et de l’argent.</p>
+                        <h3 class="mt-3 text-lg font-semibold">Plan de mise en vente</h3>
+                        <p class="mt-2 text-sm text-slate-600">Un conseiller affine votre estimation et vous aide à fixer le bon prix dès le lancement, pour vendre dans de meilleures conditions.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl">
+                <h2 class="text-center text-3xl font-bold text-slate-900">Pourquoi notre estimation est fiable à Nandy</h2>
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Des sources publiques et vérifiables</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Nous croisons les données DVF (Demandes de Valeurs Foncières), les bases notariales et les transactions enregistrées en Seine-et-Marne pour établir une fourchette réaliste, pas un chiffre arbitraire.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Une lecture locale du marché</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Notre analyse tient compte des différences de prix entre Nandy, Savigny-le-Temple, Cesson, Vert-Saint-Denis et les communes proches pour éviter les moyennes trop générales.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Un avis humain pour confirmer</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Après l'estimation en ligne, un expert local valide avec vous les éléments clés : état du bien, prestations, étage, exposition, nuisances et délai de vente visé.</p>
+                    </article>
+                </div>
+
+                <div class="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                    <h3 class="text-lg font-semibold text-blue-900">Ce que vous recevez concrètement</h3>
+                    <ul class="mt-3 space-y-2 text-sm text-blue-900">
+                        <li>• Une fourchette de prix cohérente avec les ventes récentes de votre secteur.</li>
+                        <li>• Un prix au m² indicatif adapté au type de bien et à la commune.</li>
+                        <li>• Des recommandations de positionnement pour vendre dans de bonnes conditions.</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-blue-800">Estimation indicative gratuite, sans engagement, destinée à vous aider à prendre une décision avant une expertise complète.</p>
                 </div>
             </div>
         </section>
@@ -293,15 +319,15 @@ if (!is_array($villes) || $villes === []) {
                 <h2 class="text-center text-3xl font-bold text-slate-900">Ils ont voulu connaître le vrai prix… et ils ont bien fait</h2>
                 <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Je craignais de sous-estimer ma maison à Nandy. L’estimation m’a rassuré et j’ai vendu au bon prix."</p>
+                        <p class="text-sm text-slate-600">"On craignait un délai long. L'estimation nous a aidés à fixer le bon prix dès le début et nous avons reçu des visites qualifiées rapidement."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Jean, Nandy</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"En quelques minutes, j’ai compris la vraie valeur de mon appartement à Savigny-le-Temple. Clair, rapide, efficace."</p>
+                        <p class="text-sm text-slate-600">"Très utile pour comprendre le marché local : l'outil nous a permis de positionner l'appartement au prix juste, sans brader."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Sophie, Savigny-le-Temple</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Avant de publier mon annonce à Cesson, j’ai vérifié mon prix ici. J’ai gagné du temps et évité une grosse erreur."</p>
+                        <p class="text-sm text-slate-600">"L'estimation ne m'a pas juste donné un chiffre : elle m'a donné une vraie stratégie de vente adaptée au secteur."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Marc, Cesson</footer>
                     </blockquote>
                 </div>
@@ -453,7 +479,7 @@ if (!is_array($villes) || $villes === []) {
                 priceM2.textContent = `${latestEstimation.prixM2.toLocaleString('fr-FR')} €/m²`;
 
                 resultSection.classList.remove('hidden');
-                document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 setWizardStep(0);
             } catch (error) {
                 feedback.textContent = error.message;
