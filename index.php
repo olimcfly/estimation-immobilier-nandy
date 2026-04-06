@@ -4,17 +4,26 @@ declare(strict_types=1);
 
 $configPath = __DIR__ . '/config/config.php';
 $config = [];
+$siteInstalled = false;
+
 if (is_file($configPath)) {
     $loaded = require $configPath;
+
     if (is_array($loaded)) {
         $config = $loaded;
+        $siteInstalled = !empty($config['installed']);
+    } else {
+        // Compatibilité legacy: config en constantes define(...)
+        $siteInstalled = true;
     }
 }
 
-if (empty($config['installed'])) {
+if (!$siteInstalled) {
     header('Location: /install/index.php');
     exit;
-}$agenceNom = (string) ($config['agence_nom'] ?? 'Votre agence');
+}
+
+$agenceNom = (string) ($config['agence_nom'] ?? 'Votre agence');
 $villePrincipale = (string) ($config['ville_principale'] ?? 'Nandy');
 $logo = (string) ($config['logo'] ?? '');
 $couleur = (string) ($config['couleur'] ?? '#1e3a5f');
