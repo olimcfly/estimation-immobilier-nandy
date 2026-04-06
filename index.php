@@ -13,7 +13,6 @@ if (is_file($configPath)) {
         $config = $loaded;
         $siteInstalled = !empty($config['installed']);
     } else {
-        // Compatibilité legacy: config en constantes define(...)
         $siteInstalled = true;
     }
 }
@@ -25,688 +24,87 @@ if (!$siteInstalled) {
 
 $agenceNom = (string) ($config['agence_nom'] ?? 'Votre agence');
 $villePrincipale = (string) ($config['ville_principale'] ?? 'Nandy');
-$logo = (string) ($config['logo'] ?? '');
-$couleur = (string) ($config['couleur'] ?? '#1e3a5f');
-$h1 = (string) ($config['h1_titre'] ?? ('Combien vaut votre bien à ' . $villePrincipale . ' ?'));
-$sousTitre = (string) ($config['sous_titre'] ?? 'À Nandy, vendre au bon prix dès le départ est la clé : obtenez une estimation stratégique pour sécuriser votre délai de vente.');
-$metaDescription = (string) ($config['meta_description'] ?? ('Estimation gratuite à ' . $villePrincipale . ' et en Seine-et-Marne'));
-$villes = $config['villes'] ?? [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel', 'Lieusaint', 'Saint-Pierre-du-Perray', 'Réau', 'Combs-la-Ville'];
+$villes = $config['villes'] ?? [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel', 'Lieusaint'];
 if (!is_array($villes) || $villes === []) {
-    $villes = [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel'];
+    $villes = [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis'];
 }
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($agenceNom, ENT_QUOTES); ?> · Estimation immobilière à Nandy</title>
-    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES); ?>">
+    <title>Estimation immobilière · <?= htmlspecialchars($agenceNom, ENT_QUOTES); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-slate-900 antialiased">
-    <main>
-        <section id="hero" class="text-white" style="background: linear-gradient(135deg, <?= htmlspecialchars($couleur, ENT_QUOTES); ?>, #1d4ed8);">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-                <div class="mx-auto max-w-4xl text-center">
-                    <p class="mx-auto inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1.5 text-sm font-medium">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        <?= htmlspecialchars($villePrincipale, ENT_QUOTES); ?> et ses environs
-                    </p>
-                    <h1 class="mt-4 text-4xl font-bold sm:text-5xl lg:text-6xl"><?= htmlspecialchars($h1, ENT_QUOTES); ?></h1>
-                    <p class="mt-6 text-lg sm:text-xl"><?= htmlspecialchars($sousTitre, ENT_QUOTES); ?></p>
-                    <p class="mt-3 text-sm text-blue-100 sm:text-base">Même dans un marché plus sélectif, la demande est bien présente pour les biens correctement positionnés.</p>
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+<main class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+            <p class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-semibold text-blue-700">Estimation instantanée · sans engagement</p>
+            <h1 class="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Connaissez la valeur de votre bien en moins d'une minute.</h1>
+            <p class="mt-4 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">Renseignez les informations clés de votre bien à <?= htmlspecialchars($villePrincipale, ENT_QUOTES); ?>. Vous serez redirigé vers une page de résultat claire avec une fourchette de prix et un contexte marché.</p>
 
-                    <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        <div class="sm:col-span-2 lg:col-span-3 rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-left text-sm text-blue-50">
-                            <p class="font-semibold text-white">Étape 1/2 · Décrivez votre bien en 20 secondes</p>
-                            <p class="mt-1 text-blue-100">Nous affichons une estimation immédiate, puis vous choisissez si vous souhaitez aller plus loin.</p>
-                            <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/20">
-                                <div id="hero-progress-fill" class="h-full w-[33%] rounded-full bg-white transition-all duration-300 ease-out"></div>
-                            </div>
-                        </div>
-
-                        <div class="w-full lg:flex-1">
-                            <label for="type_bien" class="mb-1 block text-sm font-medium text-blue-100">🏡 Type de bien</label>
-                            <select id="type_bien" name="type_bien" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                                <option value="">Choisir</option>
-                                <option value="Appartement">Appartement</option>
-                                <option value="Maison">Maison</option>
-                                <option value="Terrain">Terrain</option>
-                                <option value="Local commercial">Local commercial</option>
-                            </select>
-                            <p class="mt-1 text-xs text-blue-100">Aucune coordonnée demandée à cette étape.</p>
-                        </div>
-
-                        <div class="w-full lg:flex-1">
-                            <label for="ville" class="mb-1 block text-sm font-medium text-blue-100">📍 Ville</label>
-                            <select id="ville" name="ville" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                                <option value="">Choisir</option>
-                                <?php foreach ($villes as $ville): ?>
-                                    <option value="<?= htmlspecialchars($ville, ENT_QUOTES); ?>"><?= htmlspecialchars($ville, ENT_QUOTES); ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <p class="mt-1 text-xs text-blue-100">Nous utilisons les prix locaux les plus proches de votre secteur.</p>
-                        </div>
-
-                        <div class="w-full lg:flex-1">
-                            <label for="surface_tranche" class="mb-1 block text-sm font-medium text-blue-100">📏 Surface</label>
-                            <select id="surface_tranche" name="surface_tranche" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                                <option value="">Choisir</option>
-                                <option value="lt30">Moins de 30 m²</option>
-                                <option value="30_50">30-50 m²</option>
-                                <option value="50_80">50-80 m²</option>
-                                <option value="80_120">80-120 m²</option>
-                                <option value="120_200">120-200 m²</option>
-                                <option value="gt200">Plus de 200 m²</option>
-                            </select>
-                            <p class="mt-1 text-xs text-blue-100">Choisissez une tranche approximative, vous pourrez affiner ensuite.</p>
-                        </div>
-
-                        <div class="sm:col-span-2 lg:col-span-3">
-                            <button type="submit" class="w-full rounded-xl bg-white px-4 py-4 font-semibold text-blue-700 transition hover:bg-gray-100">
-                                Obtenir mon estimation gratuite maintenant →
-                            </button>
-                            <p class="mt-2 text-center text-xs text-blue-100">Résultat instantané et gratuit · Sans engagement</p>
-                        </div>
-                    </form>
-
-                    <p id="form-feedback" class="mt-4 hidden rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-700"></p>
-                </div>
+            <div class="mt-6 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
+                <div class="rounded-xl border border-slate-200 bg-white p-4">✅ Formulaire rapide, mobile-first</div>
+                <div class="rounded-xl border border-slate-200 bg-white p-4">✅ Résultat lisible et actionnable</div>
             </div>
-        </section>
+        </div>
 
-        <section id="result-section" class="hidden bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-4xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Votre estimation pour Nandy</h2>
-                <div class="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
-                        <div>
-                            <p id="result-recap" class="text-sm text-slate-600"></p>
-                            <p class="text-4xl font-bold text-blue-700">
-                                <span id="result-min">0</span> - <span id="result-max">0</span> €
-                            </p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-sm text-slate-600">Prix au m² moyen</p>
-                            <p id="result-price-m2" class="text-2xl font-bold text-blue-700">0 €/m²</p>
-                        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7 lg:p-8">
+            <h2 class="text-2xl font-bold">Page 1 · Votre bien</h2>
+            <p class="mt-2 text-sm text-slate-500">Tous les champs sont utiles pour affiner votre estimation.</p>
+
+            <form action="/resultat.php" method="get" class="mt-6 space-y-5" novalidate>
+                <div class="grid gap-5 sm:grid-cols-2">
+                    <div class="sm:col-span-2">
+                        <label for="type_bien" class="mb-2 block text-sm font-medium text-slate-700">Type de bien</label>
+                        <select id="type_bien" name="type_bien" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                            <option value="">Sélectionner</option>
+                            <option value="Appartement">Appartement</option>
+                            <option value="Maison">Maison</option>
+                            <option value="Terrain">Terrain</option>
+                            <option value="Local commercial">Local commercial</option>
+                        </select>
                     </div>
-                    <div class="mt-6">
-                        <input type="range" id="result-range" min="0" max="100" value="50" class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-200">
+
+                    <div class="sm:col-span-2">
+                        <label for="ville" class="mb-2 block text-sm font-medium text-slate-700">Ville</label>
+                        <select id="ville" name="ville" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                            <option value="">Sélectionner</option>
+                            <?php foreach ($villes as $ville): ?>
+                                <option value="<?= htmlspecialchars((string) $ville, ENT_QUOTES); ?>"><?= htmlspecialchars((string) $ville, ENT_QUOTES); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="surface_m2" class="mb-2 block text-sm font-medium text-slate-700">Surface (m²)</label>
+                        <input id="surface_m2" name="surface_m2" type="number" min="12" max="600" step="1" required placeholder="Ex: 87" class="w-full rounded-xl border border-slate-300 px-4 py-3.5 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                    </div>
+
+                    <div>
+                        <label for="pieces" class="mb-2 block text-sm font-medium text-slate-700">Nombre de pièces</label>
+                        <input id="pieces" name="pieces" type="number" min="1" max="15" step="1" required placeholder="Ex: 4" class="w-full rounded-xl border border-slate-300 px-4 py-3.5 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="etat" class="mb-2 block text-sm font-medium text-slate-700">État du bien</label>
+                        <select id="etat" name="etat" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                            <option value="">Sélectionner</option>
+                            <option value="à rénover">À rénover</option>
+                            <option value="bon">Bon état</option>
+                            <option value="excellent">Excellent état</option>
+                            <option value="neuf">Neuf / récent</option>
+                        </select>
                     </div>
                 </div>
 
-                <hr class="my-6 border-slate-200">
-
-                <div id="result-workflow" class="space-y-4">
-                    <p class="text-center text-sm text-slate-700">Pour une valeur plus précise et un plan de vente clair, complétez ce parcours rapide.</p>
-                    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                        <div id="wizard-track" class="flex transition-transform duration-500 ease-out">
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Recevez votre estimation détaillée</h3>
-                                <input id="rapport_email" name="email" type="email" placeholder="Votre email" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                <button id="step-email-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Recevoir mon estimation détaillée →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Quel est votre projet ?</h3>
-                                <div id="projet-pills" class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-                                    <label class="cursor-pointer rounded-xl border border-blue-200 px-3 py-4 text-center text-sm font-semibold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-600 has-[:checked]:text-white">
-                                        <input type="radio" name="projet" value="Vendre mon bien" class="sr-only">
-                                        🏠 Vendre
-                                    </label>
-                                    <label class="cursor-pointer rounded-xl border border-blue-200 px-3 py-4 text-center text-sm font-semibold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-600 has-[:checked]:text-white">
-                                        <input type="radio" name="projet" value="Acheter un bien" class="sr-only">
-                                        🔑 Acheter
-                                    </label>
-                                    <label class="cursor-pointer rounded-xl border border-blue-200 px-3 py-4 text-center text-sm font-semibold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-600 has-[:checked]:text-white">
-                                        <input type="radio" name="projet" value="Louer mon bien" class="sr-only">
-                                        📄 Louer
-                                    </label>
-                                </div>
-                                <button id="step-projet-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Comment souhaitez-vous vendre ?</h3>
-                                <div id="methode-pills" class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                                    <label class="cursor-pointer rounded-xl border border-blue-200 px-3 py-4 text-center text-sm font-semibold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-600 has-[:checked]:text-white">
-                                        <input type="radio" name="methode_vente" value="Agence" class="sr-only">
-                                        Via une agence
-                                    </label>
-                                    <label class="cursor-pointer rounded-xl border border-blue-200 px-3 py-4 text-center text-sm font-semibold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-600 has-[:checked]:text-white">
-                                        <input type="radio" name="methode_vente" value="Particulier" class="sr-only">
-                                        En particulier
-                                    </label>
-                                </div>
-                                <button id="step-methode-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Comment nous avez-vous connu ?</h3>
-                                <select id="source_site" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Choisir</option>
-                                    <option value="Google">Google</option>
-                                    <option value="Facebook">Facebook</option>
-                                    <option value="Bouche à oreille">Bouche à oreille</option>
-                                    <option value="Autre">Autre</option>
-                                </select>
-                                <button id="step-source-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Votre budget estimé</h3>
-                                <select id="budget_estime" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Choisir</option>
-                                    <option value="lt100k">Moins de 100 000 €</option>
-                                    <option value="100_200k">100 000 - 200 000 €</option>
-                                    <option value="200_300k">200 000 - 300 000 €</option>
-                                    <option value="300_400k">300 000 - 400 000 €</option>
-                                    <option value="400_500k">400 000 - 500 000 €</option>
-                                    <option value="gt500k">Plus de 500 000 €</option>
-                                </select>
-                                <button id="step-budget-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Votre situation</h3>
-                                <select id="decisionnaire" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Êtes-vous décisionnaire ?</option>
-                                    <option value="Oui">Oui</option>
-                                    <option value="Non">Non</option>
-                                </select>
-                                <select id="raison" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Raison de votre projet</option>
-                                    <option value="Changement de situation familiale">Changement de situation familiale</option>
-                                    <option value="Investissement">Investissement</option>
-                                    <option value="Déménagement professionnel">Déménagement professionnel</option>
-                                    <option value="Autre">Autre</option>
-                                </select>
-                                <button id="step-situation-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
-                            </div>
-                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Votre timing</h3>
-                                <select id="budget_bant" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Budget validé ?</option>
-                                    <option value="Oui">Oui</option>
-                                    <option value="Non">Non</option>
-                                </select>
-                                <select id="delai" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                    <option value="">Délai de réalisation</option>
-                                    <option value="Dans le mois">Dans le mois</option>
-                                    <option value="Dans les 3 mois">Dans les 3 mois</option>
-                                    <option value="Dans les 6 mois">Dans les 6 mois</option>
-                                    <option value="Dans l'année">Dans l'année</option>
-                                    <option value="Pas de délai précis">Pas de délai précis</option>
-                                </select>
-                                <button id="step-timing-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Dernière étape →</button>
-                            </div>
-                            <form id="contact-form" class="wizard-step w-full shrink-0 space-y-3 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Vos coordonnées</h3>
-                                <input id="prenom" name="prenom" type="text" placeholder="Prénom" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                <input id="telephone" name="telephone" type="tel" placeholder="Téléphone" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                <button id="contact-submit" type="submit" class="w-full rounded-xl bg-gradient-to-r from-blue-700 to-blue-500 px-4 py-3 font-bold text-white transition hover:from-blue-800 hover:to-blue-600">Me faire rappeler gratuitement →</button>
-                            </form>
-                        </div>
-                        <div id="wizard-dots" class="mt-4 flex items-center justify-center gap-2">
-                            <span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
-                        </div>
-                        <p id="contact-feedback" class="mt-4 hidden rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700"></p>
-                    </div>
-                </div>
-                <button id="new-estimation" type="button" class="mt-4 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
-                    ← Nouvelle estimation
-                </button>
-            </div>
-        </section>
-
-        <section class="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Comment éviter une mauvaise vente en 3 étapes</h2>
-                <div class="mt-10 grid gap-6 md:grid-cols-3">
-                    <article class="rounded-2xl bg-white p-6 shadow-sm">
-                        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">1</div>
-                        <p class="text-2xl">📝</p>
-                        <h3 class="mt-3 text-lg font-semibold">Décrivez votre bien</h3>
-                        <p class="mt-2 text-sm text-slate-600">Sélectionnez le type de bien, la ville (Nandy, Savigny-le-Temple, etc.) et la surface pour obtenir une première fourchette.</p>
-                    </article>
-                    <article class="rounded-2xl bg-white p-6 shadow-sm">
-                        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">2</div>
-                        <p class="text-2xl">⚡</p>
-                        <h3 class="mt-3 text-lg font-semibold">Estimation stratégique</h3>
-                        <p class="mt-2 text-sm text-slate-600">Recevez une fourchette cohérente avec la demande locale pour éviter la surévaluation, préserver l'attractivité de votre annonce et réduire les délais.</p>
-                    </article>
-                    <article class="rounded-2xl bg-white p-6 shadow-sm">
-                        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">3</div>
-                        <p class="text-2xl">📞</p>
-                        <h3 class="mt-3 text-lg font-semibold">Plan de mise en vente</h3>
-                        <p class="mt-2 text-sm text-slate-600">Un conseiller affine votre estimation et vous aide à fixer le bon prix dès le lancement, pour vendre dans de meilleures conditions.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white px-4 py-16 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Pourquoi notre estimation est fiable à Nandy</h2>
-                <div class="mt-10 grid gap-6 md:grid-cols-3">
-                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <h3 class="text-lg font-semibold text-slate-900">Des sources publiques et vérifiables</h3>
-                        <p class="mt-3 text-sm leading-6 text-slate-600">Nous croisons les données DVF (Demandes de Valeurs Foncières), les bases notariales et les transactions enregistrées en Seine-et-Marne pour établir une fourchette réaliste, pas un chiffre arbitraire.</p>
-                    </article>
-                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <h3 class="text-lg font-semibold text-slate-900">Une lecture locale du marché</h3>
-                        <p class="mt-3 text-sm leading-6 text-slate-600">Notre analyse tient compte des différences de prix entre Nandy, Savigny-le-Temple, Cesson, Vert-Saint-Denis et les communes proches pour éviter les moyennes trop générales.</p>
-                    </article>
-                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <h3 class="text-lg font-semibold text-slate-900">Un avis humain pour confirmer</h3>
-                        <p class="mt-3 text-sm leading-6 text-slate-600">Après l'estimation en ligne, un expert local valide avec vous les éléments clés : état du bien, prestations, étage, exposition, nuisances et délai de vente visé.</p>
-                    </article>
-                </div>
-
-                <div class="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-6">
-                    <h3 class="text-lg font-semibold text-blue-900">Ce que vous recevez concrètement</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-blue-900">
-                        <li>• Une fourchette de prix cohérente avec les ventes récentes de votre secteur.</li>
-                        <li>• Un prix au m² indicatif adapté au type de bien et à la commune.</li>
-                        <li>• Des recommandations de positionnement pour vendre dans de bonnes conditions.</li>
-                    </ul>
-                    <p class="mt-4 text-xs text-blue-800">Estimation indicative gratuite, sans engagement, destinée à vous aider à prendre une décision avant une expertise complète.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-4 py-16 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Preuves sociales locales</h2>
-                <p class="mx-auto mt-3 max-w-3xl text-center text-sm text-slate-600">Des exemples récents d'estimations réalisées autour de Nandy pour vous situer rapidement.</p>
-
-                <div class="mt-8 grid gap-4 sm:grid-cols-3">
-                    <article class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Activité locale</p>
-                        <p class="mt-2 text-2xl font-bold text-emerald-900">+120</p>
-                        <p class="text-sm text-emerald-800">demandes d'estimation sur les 30 derniers jours autour de Nandy.</p>
-                    </article>
-                    <article class="rounded-2xl border border-blue-100 bg-blue-50 p-5">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Délai moyen</p>
-                        <p class="mt-2 text-2xl font-bold text-blue-900">2 min</p>
-                        <p class="text-sm text-blue-800">pour recevoir une première fourchette de prix personnalisée.</p>
-                    </article>
-                    <article class="rounded-2xl border border-violet-100 bg-violet-50 p-5">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-violet-700">Affinage expert</p>
-                        <p class="mt-2 text-2xl font-bold text-violet-900">24 h</p>
-                        <p class="text-sm text-violet-800">pour un retour d'un conseiller local si vous le souhaitez.</p>
-                    </article>
-                </div>
-
-                <h3 class="mt-12 text-xl font-semibold text-slate-900">Exemples concrets d'estimation</h3>
-                <div class="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Maison · Nandy (secteur Balory)</p>
-                        <p class="mt-2 text-sm text-slate-600">5 pièces · 108 m² habitables · jardin 320 m² · bon état général</p>
-                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 308 000 € – 332 000 €</p>
-                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en mars 2026</p>
-                    </article>
-                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Appartement · Savigny-le-Temple (Plessis-la-Forêt)</p>
-                        <p class="mt-2 text-sm text-slate-600">3 pièces · 67 m² · 2e étage · balcon · parking sous-sol</p>
-                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 176 000 € – 192 000 €</p>
-                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en février 2026</p>
-                    </article>
-                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Maison · Cesson (Bourg)</p>
-                        <p class="mt-2 text-sm text-slate-600">6 pièces · 132 m² · garage · parcelle 460 m² · rénovée</p>
-                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 356 000 € – 389 000 €</p>
-                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en mars 2026</p>
-                    </article>
-                </div>
-
-                <h3 class="mt-12 text-xl font-semibold text-slate-900">Témoignages de propriétaires</h3>
-                <div class="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Nous vendions la maison familiale près du collège de Balory à Nandy. La fourchette reçue était cohérente avec l'avis de l'agent, et nous avons signé une offre en 3 semaines."</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Claire et Romain, maison 5 pièces · Nandy</footer>
-                    </blockquote>
-                    <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Avant une mise en location, je voulais vérifier la valeur de revente de mon T3 à Savigny-le-Temple (côté gare RER D). L'estimation m'a aidée à fixer un prix réaliste."</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Nadia, appartement 67 m² · Savigny-le-Temple</footer>
-                    </blockquote>
-                    <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Succession en cours sur une maison à Cesson : nous avions besoin d'une base sérieuse rapidement. Le rapport reçu le jour même nous a permis d'avancer avec le notaire."</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— M. Lefèvre, maison 6 pièces · Cesson</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="border-t border-slate-200 bg-white px-4 py-6 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
-        © <?= date('Y'); ?> · <?= htmlspecialchars($agenceNom, ENT_QUOTES); ?> · <a href="/pages/mentions-legales.php" class="hover:text-slate-600">Mentions légales</a> ·
-        <a href="/pages/politique-confidentialite.php" class="hover:text-slate-600">Politique de confidentialité</a>
-    </footer>
-
-    <script>
-        const form = document.getElementById('estimation-form');
-        const feedback = document.getElementById('form-feedback');
-        const resultSection = document.getElementById('result-section');
-        const recap = document.getElementById('result-recap');
-        const range = document.getElementById('result-range');
-        const priceM2 = document.getElementById('result-price-m2');
-        const newEstimationBtn = document.getElementById('new-estimation');
-        const heroProgressFill = document.getElementById('hero-progress-fill');
-        const wizardTrack = document.getElementById('wizard-track');
-        const wizardDots = [...document.querySelectorAll('#wizard-dots span')];
-        const rapportEmail = document.getElementById('rapport_email');
-        const stepEmailNext = document.getElementById('step-email-next');
-        const stepProjetNext = document.getElementById('step-projet-next');
-        const stepMethodeNext = document.getElementById('step-methode-next');
-        const stepSourceNext = document.getElementById('step-source-next');
-        const stepBudgetNext = document.getElementById('step-budget-next');
-        const stepSituationNext = document.getElementById('step-situation-next');
-        const stepTimingNext = document.getElementById('step-timing-next');
-        const contactForm = document.getElementById('contact-form');
-        const contactFeedback = document.getElementById('contact-feedback');
-        const contactSubmit = document.getElementById('contact-submit');
-        const projetPills = document.getElementById('projet-pills');
-        const methodePills = document.getElementById('methode-pills');
-        const sourceSite = document.getElementById('source_site');
-        const budgetEstime = document.getElementById('budget_estime');
-        const decisionnaire = document.getElementById('decisionnaire');
-        const raison = document.getElementById('raison');
-        const budgetBant = document.getElementById('budget_bant');
-        const delai = document.getElementById('delai');
-        const emailRadios = [...projetPills.querySelectorAll('input[type="radio"]')];
-        const methodeRadios = [...methodePills.querySelectorAll('input[type="radio"]')];
-        let wizardStep = 0;
-        let latestEstimation = {};
-
-        function updateHeroProgress() {
-            const requiredFields = ['type_bien', 'ville', 'surface_tranche'];
-            const completed = requiredFields.filter((fieldName) => form.elements[fieldName].value !== '').length;
-            const percent = Math.max(33, Math.round((completed / requiredFields.length) * 100));
-            heroProgressFill.style.width = `${percent}%`;
-        }
-
-        function setWizardStep(step) {
-            wizardStep = step;
-            wizardTrack.style.transform = `translateX(-${step * 100}%)`;
-            wizardDots.forEach((dot, index) => {
-                dot.classList.toggle('bg-blue-600', index === step);
-                dot.classList.toggle('bg-slate-300', index !== step);
-            });
-        }
-
-        function formatPrice(price) {
-            return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(price);
-        }
-
-        function getSurfaceValue(tranche) {
-            const surfaces = {
-                lt30: { min: 15, max: 30 },
-                '30_50': { min: 30, max: 50 },
-                '50_80': { min: 50, max: 80 },
-                '80_120': { min: 80, max: 120 },
-                '120_200': { min: 120, max: 200 },
-                gt200: { min: 200, max: 300 }
-            };
-            return surfaces[tranche] || { min: 50, max: 80 };
-        }
-
-        function calculateEstimation(typeBien, ville, surfaceTranche) {
-            // Prix moyens au m² pour Nandy et ses environs (à adapter selon les données réelles)
-            const prixM2 = {
-                'Appartement': {
-                    'Nandy': 2800,
-                    'Savigny-le-Temple': 3000,
-                    'Cesson': 3100,
-                    'Vert-Saint-Denis': 2900,
-                    'Moissy-Cramayel': 2700,
-                    'default': 2900
-                },
-                'Maison': {
-                    'Nandy': 3200,
-                    'Savigny-le-Temple': 3400,
-                    'Cesson': 3500,
-                    'Vert-Saint-Denis': 3300,
-                    'Moissy-Cramayel': 3100,
-                    'default': 3300
-                },
-                'Terrain': {
-                    'Nandy': 200,
-                    'Savigny-le-Temple': 220,
-                    'Cesson': 230,
-                    'Vert-Saint-Denis': 210,
-                    'Moissy-Cramayel': 190,
-                    'default': 210
-                },
-                'default': 3000
-            };
-
-            const surface = getSurfaceValue(surfaceTranche);
-
-            const prixMoyen = prixM2[typeBien]?.[ville] || prixM2[typeBien]?.default || prixM2.default;
-            const prixMin = prixMoyen * 0.9 * surface.min;
-            const prixMax = prixMoyen * 1.1 * surface.max;
-
-            return {
-                min: Math.round(prixMin / 1000) * 1000,
-                max: Math.round(prixMax / 1000) * 1000,
-                prixM2: prixMoyen,
-                surfaceMin: surface.min,
-                surfaceMax: surface.max
-            };
-        }
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            feedback.classList.add('hidden');
-            feedback.textContent = '';
-
-            const submitButton = form.querySelector('button[type="submit"]');
-            const buttonText = submitButton.textContent;
-            submitButton.disabled = true;
-            submitButton.textContent = 'Calcul en cours...';
-
-            try {
-                const typeBien = form.elements.type_bien.value;
-                const ville = form.elements.ville.value;
-                const surfaceTranche = form.elements.surface_tranche.value;
-
-                if (!typeBien || !ville || !surfaceTranche) {
-                    throw new Error('Veuillez remplir tous les champs.');
-                }
-
-                latestEstimation = calculateEstimation(typeBien, ville, surfaceTranche);
-
-                recap.textContent = `${typeBien} de ${latestEstimation.surfaceMin}-${latestEstimation.surfaceMax} m² à ${ville}`;
-                document.getElementById('result-min').textContent = latestEstimation.min.toLocaleString('fr-FR');
-                document.getElementById('result-max').textContent = latestEstimation.max.toLocaleString('fr-FR');
-                priceM2.textContent = `${latestEstimation.prixM2.toLocaleString('fr-FR')} €/m²`;
-
-                resultSection.classList.remove('hidden');
-                resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                setWizardStep(0);
-            } catch (error) {
-                feedback.textContent = error.message;
-                feedback.classList.remove('hidden');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = buttonText;
-            }
-        });
-
-        newEstimationBtn.addEventListener('click', () => {
-            form.reset();
-            resultSection.classList.add('hidden');
-            feedback.classList.add('hidden');
-            setWizardStep(0);
-            updateHeroProgress();
-        });
-
-        form.addEventListener('change', updateHeroProgress);
-        updateHeroProgress();
-
-        projetPills.addEventListener('change', () => {
-            [...projetPills.querySelectorAll('label')].forEach((label) => {
-                const input = label.querySelector('input[type="radio"]');
-                label.classList.toggle('ring-2', input.checked);
-                label.classList.toggle('ring-blue-200', input.checked);
-            });
-            setWizardStep(2);
-        });
-
-        methodePills.addEventListener('change', () => {
-            [...methodePills.querySelectorAll('label')].forEach((label) => {
-                const input = label.querySelector('input[type="radio"]');
-                label.classList.toggle('ring-2', input.checked);
-                label.classList.toggle('ring-blue-200', input.checked);
-            });
-            setWizardStep(3);
-        });
-
-        stepEmailNext.addEventListener('click', async () => {
-            if (!rapportEmail.reportValidity()) {
-                return;
-            }
-            stepEmailNext.disabled = true;
-            const originalText = stepEmailNext.textContent;
-            stepEmailNext.textContent = 'Envoi...';
-            contactFeedback.classList.add('hidden');
-            try {
-                const payload = new FormData();
-                payload.append('email', rapportEmail.value.trim());
-                payload.append('type_bien', form.elements.type_bien.value);
-                payload.append('ville', form.elements.ville.value);
-                payload.append('surface_tranche', form.elements.surface_tranche.value);
-                payload.append('budget_estime', form.elements.budget_estime.value);
-                await fetch('/api/rapport.php', { method: 'POST', body: payload });
-            } catch (error) {
-                // Capture non bloquante : l'utilisateur continue même si l'enregistrement échoue.
-            } finally {
-                stepEmailNext.disabled = false;
-                stepEmailNext.textContent = originalText;
-                setWizardStep(1);
-            }
-        });
-
-        stepProjetNext.addEventListener('click', () => {
-            if (!emailRadios.some(input => input.checked)) {
-                return;
-            }
-            setWizardStep(2);
-        });
-
-        stepMethodeNext.addEventListener('click', () => {
-            if (!methodeRadios.some(input => input.checked)) {
-                return;
-            }
-            setWizardStep(3);
-        });
-
-        stepSourceNext.addEventListener('click', () => {
-            if (sourceSite.value === '') {
-                sourceSite.reportValidity();
-                return;
-            }
-            setWizardStep(4);
-        });
-
-        stepBudgetNext.addEventListener('click', () => {
-            if (budgetEstime.value === '') {
-                budgetEstime.reportValidity();
-                return;
-            }
-            setWizardStep(5);
-        });
-
-        stepSituationNext.addEventListener('click', () => {
-            if (decisionnaire.value === '' || raison.value === '') {
-                if (decisionnaire.value === '') {
-                    decisionnaire.reportValidity();
-                } else {
-                    raison.reportValidity();
-                }
-                return;
-            }
-            setWizardStep(6);
-        });
-
-        stepTimingNext.addEventListener('click', () => {
-            if (budgetBant.value === '' || delai.value === '') {
-                if (budgetBant.value === '') {
-                    budgetBant.reportValidity();
-                } else {
-                    delai.reportValidity();
-                }
-                return;
-            }
-            setWizardStep(7);
-        });
-
-        contactForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            contactFeedback.classList.add('hidden');
-            contactFeedback.textContent = '';
-            setWizardStep(0);
-
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const buttonText = submitButton.textContent;
-            submitButton.disabled = true;
-            submitButton.textContent = 'Envoi en cours...';
-
-            try {
-                const payload = new FormData(contactForm);
-                payload.append('email', rapportEmail.value.trim());
-                payload.append('projet', emailRadios.find((input) => input.checked)?.value || '');
-                payload.append('methode_vente', methodeRadios.find((input) => input.checked)?.value || '');
-                payload.append('source_site', sourceSite.value);
-                payload.append('budget_estime', budgetEstime.value);
-                payload.append('decisionnaire', decisionnaire.value);
-                payload.append('raison', raison.value);
-                payload.append('budget_bant', budgetBant.value);
-                payload.append('delai', delai.value);
-                Object.entries(latestEstimation).forEach(([key, value]) => payload.append(key, String(value)));
-
-                const response = await fetch('/api/contact.php', {
-                    method: 'POST',
-                    body: payload
-                });
-                const data = await response.json();
-
-                if (!response.ok || !data.success) {
-                    throw new Error(data.message || 'Impossible d\'envoyer votre demande.');
-                }
-
-                const prenom = (payload.get('prenom') || '').toString().trim();
-                contactFeedback.className = 'rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700 transition-all duration-500';
-                contactFeedback.textContent = `✅ Merci ${prenom} ! Un conseiller vous rappelle sous 24h pour votre projet à Nandy.`;
-                contactFeedback.classList.remove('hidden');
-                contactFeedback.animate(
-                    [{ transform: 'scale(0.96)', opacity: 0 }, { transform: 'scale(1)', opacity: 1 }],
-                    { duration: 280, easing: 'ease-out' }
-                );
-                contactForm.reset();
-                rapportEmail.value = '';
-                projetPills.querySelectorAll('input').forEach((input) => {
-                    input.checked = false;
-                });
-                methodePills.querySelectorAll('input').forEach((input) => {
-                    input.checked = false;
-                });
-                sourceSite.value = '';
-                budgetEstime.value = '';
-                decisionnaire.value = '';
-                raison.value = '';
-                budgetBant.value = '';
-                delai.value = '';
-                setWizardStep(0);
-            } catch (error) {
-                contactFeedback.className = 'rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700';
-                contactFeedback.textContent = error.message || 'Le service est momentanément indisponible.';
-                contactFeedback.classList.remove('hidden');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = buttonText;
-            }
-        });
-    </script>
+                <button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-5 py-4 text-base font-semibold text-white transition hover:bg-blue-700">Voir mon estimation →</button>
+                <p class="text-center text-xs text-slate-500">En cliquant, vous accédez à la page résultat (étape 2).</p>
+            </form>
+        </div>
+    </section>
+</main>
 </body>
 </html>
