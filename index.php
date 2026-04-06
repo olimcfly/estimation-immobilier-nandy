@@ -109,8 +109,9 @@ if (!is_array($villes) || $villes === []) {
 
                         <div class="sm:col-span-2 lg:col-span-4">
                             <button type="submit" class="w-full rounded-xl bg-white px-4 py-4 font-semibold text-blue-700 transition hover:bg-gray-100">
-                                Estimer mon bien →
+                                Obtenir mon estimation gratuite maintenant →
                             </button>
+                            <p class="mt-3 text-center text-xs text-blue-100">Sans appel automatique · Aucun paiement requis · Réponse immédiate</p>
                         </div>
                     </form>
 
@@ -143,13 +144,13 @@ if (!is_array($villes) || $villes === []) {
                 <hr class="my-6 border-slate-200">
 
                 <div id="result-workflow" class="space-y-4">
-                    <p class="text-center text-sm text-slate-700">Pour affiner cette estimation, complétez ce court parcours.</p>
+                    <p class="text-center text-sm text-slate-700">Pour une valeur plus précise et un plan de vente clair, complétez ce parcours rapide.</p>
                     <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
                         <div id="wizard-track" class="flex transition-transform duration-500 ease-out">
                             <div class="wizard-step w-full shrink-0 space-y-4 px-1">
-                                <h3 class="text-center text-xl font-bold text-slate-900">Recevez votre rapport détaillé</h3>
+                                <h3 class="text-center text-xl font-bold text-slate-900">Recevez votre estimation détaillée</h3>
                                 <input id="rapport_email" name="email" type="email" placeholder="Votre email" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
-                                <button id="step-email-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Recevoir mon rapport →</button>
+                                <button id="step-email-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Recevoir mon estimation détaillée →</button>
                             </div>
                             <div class="wizard-step w-full shrink-0 space-y-4 px-1">
                                 <h3 class="text-center text-xl font-bold text-slate-900">Quel est votre projet ?</h3>
@@ -248,7 +249,7 @@ if (!is_array($villes) || $villes === []) {
 
         <section class="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Comment ça marche</h2>
+                <h2 class="text-center text-3xl font-bold text-slate-900">Comment éviter une mauvaise vente en 3 étapes</h2>
                 <div class="mt-10 grid gap-6 md:grid-cols-3">
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">1</div>
@@ -272,9 +273,39 @@ if (!is_array($villes) || $villes === []) {
             </div>
         </section>
 
+        <section class="bg-white px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl">
+                <h2 class="text-center text-3xl font-bold text-slate-900">Pourquoi notre estimation est fiable à Nandy</h2>
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Des sources publiques et vérifiables</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Nous croisons les données DVF (Demandes de Valeurs Foncières), les bases notariales et les transactions enregistrées en Seine-et-Marne pour établir une fourchette réaliste, pas un chiffre arbitraire.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Une lecture locale du marché</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Notre analyse tient compte des différences de prix entre Nandy, Savigny-le-Temple, Cesson, Vert-Saint-Denis et les communes proches pour éviter les moyennes trop générales.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Un avis humain pour confirmer</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Après l'estimation en ligne, un expert local valide avec vous les éléments clés : état du bien, prestations, étage, exposition, nuisances et délai de vente visé.</p>
+                    </article>
+                </div>
+
+                <div class="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                    <h3 class="text-lg font-semibold text-blue-900">Ce que vous recevez concrètement</h3>
+                    <ul class="mt-3 space-y-2 text-sm text-blue-900">
+                        <li>• Une fourchette de prix cohérente avec les ventes récentes de votre secteur.</li>
+                        <li>• Un prix au m² indicatif adapté au type de bien et à la commune.</li>
+                        <li>• Des recommandations de positionnement pour vendre dans de bonnes conditions.</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-blue-800">Estimation indicative gratuite, sans engagement, destinée à vous aider à prendre une décision avant une expertise complète.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="px-4 py-16 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Ils nous ont fait confiance</h2>
+                <h2 class="text-center text-3xl font-bold text-slate-900">Ils ont voulu connaître le vrai prix… et ils ont bien fait</h2>
                 <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
                         <p class="text-sm text-slate-600">"On craignait un délai long. L'estimation nous a aidés à fixer le bon prix dès le début et nous avons reçu des visites qualifiées rapidement."</p>
@@ -447,7 +478,7 @@ if (!is_array($villes) || $villes === []) {
                 priceM2.textContent = `${latestEstimation.prixM2.toLocaleString('fr-FR')} €/m²`;
 
                 resultSection.classList.remove('hidden');
-                document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 setWizardStep(0);
             } catch (error) {
                 feedback.textContent = error.message;
@@ -490,21 +521,21 @@ if (!is_array($villes) || $villes === []) {
             stepEmailNext.disabled = true;
             const originalText = stepEmailNext.textContent;
             stepEmailNext.textContent = 'Envoi...';
+            contactFeedback.classList.add('hidden');
             try {
                 const payload = new FormData();
                 payload.append('email', rapportEmail.value.trim());
-                const response = await fetch('/api/rapport.php', { method: 'POST', body: payload });
-                if (!response.ok) {
-                    throw new Error('Impossible d\'envoyer le rapport pour le moment.');
-                }
-                setWizardStep(1);
+                payload.append('type_bien', form.elements.type_bien.value);
+                payload.append('ville', form.elements.ville.value);
+                payload.append('surface_tranche', form.elements.surface_tranche.value);
+                payload.append('budget_estime', form.elements.budget_estime.value);
+                await fetch('/api/rapport.php', { method: 'POST', body: payload });
             } catch (error) {
-                contactFeedback.className = 'mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-700';
-                contactFeedback.textContent = error.message || 'Service temporairement indisponible.';
-                contactFeedback.classList.remove('hidden');
+                // Capture non bloquante : l'utilisateur continue même si l'enregistrement échoue.
             } finally {
                 stepEmailNext.disabled = false;
                 stepEmailNext.textContent = originalText;
+                setWizardStep(1);
             }
         });
 
