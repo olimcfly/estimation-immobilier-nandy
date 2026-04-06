@@ -59,7 +59,15 @@ if (!is_array($villes) || $villes === []) {
                     <p class="mt-6 text-lg sm:text-xl"><?= htmlspecialchars($sousTitre, ENT_QUOTES); ?></p>
                     <p class="mt-3 text-sm text-blue-100 sm:text-base">Même dans un marché plus sélectif, la demande est bien présente pour les biens correctement positionnés.</p>
 
-                    <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <div class="sm:col-span-2 lg:col-span-3 rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-left text-sm text-blue-50">
+                            <p class="font-semibold text-white">Étape 1/2 · Décrivez votre bien en 20 secondes</p>
+                            <p class="mt-1 text-blue-100">Nous affichons une estimation immédiate, puis vous choisissez si vous souhaitez aller plus loin.</p>
+                            <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/20">
+                                <div id="hero-progress-fill" class="h-full w-[33%] rounded-full bg-white transition-all duration-300 ease-out"></div>
+                            </div>
+                        </div>
+
                         <div class="w-full lg:flex-1">
                             <label for="type_bien" class="mb-1 block text-sm font-medium text-blue-100">🏡 Type de bien</label>
                             <select id="type_bien" name="type_bien" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
@@ -69,6 +77,7 @@ if (!is_array($villes) || $villes === []) {
                                 <option value="Terrain">Terrain</option>
                                 <option value="Local commercial">Local commercial</option>
                             </select>
+                            <p class="mt-1 text-xs text-blue-100">Aucune coordonnée demandée à cette étape.</p>
                         </div>
 
                         <div class="w-full lg:flex-1">
@@ -79,9 +88,10 @@ if (!is_array($villes) || $villes === []) {
                                     <option value="<?= htmlspecialchars($ville, ENT_QUOTES); ?>"><?= htmlspecialchars($ville, ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
+                            <p class="mt-1 text-xs text-blue-100">Nous utilisons les prix locaux les plus proches de votre secteur.</p>
                         </div>
 
-                        <div class="w-full lg:flex-1 lg:px-3 lg:border-r lg:border-white/20">
+                        <div class="w-full lg:flex-1">
                             <label for="surface_tranche" class="mb-1 block text-sm font-medium text-blue-100">📏 Surface</label>
                             <select id="surface_tranche" name="surface_tranche" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
                                 <option value="">Choisir</option>
@@ -92,26 +102,14 @@ if (!is_array($villes) || $villes === []) {
                                 <option value="120_200">120-200 m²</option>
                                 <option value="gt200">Plus de 200 m²</option>
                             </select>
+                            <p class="mt-1 text-xs text-blue-100">Choisissez une tranche approximative, vous pourrez affiner ensuite.</p>
                         </div>
 
-                        <div class="w-full lg:flex-1">
-                            <label for="budget_estime" class="mb-1 block text-sm font-medium text-blue-100">💰 Budget estimé</label>
-                            <select id="budget_estime" name="budget_estime" required class="w-full rounded-xl border-0 bg-gray-50 px-4 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                                <option value="">Choisir</option>
-                                <option value="lt100k">Moins de 100 000 €</option>
-                                <option value="100_200k">100 000 - 200 000 €</option>
-                                <option value="200_300k">200 000 - 300 000 €</option>
-                                <option value="300_400k">300 000 - 400 000 €</option>
-                                <option value="400_500k">400 000 - 500 000 €</option>
-                                <option value="gt500k">Plus de 500 000 €</option>
-                            </select>
-                        </div>
-
-                        <div class="sm:col-span-2 lg:col-span-4">
+                        <div class="sm:col-span-2 lg:col-span-3">
                             <button type="submit" class="w-full rounded-xl bg-white px-4 py-4 font-semibold text-blue-700 transition hover:bg-gray-100">
                                 Obtenir mon estimation gratuite maintenant →
                             </button>
-                            <p class="mt-3 text-center text-xs text-blue-100">Sans appel automatique · Aucun paiement requis · Réponse immédiate</p>
+                            <p class="mt-2 text-center text-xs text-blue-100">Résultat instantané et gratuit · Sans engagement</p>
                         </div>
                     </form>
 
@@ -196,6 +194,19 @@ if (!is_array($villes) || $villes === []) {
                                 <button id="step-source-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
                             </div>
                             <div class="wizard-step w-full shrink-0 space-y-4 px-1">
+                                <h3 class="text-center text-xl font-bold text-slate-900">Votre budget estimé</h3>
+                                <select id="budget_estime" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
+                                    <option value="">Choisir</option>
+                                    <option value="lt100k">Moins de 100 000 €</option>
+                                    <option value="100_200k">100 000 - 200 000 €</option>
+                                    <option value="200_300k">200 000 - 300 000 €</option>
+                                    <option value="300_400k">300 000 - 400 000 €</option>
+                                    <option value="400_500k">400 000 - 500 000 €</option>
+                                    <option value="gt500k">Plus de 500 000 €</option>
+                                </select>
+                                <button id="step-budget-next" type="button" class="w-full rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white transition hover:bg-slate-800">Suivant →</button>
+                            </div>
+                            <div class="wizard-step w-full shrink-0 space-y-4 px-1">
                                 <h3 class="text-center text-xl font-bold text-slate-900">Votre situation</h3>
                                 <select id="decisionnaire" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none">
                                     <option value="">Êtes-vous décisionnaire ?</option>
@@ -236,7 +247,7 @@ if (!is_array($villes) || $villes === []) {
                             </form>
                         </div>
                         <div id="wizard-dots" class="mt-4 flex items-center justify-center gap-2">
-                            <span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
+                            <span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
                         </div>
                         <p id="contact-feedback" class="mt-4 hidden rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700"></p>
                     </div>
@@ -255,7 +266,7 @@ if (!is_array($villes) || $villes === []) {
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">1</div>
                         <p class="text-2xl">📝</p>
                         <h3 class="mt-3 text-lg font-semibold">Décrivez votre bien</h3>
-                        <p class="mt-2 text-sm text-slate-600">Renseignez les caractéristiques essentielles de votre bien pour une base de prix réaliste, adaptée à Nandy et ses environs.</p>
+                        <p class="mt-2 text-sm text-slate-600">Sélectionnez le type de bien, la ville (Nandy, Savigny-le-Temple, etc.) et la surface pour obtenir une première fourchette.</p>
                     </article>
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">2</div>
@@ -337,6 +348,7 @@ if (!is_array($villes) || $villes === []) {
         const range = document.getElementById('result-range');
         const priceM2 = document.getElementById('result-price-m2');
         const newEstimationBtn = document.getElementById('new-estimation');
+        const heroProgressFill = document.getElementById('hero-progress-fill');
         const wizardTrack = document.getElementById('wizard-track');
         const wizardDots = [...document.querySelectorAll('#wizard-dots span')];
         const rapportEmail = document.getElementById('rapport_email');
@@ -344,6 +356,7 @@ if (!is_array($villes) || $villes === []) {
         const stepProjetNext = document.getElementById('step-projet-next');
         const stepMethodeNext = document.getElementById('step-methode-next');
         const stepSourceNext = document.getElementById('step-source-next');
+        const stepBudgetNext = document.getElementById('step-budget-next');
         const stepSituationNext = document.getElementById('step-situation-next');
         const stepTimingNext = document.getElementById('step-timing-next');
         const contactForm = document.getElementById('contact-form');
@@ -352,6 +365,7 @@ if (!is_array($villes) || $villes === []) {
         const projetPills = document.getElementById('projet-pills');
         const methodePills = document.getElementById('methode-pills');
         const sourceSite = document.getElementById('source_site');
+        const budgetEstime = document.getElementById('budget_estime');
         const decisionnaire = document.getElementById('decisionnaire');
         const raison = document.getElementById('raison');
         const budgetBant = document.getElementById('budget_bant');
@@ -360,6 +374,13 @@ if (!is_array($villes) || $villes === []) {
         const methodeRadios = [...methodePills.querySelectorAll('input[type="radio"]')];
         let wizardStep = 0;
         let latestEstimation = {};
+
+        function updateHeroProgress() {
+            const requiredFields = ['type_bien', 'ville', 'surface_tranche'];
+            const completed = requiredFields.filter((fieldName) => form.elements[fieldName].value !== '').length;
+            const percent = Math.max(33, Math.round((completed / requiredFields.length) * 100));
+            heroProgressFill.style.width = `${percent}%`;
+        }
 
         function setWizardStep(step) {
             wizardStep = step;
@@ -386,19 +407,7 @@ if (!is_array($villes) || $villes === []) {
             return surfaces[tranche] || { min: 50, max: 80 };
         }
 
-        function getBudgetValue(tranche) {
-            const budgets = {
-                lt100k: { min: 50000, max: 100000 },
-                '100_200k': { min: 100000, max: 200000 },
-                '200_300k': { min: 200000, max: 300000 },
-                '300_400k': { min: 300000, max: 400000 },
-                '400_500k': { min: 400000, max: 500000 },
-                gt500k: { min: 500000, max: 1000000 }
-            };
-            return budgets[tranche] || { min: 200000, max: 300000 };
-        }
-
-        function calculateEstimation(typeBien, ville, surfaceTranche, budgetEstime) {
+        function calculateEstimation(typeBien, ville, surfaceTranche) {
             // Prix moyens au m² pour Nandy et ses environs (à adapter selon les données réelles)
             const prixM2 = {
                 'Appartement': {
@@ -429,21 +438,14 @@ if (!is_array($villes) || $villes === []) {
             };
 
             const surface = getSurfaceValue(surfaceTranche);
-            const budget = getBudgetValue(budgetEstime);
 
             const prixMoyen = prixM2[typeBien]?.[ville] || prixM2[typeBien]?.default || prixM2.default;
             const prixMin = prixMoyen * 0.9 * surface.min;
             const prixMax = prixMoyen * 1.1 * surface.max;
 
-            // Ajustement selon le budget estimé
-            const budgetMin = budget.min;
-            const budgetMax = budget.max;
-            const estimationMin = Math.max(prixMin, budgetMin * 0.9);
-            const estimationMax = Math.min(prixMax, budgetMax * 1.1);
-
             return {
-                min: Math.round(estimationMin / 1000) * 1000,
-                max: Math.round(estimationMax / 1000) * 1000,
+                min: Math.round(prixMin / 1000) * 1000,
+                max: Math.round(prixMax / 1000) * 1000,
                 prixM2: prixMoyen,
                 surfaceMin: surface.min,
                 surfaceMax: surface.max
@@ -464,13 +466,12 @@ if (!is_array($villes) || $villes === []) {
                 const typeBien = form.elements.type_bien.value;
                 const ville = form.elements.ville.value;
                 const surfaceTranche = form.elements.surface_tranche.value;
-                const budgetEstime = form.elements.budget_estime.value;
 
-                if (!typeBien || !ville || !surfaceTranche || !budgetEstime) {
+                if (!typeBien || !ville || !surfaceTranche) {
                     throw new Error('Veuillez remplir tous les champs.');
                 }
 
-                latestEstimation = calculateEstimation(typeBien, ville, surfaceTranche, budgetEstime);
+                latestEstimation = calculateEstimation(typeBien, ville, surfaceTranche);
 
                 recap.textContent = `${typeBien} de ${latestEstimation.surfaceMin}-${latestEstimation.surfaceMax} m² à ${ville}`;
                 document.getElementById('result-min').textContent = latestEstimation.min.toLocaleString('fr-FR');
@@ -494,7 +495,11 @@ if (!is_array($villes) || $villes === []) {
             resultSection.classList.add('hidden');
             feedback.classList.add('hidden');
             setWizardStep(0);
+            updateHeroProgress();
         });
+
+        form.addEventListener('change', updateHeroProgress);
+        updateHeroProgress();
 
         projetPills.addEventListener('change', () => {
             [...projetPills.querySelectorAll('label')].forEach((label) => {
@@ -561,6 +566,14 @@ if (!is_array($villes) || $villes === []) {
             setWizardStep(4);
         });
 
+        stepBudgetNext.addEventListener('click', () => {
+            if (budgetEstime.value === '') {
+                budgetEstime.reportValidity();
+                return;
+            }
+            setWizardStep(5);
+        });
+
         stepSituationNext.addEventListener('click', () => {
             if (decisionnaire.value === '' || raison.value === '') {
                 if (decisionnaire.value === '') {
@@ -570,7 +583,7 @@ if (!is_array($villes) || $villes === []) {
                 }
                 return;
             }
-            setWizardStep(5);
+            setWizardStep(6);
         });
 
         stepTimingNext.addEventListener('click', () => {
@@ -582,7 +595,7 @@ if (!is_array($villes) || $villes === []) {
                 }
                 return;
             }
-            setWizardStep(6);
+            setWizardStep(7);
         });
 
         contactForm.addEventListener('submit', async (event) => {
@@ -602,6 +615,7 @@ if (!is_array($villes) || $villes === []) {
                 payload.append('projet', emailRadios.find((input) => input.checked)?.value || '');
                 payload.append('methode_vente', methodeRadios.find((input) => input.checked)?.value || '');
                 payload.append('source_site', sourceSite.value);
+                payload.append('budget_estime', budgetEstime.value);
                 payload.append('decisionnaire', decisionnaire.value);
                 payload.append('raison', raison.value);
                 payload.append('budget_bant', budgetBant.value);
@@ -635,6 +649,7 @@ if (!is_array($villes) || $villes === []) {
                     input.checked = false;
                 });
                 sourceSite.value = '';
+                budgetEstime.value = '';
                 decisionnaire.value = '';
                 raison.value = '';
                 budgetBant.value = '';
