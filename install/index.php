@@ -185,6 +185,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
             $_SESSION['install_wizard']['villes'] = array_values(array_unique($cities));
+
+            try {
+                $db = $_SESSION['install_db'];
+                new PDO(
+                    sprintf('mysql:host=%s;dbname=%s;charset=utf8mb4', (string) $db['host'], (string) $db['db_name']),
+                    (string) $db['db_user'],
+                    (string) $db['db_pass'],
+                    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+                );
+
+                header('Location: ?step=3');
+                exit;
+            } catch (Throwable $ex) {
+                $error = 'Connexion DB impossible : ' . $ex->getMessage();
+            }
         }
 
     if ($step === 6) {
@@ -407,7 +422,7 @@ PHP;
 }
 }
 
-$step = max(1, min(6, (int) ($_GET['step'] ?? 1)));
+$step = max(1, min(6, (int) ($_GET['step'] ?? ($_POST['step'] ?? 1))));
 $data = $_SESSION['install_wizard'] ?? [];
 
 $dbSession   = $_SESSION['install_db'] ?? ['host' => 'localhost', 'db_name' => '', 'db_user' => '', 'db_pass' => ''];
