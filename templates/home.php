@@ -16,6 +16,9 @@ if (defined('CITIES_LIST')) {
             <img src="<?= htmlspecialchars($logoPath, ENT_QUOTES, 'UTF-8') ?>" alt="Logo" style="max-height:84px;max-width:220px;object-fit:contain; margin: 0 auto 12px auto;">
             <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-blue-900"><?= htmlspecialchars($homeTitle, ENT_QUOTES, 'UTF-8') ?></h1>
             <p class="mt-3 text-lg text-slate-600"><?= htmlspecialchars($homeSubtitle, ENT_QUOTES, 'UTF-8') ?></p>
+            <p class="mx-auto mt-4 max-w-3xl rounded-xl bg-blue-100 px-4 py-3 text-sm font-semibold text-blue-900">
+                Votre estimation à Nandy ne se joue pas à l’échelle de la France : elle se joue rue par rue, quartier par quartier.
+            </p>
         </div>
 
         <div class="mx-auto max-w-3xl rounded-2xl bg-white p-8 shadow-xl ring-1 ring-slate-200">
@@ -61,5 +64,31 @@ if (defined('CITIES_LIST')) {
                 </div>
             </form>
         </div>
+
+        <section class="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-3">
+            <article class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+                <p class="text-sm font-semibold uppercase tracking-wide text-blue-700">Différenciation #1</p>
+                <h2 class="mt-2 text-lg font-bold text-slate-900">Analyse micro‑quartier</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Nous comparons votre bien avec des ventes réellement proches à Nandy, Savigny-le-Temple, Cesson et Seine-Port, plutôt qu’avec des moyennes départementales trop larges.
+                </p>
+            </article>
+
+            <article class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+                <p class="text-sm font-semibold uppercase tracking-wide text-blue-700">Différenciation #2</p>
+                <h2 class="mt-2 text-lg font-bold text-slate-900">Typologie périurbaine maîtrisée</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Maison familiale avec jardin, pavillon récent, appartement en résidence : chaque type de bien est évalué avec ses critères locaux (terrain, stationnement, dépendances, état général).
+                </p>
+            </article>
+
+            <article class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+                <p class="text-sm font-semibold uppercase tracking-wide text-blue-700">Différenciation #3</p>
+                <h2 class="mt-2 text-lg font-bold text-slate-900">Plan d’action après estimation</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Vous ne recevez pas qu’un chiffre : vous obtenez une fourchette argumentée, les points à valoriser avant mise en vente, et une stratégie adaptée au rythme du secteur de Nandy.
+                </p>
+            </article>
+        </section>
     </section>
 </main>
