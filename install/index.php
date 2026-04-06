@@ -420,21 +420,24 @@ PHP;
                     $db['db_user'], $db['db_pass'],
                     [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
                 );
+                applySqlFileIfTableMissing($pdo, 'admins', $installSqlPath);
                 applySqlFileIfTableMissing($pdo, 'leads', $createLeadsSqlPath);
 
                 $nameParts     = preg_split('/\s+/', trim((string) $site['site_name'])) ?: [];
                 $defaultPrenom = isset($nameParts[0]) && $nameParts[0] !== '' ? $nameParts[0] : 'Admin';
                 $defaultNom    = count($nameParts) > 1 ? implode(' ', array_slice($nameParts, 1)) : 'EstimIA';
 
-                $adminStmt = $pdo->prepare(
-                    'INSERT INTO admins (prenom, nom, email) VALUES (:prenom, :nom, :email)
-                     ON DUPLICATE KEY UPDATE prenom = VALUES(prenom), nom = VALUES(nom)'
-                );
-                $adminStmt->execute([
-                    'prenom' => $defaultPrenom,
-                    'nom'    => $defaultNom,
-                    'email'  => (string) $site['admin_email'],
-                ]);
+                if (tableExists($pdo, 'admins')) {
+                    $adminStmt = $pdo->prepare(
+                        'INSERT INTO admins (prenom, nom, email) VALUES (:prenom, :nom, :email)
+                         ON DUPLICATE KEY UPDATE prenom = VALUES(prenom), nom = VALUES(nom)'
+                    );
+                    $adminStmt->execute([
+                        'prenom' => $defaultPrenom,
+                        'nom'    => $defaultNom,
+                        'email'  => (string) $site['admin_email'],
+                    ]);
+                }
 
                 $emailHtml = installRenderEmailTemplate($rootDir, 'install-success', [
                     'prenom'   => $defaultPrenom,
