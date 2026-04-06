@@ -28,7 +28,7 @@ $villePrincipale = (string) ($config['ville_principale'] ?? 'Nandy');
 $logo = (string) ($config['logo'] ?? '');
 $couleur = (string) ($config['couleur'] ?? '#1e3a5f');
 $h1 = (string) ($config['h1_titre'] ?? ('Combien vaut votre bien à ' . $villePrincipale . ' ?'));
-$sousTitre = (string) ($config['sous_titre'] ?? 'Obtenez une estimation instantanée basée sur les données du marché local de Nandy et ses environs.');
+$sousTitre = (string) ($config['sous_titre'] ?? 'À Nandy, vendre au bon prix dès le départ est la clé : obtenez une estimation stratégique pour sécuriser votre délai de vente.');
 $metaDescription = (string) ($config['meta_description'] ?? ('Estimation gratuite à ' . $villePrincipale . ' et en Seine-et-Marne'));
 $villes = $config['villes'] ?? [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel', 'Lieusaint', 'Saint-Pierre-du-Perray', 'Réau', 'Combs-la-Ville'];
 if (!is_array($villes) || $villes === []) {
@@ -57,6 +57,7 @@ if (!is_array($villes) || $villes === []) {
                     </p>
                     <h1 class="mt-4 text-4xl font-bold sm:text-5xl lg:text-6xl"><?= htmlspecialchars($h1, ENT_QUOTES); ?></h1>
                     <p class="mt-6 text-lg sm:text-xl"><?= htmlspecialchars($sousTitre, ENT_QUOTES); ?></p>
+                    <p class="mt-3 text-sm text-blue-100 sm:text-base">Même dans un marché plus sélectif, la demande est bien présente pour les biens correctement positionnés.</p>
 
                     <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         <div class="w-full lg:flex-1">
@@ -253,19 +254,19 @@ if (!is_array($villes) || $villes === []) {
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">1</div>
                         <p class="text-2xl">📝</p>
                         <h3 class="mt-3 text-lg font-semibold">Décrivez votre bien</h3>
-                        <p class="mt-2 text-sm text-slate-600">Sélectionnez le type de bien, la ville (Nandy, Savigny-le-Temple, etc.), la surface et votre budget estimé.</p>
+                        <p class="mt-2 text-sm text-slate-600">Renseignez les caractéristiques essentielles de votre bien pour une base de prix réaliste, adaptée à Nandy et ses environs.</p>
                     </article>
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">2</div>
                         <p class="text-2xl">⚡</p>
-                        <h3 class="mt-3 text-lg font-semibold">Estimation instantanée</h3>
-                        <p class="mt-2 text-sm text-slate-600">Notre algorithme calcule immédiatement une fourchette de prix cohérente avec le marché de Nandy et de la Seine-et-Marne.</p>
+                        <h3 class="mt-3 text-lg font-semibold">Estimation stratégique</h3>
+                        <p class="mt-2 text-sm text-slate-600">Recevez une fourchette cohérente avec la demande locale pour éviter la surévaluation, préserver l'attractivité de votre annonce et réduire les délais.</p>
                     </article>
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">3</div>
                         <p class="text-2xl">📞</p>
-                        <h3 class="mt-3 text-lg font-semibold">Échange avec un expert</h3>
-                        <p class="mt-2 text-sm text-slate-600">Un conseiller vous contacte pour affiner l'estimation et vous accompagner dans votre projet immobilier.</p>
+                        <h3 class="mt-3 text-lg font-semibold">Plan de mise en vente</h3>
+                        <p class="mt-2 text-sm text-slate-600">Un conseiller affine votre estimation et vous aide à fixer le bon prix dès le lancement, pour vendre dans de meilleures conditions.</p>
                     </article>
                 </div>
             </div>
@@ -276,15 +277,15 @@ if (!is_array($villes) || $villes === []) {
                 <h2 class="text-center text-3xl font-bold text-slate-900">Ils nous ont fait confiance</h2>
                 <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"L'estimation était très précise et m'a permis de vendre rapidement ma maison à Nandy. Merci pour l'accompagnement !"</p>
+                        <p class="text-sm text-slate-600">"On craignait un délai long. L'estimation nous a aidés à fixer le bon prix dès le début et nous avons reçu des visites qualifiées rapidement."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Jean, Nandy</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Le service est rapide et professionnel. J'ai obtenu une estimation fiable pour mon appartement à Savigny-le-Temple."</p>
+                        <p class="text-sm text-slate-600">"Très utile pour comprendre le marché local : l'outil nous a permis de positionner l'appartement au prix juste, sans brader."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Sophie, Savigny-le-Temple</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Très pratique pour avoir une première idée du prix de mon terrain à Cesson. Je recommande !"</p>
+                        <p class="text-sm text-slate-600">"L'estimation ne m'a pas juste donné un chiffre : elle m'a donné une vraie stratégie de vente adaptée au secteur."</p>
                         <footer class="mt-3 text-xs font-semibold text-slate-500">— Marc, Cesson</footer>
                     </blockquote>
                 </div>
