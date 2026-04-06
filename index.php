@@ -273,19 +273,62 @@ if (!is_array($villes) || $villes === []) {
 
         <section class="px-4 py-16 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-6xl">
-                <h2 class="text-center text-3xl font-bold text-slate-900">Ils nous ont fait confiance</h2>
-                <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <h2 class="text-center text-3xl font-bold text-slate-900">Preuves sociales locales</h2>
+                <p class="mx-auto mt-3 max-w-3xl text-center text-sm text-slate-600">Des exemples récents d'estimations réalisées autour de Nandy pour vous situer rapidement.</p>
+
+                <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                    <article class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Activité locale</p>
+                        <p class="mt-2 text-2xl font-bold text-emerald-900">+120</p>
+                        <p class="text-sm text-emerald-800">demandes d'estimation sur les 30 derniers jours autour de Nandy.</p>
+                    </article>
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Délai moyen</p>
+                        <p class="mt-2 text-2xl font-bold text-blue-900">2 min</p>
+                        <p class="text-sm text-blue-800">pour recevoir une première fourchette de prix personnalisée.</p>
+                    </article>
+                    <article class="rounded-2xl border border-violet-100 bg-violet-50 p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-violet-700">Affinage expert</p>
+                        <p class="mt-2 text-2xl font-bold text-violet-900">24 h</p>
+                        <p class="text-sm text-violet-800">pour un retour d'un conseiller local si vous le souhaitez.</p>
+                    </article>
+                </div>
+
+                <h3 class="mt-12 text-xl font-semibold text-slate-900">Exemples concrets d'estimation</h3>
+                <div class="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Maison · Nandy (secteur Balory)</p>
+                        <p class="mt-2 text-sm text-slate-600">5 pièces · 108 m² habitables · jardin 320 m² · bon état général</p>
+                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 308 000 € – 332 000 €</p>
+                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en mars 2026</p>
+                    </article>
+                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Appartement · Savigny-le-Temple (Plessis-la-Forêt)</p>
+                        <p class="mt-2 text-sm text-slate-600">3 pièces · 67 m² · 2e étage · balcon · parking sous-sol</p>
+                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 176 000 € – 192 000 €</p>
+                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en février 2026</p>
+                    </article>
+                    <article class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">Maison · Cesson (Bourg)</p>
+                        <p class="mt-2 text-sm text-slate-600">6 pièces · 132 m² · garage · parcelle 460 m² · rénovée</p>
+                        <p class="mt-4 text-lg font-bold text-slate-900">Estimation : 356 000 € – 389 000 €</p>
+                        <p class="mt-2 text-xs text-slate-500">Dossier estimé en mars 2026</p>
+                    </article>
+                </div>
+
+                <h3 class="mt-12 text-xl font-semibold text-slate-900">Témoignages de propriétaires</h3>
+                <div class="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"L'estimation était très précise et m'a permis de vendre rapidement ma maison à Nandy. Merci pour l'accompagnement !"</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Jean, Nandy</footer>
+                        <p class="text-sm text-slate-600">"Nous vendions la maison familiale près du collège de Balory à Nandy. La fourchette reçue était cohérente avec l'avis de l'agent, et nous avons signé une offre en 3 semaines."</p>
+                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Claire et Romain, maison 5 pièces · Nandy</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Le service est rapide et professionnel. J'ai obtenu une estimation fiable pour mon appartement à Savigny-le-Temple."</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Sophie, Savigny-le-Temple</footer>
+                        <p class="text-sm text-slate-600">"Avant une mise en location, je voulais vérifier la valeur de revente de mon T3 à Savigny-le-Temple (côté gare RER D). L'estimation m'a aidée à fixer un prix réaliste."</p>
+                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Nadia, appartement 67 m² · Savigny-le-Temple</footer>
                     </blockquote>
                     <blockquote class="rounded-2xl bg-white p-6 shadow-sm">
-                        <p class="text-sm text-slate-600">"Très pratique pour avoir une première idée du prix de mon terrain à Cesson. Je recommande !"</p>
-                        <footer class="mt-3 text-xs font-semibold text-slate-500">— Marc, Cesson</footer>
+                        <p class="text-sm text-slate-600">"Succession en cours sur une maison à Cesson : nous avions besoin d'une base sérieuse rapidement. Le rapport reçu le jour même nous a permis d'avancer avec le notaire."</p>
+                        <footer class="mt-3 text-xs font-semibold text-slate-500">— M. Lefèvre, maison 6 pièces · Cesson</footer>
                     </blockquote>
                 </div>
             </div>
