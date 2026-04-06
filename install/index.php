@@ -7,13 +7,91 @@ session_start();
 $rootDir = dirname(__DIR__);
 $configDir = $rootDir . '/config';
 $configFile = $configDir . '/config.php';
+$databaseFile = $configDir . '/database.php';
 $installHtaccess = __DIR__ . '/.htaccess';
+$installSqlPath = $rootDir . '/install.sql';
+$createLeadsSqlPath = $rootDir . '/sql/create_leads_table.sql';
 $uploadDir = $rootDir . '/assets';
+$alreadyInstalled = is_file($configFile);
+$error = '';
+$installCompleted = false;
+
+$requirements = [
+    'php_version' => version_compare(PHP_VERSION, '8.1.0', '>='),
+    'pdo_mysql' => extension_loaded('pdo_mysql'),
+    'json' => extension_loaded('json'),
+    'mbstring' => extension_loaded('mbstring'),
+    'config_writable' => is_dir($configDir) ? is_writable($configDir) : is_writable($rootDir),
+];
+
+function extractInstallTables(string $sqlPath): array
+{
+    if (!is_file($sqlPath)) {
+        return [];
+    }
+
+    $sql = (string) file_get_contents($sqlPath);
+    preg_match_all('/CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?`?([a-zA-Z0-9_]+)`?/i', $sql, $matches);
+    return array_values(array_unique($matches[1] ?? []));
+}
+
+function getTablesChecklist(array $db, array $expectedTables): array
+{
+    $result = [];
+    if ($expectedTables === []) {
+        return $result;
+    }
+
+    try {
+        $pdo = new PDO(
+            sprintf('mysql:host=%s;dbname=%s;charset=utf8mb4', (string) ($db['host'] ?? ''), (string) ($db['db_name'] ?? '')),
+            (string) ($db['db_user'] ?? ''),
+            (string) ($db['db_pass'] ?? ''),
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+        );
+
+        foreach ($expectedTables as $table) {
+            $result[$table] = tableExists($pdo, $table);
+        }
+    } catch (Throwable) {
+        foreach ($expectedTables as $table) {
+            $result[$table] = false;
+        }
+    }
+
+    return $result;
+}
+
+function installRenderEmailTemplate(string $rootDir, string $template, array $vars = []): string
+{
+    $path = $rootDir . '/templates/emails/' . $template . '.php';
+    if (!is_file($path)) {
+        return '<p>Installation terminée.</p>';
+    }
+
+    extract($vars, EXTR_SKIP);
+    ob_start();
+    include $path;
+    return (string) ob_get_clean();
+}
+
+function installSendEmail(string $to, string $subject, string $html, string $siteName): void
+{
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-type: text/html; charset=UTF-8',
+        'From: ' . ($siteName !== '' ? $siteName : 'EstimIA') . ' <no-reply@localhost>',
+    ];
+
+    if ($to !== '') {
+        @mail($to, $subject, $html, implode("\r\n", $headers));
+    }
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $step = (int) ($_POST['step'] ?? 1);
 
-    if ($step >= 1 && $step <= 5) {
+    if ($step >= 1 && $step <= 6) {
         $_SESSION['install_wizard'] = array_merge(
             $_SESSION['install_wizard'] ?? [],
             [
@@ -65,6 +143,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if ($step === 2) {
+            $_SESSION['install_db'] = [
+                'host' => trim((string) ($_POST['host'] ?? ($_SESSION['install_db']['host'] ?? 'localhost'))),
+                'db_name' => trim((string) ($_POST['db_name'] ?? ($_SESSION['install_db']['db_name'] ?? ''))),
+                'db_user' => trim((string) ($_POST['db_user'] ?? ($_SESSION['install_db']['db_user'] ?? ''))),
+                'db_pass' => (string) ($_POST['db_pass'] ?? ($_SESSION['install_db']['db_pass'] ?? '')),
+            ];
+
             $rawCities = $_POST['villes'] ?? [];
             $cities = [];
             if (is_array($rawCities)) {
@@ -141,14 +226,6 @@ function applySqlFileIfTableMissing(PDO $pdo, string $tableName, string $sqlPath
             'api_key_mamouth' => (string) ($wizard['api_key_mamouth'] ?? ''),
             'api_keys_activate_now' => (bool) ($wizard['api_keys_activate_now'] ?? false),
         ];
-
-
-
-$alreadyInstalled = is_file($configFile);
-$step = (int) ($_GET['step'] ?? 1);
-if ($step < 1 || $step > 5) $step = 1;
-$error = '';
-$installCompleted = false;
 
         unset($_SESSION['install_wizard']);
 
@@ -327,6 +404,7 @@ PHP;
             }
         }
     }
+}
 }
 
 $step = max(1, min(6, (int) ($_GET['step'] ?? 1)));
@@ -964,6 +1042,7 @@ $stepLabels = ['Pré-requis', 'Base de données', 'Configuration', 'Clés IA', '
             </form>
             <div id="dbResult" style="margin-top:16px"></div>
         </div>
+            <?php endif; ?>
 
     <!-- ════════ STEP 3 ════════ -->
     <?php elseif (!$alreadyInstalled && $step === 3): ?>
@@ -1155,6 +1234,7 @@ $stepLabels = ['Pré-requis', 'Base de données', 'Configuration', 'Clés IA', '
                 </form>
             </div>
         <?php endif; ?>
+    <?php endif; ?>
     </div>
 </div>
 
