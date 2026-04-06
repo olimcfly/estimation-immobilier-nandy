@@ -489,21 +489,21 @@ if (!is_array($villes) || $villes === []) {
             stepEmailNext.disabled = true;
             const originalText = stepEmailNext.textContent;
             stepEmailNext.textContent = 'Envoi...';
+            contactFeedback.classList.add('hidden');
             try {
                 const payload = new FormData();
                 payload.append('email', rapportEmail.value.trim());
-                const response = await fetch('/api/rapport.php', { method: 'POST', body: payload });
-                if (!response.ok) {
-                    throw new Error('Impossible d\'envoyer le rapport pour le moment.');
-                }
-                setWizardStep(1);
+                payload.append('type_bien', form.elements.type_bien.value);
+                payload.append('ville', form.elements.ville.value);
+                payload.append('surface_tranche', form.elements.surface_tranche.value);
+                payload.append('budget_estime', form.elements.budget_estime.value);
+                await fetch('/api/rapport.php', { method: 'POST', body: payload });
             } catch (error) {
-                contactFeedback.className = 'mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-700';
-                contactFeedback.textContent = error.message || 'Service temporairement indisponible.';
-                contactFeedback.classList.remove('hidden');
+                // Capture non bloquante : l'utilisateur continue même si l'enregistrement échoue.
             } finally {
                 stepEmailNext.disabled = false;
                 stepEmailNext.textContent = originalText;
+                setWizardStep(1);
             }
         });
 
