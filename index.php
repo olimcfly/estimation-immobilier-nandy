@@ -57,6 +57,12 @@ if (!is_array($villes) || $villes === []) {
                     </p>
                     <h1 class="mt-4 text-4xl font-bold sm:text-5xl lg:text-6xl"><?= htmlspecialchars($h1, ENT_QUOTES); ?></h1>
                     <p class="mt-6 text-lg sm:text-xl"><?= htmlspecialchars($sousTitre, ENT_QUOTES); ?></p>
+                    <ul class="mt-6 grid grid-cols-1 gap-3 text-sm sm:grid-cols-3">
+                        <li class="rounded-xl border border-white/20 bg-white/10 px-3 py-2 font-medium">✅ Résultat immédiat en moins de 30 secondes</li>
+                        <li class="rounded-xl border border-white/20 bg-white/10 px-3 py-2 font-medium">🔒 Données protégées et sans engagement</li>
+                        <li class="rounded-xl border border-white/20 bg-white/10 px-3 py-2 font-medium">⭐ Conseiller local à <?= htmlspecialchars($villePrincipale, ENT_QUOTES); ?></li>
+                    </ul>
+                    <p class="mt-6 text-sm font-semibold uppercase tracking-wide text-blue-100">Étape 1 sur 2 · 4 champs rapides</p>
 
                     <form id="estimation-form" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         <div class="w-full lg:flex-1">
@@ -108,8 +114,9 @@ if (!is_array($villes) || $villes === []) {
 
                         <div class="sm:col-span-2 lg:col-span-4">
                             <button type="submit" class="w-full rounded-xl bg-white px-4 py-4 font-semibold text-blue-700 transition hover:bg-gray-100">
-                                Estimer mon bien →
+                                Obtenir mon estimation gratuite maintenant →
                             </button>
+                            <p class="mt-3 text-center text-xs text-blue-100">Sans appel automatique · Aucun paiement requis · Réponse immédiate</p>
                         </div>
                     </form>
 
@@ -446,7 +453,7 @@ if (!is_array($villes) || $villes === []) {
                 priceM2.textContent = `${latestEstimation.prixM2.toLocaleString('fr-FR')} €/m²`;
 
                 resultSection.classList.remove('hidden');
-                document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 setWizardStep(0);
             } catch (error) {
                 feedback.textContent = error.message;
