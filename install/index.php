@@ -115,6 +115,45 @@ function applySqlFileIfTableMissing(PDO $pdo, string $tableName, string $sqlPath
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $step = (int) ($_POST['step'] ?? 1);
 
+    if ($step === 3) {
+        $_SESSION['install_site'] = [
+            'site_name'            => trim((string) ($_POST['site_name'] ?? 'EstimIA')),
+            'city_name'            => trim((string) ($_POST['city_name'] ?? 'Bordeaux')),
+            'operation_radius_km'  => max(1, (int) ($_POST['operation_radius_km'] ?? 30)),
+            'admin_email'          => trim((string) ($_POST['admin_email'] ?? '')),
+            'site_phone'           => trim((string) ($_POST['site_phone'] ?? '')),
+            'admin_password'       => (string) ($_POST['admin_password'] ?? ''),
+            'base_url'             => trim((string) ($_POST['base_url'] ?? '')),
+            'smtp_host'            => trim((string) ($_POST['smtp_host'] ?? '')),
+            'smtp_port'            => (int) ($_POST['smtp_port'] ?? 587),
+            'smtp_user'            => trim((string) ($_POST['smtp_user'] ?? '')),
+            'smtp_pass'            => (string) ($_POST['smtp_pass'] ?? ''),
+            'ai_openai_key'        => trim((string) ($_POST['ai_openai_key'] ?? ($_SESSION['install_site']['ai_openai_key'] ?? ''))),
+            'ai_anthropic_key'     => trim((string) ($_POST['ai_anthropic_key'] ?? ($_SESSION['install_site']['ai_anthropic_key'] ?? ''))),
+            'ai_perplexity_key'    => trim((string) ($_POST['ai_perplexity_key'] ?? ($_SESSION['install_site']['ai_perplexity_key'] ?? ''))),
+            'ai_mistral_key'       => trim((string) ($_POST['ai_mistral_key'] ?? ($_SESSION['install_site']['ai_mistral_key'] ?? ''))),
+            'operation_cities_json'=> (string) ($_POST['operation_cities_json'] ?? ($_SESSION['install_site']['operation_cities_json'] ?? '[]')),
+        ];
+        header('Location: ?step=4');
+        exit;
+    }
+
+    if ($step === 4) {
+        $site = $_SESSION['install_site'] ?? [];
+        if (!is_array($site)) {
+            $site = [];
+        }
+
+        $site['ai_openai_key'] = trim((string) ($_POST['ai_openai_key'] ?? ($site['ai_openai_key'] ?? '')));
+        $site['ai_anthropic_key'] = trim((string) ($_POST['ai_anthropic_key'] ?? ($site['ai_anthropic_key'] ?? '')));
+        $site['ai_perplexity_key'] = trim((string) ($_POST['ai_perplexity_key'] ?? ($site['ai_perplexity_key'] ?? '')));
+        $site['ai_mistral_key'] = trim((string) ($_POST['ai_mistral_key'] ?? ($site['ai_mistral_key'] ?? '')));
+
+        $_SESSION['install_site'] = $site;
+        header('Location: ?step=5');
+        exit;
+    }
+
     if ($step >= 1 && $step <= 6) {
         $_SESSION['install_wizard'] = array_merge(
             $_SESSION['install_wizard'] ?? [],
