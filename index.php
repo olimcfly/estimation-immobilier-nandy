@@ -28,7 +28,7 @@ $villePrincipale = (string) ($config['ville_principale'] ?? 'Nandy');
 $logo = (string) ($config['logo'] ?? '');
 $couleur = (string) ($config['couleur'] ?? '#1e3a5f');
 $h1 = (string) ($config['h1_titre'] ?? ('Combien vaut votre bien à ' . $villePrincipale . ' ?'));
-$sousTitre = (string) ($config['sous_titre'] ?? 'Obtenez une estimation instantanée basée sur les données du marché local de Nandy et ses environs.');
+$sousTitre = (string) ($config['sous_titre'] ?? 'Recevez une première fourchette de prix construite à partir de ventes réelles à Nandy et dans les communes voisines de Seine-et-Marne.');
 $metaDescription = (string) ($config['meta_description'] ?? ('Estimation gratuite à ' . $villePrincipale . ' et en Seine-et-Marne'));
 $villes = $config['villes'] ?? [$villePrincipale, 'Savigny-le-Temple', 'Cesson', 'Vert-Saint-Denis', 'Moissy-Cramayel', 'Lieusaint', 'Saint-Pierre-du-Perray', 'Réau', 'Combs-la-Ville'];
 if (!is_array($villes) || $villes === []) {
@@ -259,14 +259,44 @@ if (!is_array($villes) || $villes === []) {
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">2</div>
                         <p class="text-2xl">⚡</p>
                         <h3 class="mt-3 text-lg font-semibold">Estimation instantanée</h3>
-                        <p class="mt-2 text-sm text-slate-600">Notre algorithme calcule immédiatement une fourchette de prix cohérente avec le marché de Nandy et de la Seine-et-Marne.</p>
+                        <p class="mt-2 text-sm text-slate-600">Notre moteur d'estimation compare votre bien aux ventes DVF, aux références notariales et aux transactions récentes observées à Nandy et en Seine-et-Marne.</p>
                     </article>
                     <article class="rounded-2xl bg-white p-6 shadow-sm">
                         <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-600 text-sm font-bold text-blue-600">3</div>
                         <p class="text-2xl">📞</p>
                         <h3 class="mt-3 text-lg font-semibold">Échange avec un expert</h3>
-                        <p class="mt-2 text-sm text-slate-600">Un conseiller vous contacte pour affiner l'estimation et vous accompagner dans votre projet immobilier.</p>
+                        <p class="mt-2 text-sm text-slate-600">Un conseiller local vous contacte pour ajuster la valeur selon l'état du bien, la rue, la demande actuelle et votre projet de vente.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl">
+                <h2 class="text-center text-3xl font-bold text-slate-900">Pourquoi notre estimation est fiable à Nandy</h2>
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Des sources publiques et vérifiables</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Nous croisons les données DVF (Demandes de Valeurs Foncières), les bases notariales et les transactions enregistrées en Seine-et-Marne pour établir une fourchette réaliste, pas un chiffre arbitraire.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Une lecture locale du marché</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Notre analyse tient compte des différences de prix entre Nandy, Savigny-le-Temple, Cesson, Vert-Saint-Denis et les communes proches pour éviter les moyennes trop générales.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-lg font-semibold text-slate-900">Un avis humain pour confirmer</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">Après l'estimation en ligne, un expert local valide avec vous les éléments clés : état du bien, prestations, étage, exposition, nuisances et délai de vente visé.</p>
+                    </article>
+                </div>
+
+                <div class="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                    <h3 class="text-lg font-semibold text-blue-900">Ce que vous recevez concrètement</h3>
+                    <ul class="mt-3 space-y-2 text-sm text-blue-900">
+                        <li>• Une fourchette de prix cohérente avec les ventes récentes de votre secteur.</li>
+                        <li>• Un prix au m² indicatif adapté au type de bien et à la commune.</li>
+                        <li>• Des recommandations de positionnement pour vendre dans de bonnes conditions.</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-blue-800">Estimation indicative gratuite, sans engagement, destinée à vous aider à prendre une décision avant une expertise complète.</p>
                 </div>
             </div>
         </section>
