@@ -88,6 +88,30 @@ function installSendEmail(string $to, string $subject, string $html, string $sit
     }
 }
 
+function tableExists(PDO $pdo, string $tableName): bool
+{
+    $stmt = $pdo->prepare(
+        'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = :table_name'
+    );
+    $stmt->execute(['table_name' => $tableName]);
+    return (int) $stmt->fetchColumn() > 0;
+}
+
+function applySqlFileIfTableMissing(PDO $pdo, string $tableName, string $sqlPath): void
+{
+    if (tableExists($pdo, $tableName)) {
+        return;
+    }
+    if (!is_file($sqlPath)) {
+        throw new RuntimeException(basename($sqlPath) . ' introuvable.');
+    }
+    $sql = trim((string) file_get_contents($sqlPath));
+    if ($sql === '') {
+        throw new RuntimeException(basename($sqlPath) . ' est vide.');
+    }
+    $pdo->exec($sql);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $step = (int) ($_POST['step'] ?? 1);
 
@@ -162,30 +186,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             $_SESSION['install_wizard']['villes'] = array_values(array_unique($cities));
         }
-
-function tableExists(PDO $pdo, string $tableName): bool
-{
-    $stmt = $pdo->prepare(
-        'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = :table_name'
-    );
-    $stmt->execute(['table_name' => $tableName]);
-    return (int) $stmt->fetchColumn() > 0;
-}
-
-function applySqlFileIfTableMissing(PDO $pdo, string $tableName, string $sqlPath): void
-{
-    if (tableExists($pdo, $tableName)) {
-        return;
-    }
-    if (!is_file($sqlPath)) {
-        throw new RuntimeException(basename($sqlPath) . ' introuvable.');
-    }
-    $sql = trim((string) file_get_contents($sqlPath));
-    if ($sql === '') {
-        throw new RuntimeException(basename($sqlPath) . ' est vide.');
-    }
-    $pdo->exec($sql);
-}
 
     if ($step === 6) {
         $wizard = $_SESSION['install_wizard'] ?? [];
